@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5/10/2014, 10:12:05 AM
+    Author     : Elizabeth Cruz
+*/
+body{
+    background-color: black;
+    color: white;
+    
+}
+div{
+    width: 99%;
+    height: 610px;
+}
+
+#titulo{
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    font-family: Vivaldi;
+}
+
+#menu{
+    float: left;
+  //  border: solid 1px white;
+    width: 40%;
+    height: 3%;
+    list-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left:50px;
+}
+.opcionmenu{
+    display: inline;
+    margin: 5px;
+}
+                                                         
+.opcionmenu:hover{
+cursor: pointer;
+background-color: #ffffff;
+color: black;
+}
+#secion{
+    float: right;
+}
+
+
+aside{
+    clear:  both;
+    float: left;
+    border: 0px;
+    width: 23%;
+    height: 500px;
+}
+
+#opcion{
+    
+    float: left;
+    list-style: none;
+}
+
+
+#logo{
+    float: left;
+    margin: 0px;
+}
+
+#botonBuscar{
+    border-radius: 4em;
+    margin-top: 15px;
+}
+
+#busqueda{
+    margin-top: 15px;
+}
+
+#seccionPrincipal{
+    border: solid 2px white;
+    float: right;
+    width: 75%;
+    height: 550px;
+}
+
+#boton{
+    margin-right: 0px;
+}
+
+.registro{
+    width: 60%;
+}
+#formulario{
+    width: 70%;
+    float:left;
+    margin: 10%;
+}
