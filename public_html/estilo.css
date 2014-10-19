@@ -4,71 +4,74 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 5/10/2014, 10:12:05 AM
-    Author     : Elizabeth Cruz
+    Created on : 16/10/2014, 12:28:00 AM
+    Author     : Javier
 */
-body{
-    background-color: black;
-    color: white;
-    
-}
-div{
-    width: 99%;
-    height: 610px;
+#cajaPrincipal{
+    border: solid 1px black;
+    width: 100%;
+    height: 550px;
 }
 
-#titulo{
+aside{
     float: left;
-    text-align: center;
-    font-size: 25px;
+    border: 0px;
+    width: 25%;
+    height: 100%;
+    /*background-color: #0000ff;*/
+}
+#contenido{
+    float: right;
+    width: 75%;
+    height: 100%;
+    /*background-color: gray;*/
+}
+body{
+    background-color: black;
+    color: white;   
+}
+#seccion1{
+    float: left;
+    width: 30%;
+}
+#seccion2{
+    float: left;
+    width: 40%; 
+}
+#seccion3{
+    float: right;
+    width: 40%;
+}
+#titulo{
+    text-align: left;
+    font-size: 30px;
     font-family: Vivaldi;
 }
 
-#menu{
-    float: left;
-  //  border: solid 1px white;
-    width: 40%;
-    height: 3%;
-    list-style: none;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left:50px;
-}
+
 .opcionmenu{
     display: inline;
-    margin: 5px;
+    padding: 5px;
+    font-family: Edwardian Script ITC;
+    font-size: 26px;
 }
-                                                         
-.opcionmenu:hover{
-cursor: pointer;
-background-color: #ffffff;
-color: black;
+.opcionmenu:hover a{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: black;
 }
-#secion{
-    float: right;
+.opcionmenu a{
+    text-decoration:none;
+    color:white;	
 }
-
-
-aside{
-    clear:  both;
-    float: left;
-    border: 0px;
-    width: 23%;
-    height: 500px;
-}
-
-#opcion{
-    
-    float: left;
-    list-style: none;
-}
-
-
 #logo{
     float: left;
     margin: 0px;
 }
-
+#opcion{    
+    float: left;
+    list-style: none;
+}
 #botonBuscar{
     border-radius: 4em;
     margin-top: 15px;
@@ -76,24 +79,105 @@ aside{
 
 #busqueda{
     margin-top: 15px;
+    width: 190px;
+}
+#seccionArticulos{
+    clear: both;
+    width: 100%;
+    height: 88.5%;
+    border: solid black 1px;
+    overflow:auto;
+}
+#seccionArticuloss{
+    clear: both;
+    width: 100%;
+    height: 90%;
+    border: solid black 1px;
+}
+img{
+    margin-left: 6%;
+    margin-top: 2%;
+    border: solid white 1px;
+    float: left;
+    width: 163px;
+    height: 243px;
+    border:black solid 1px;
 }
 
-#seccionPrincipal{
-    border: solid 2px white;
-    float: right;
-    width: 75%;
-    height: 550px;
+figcaption{
+    clear: both;
+    margin-left: 6%;
 }
 
-#boton{
-    margin-right: 0px;
+
+#registrar{
+    color:white;
+    text-decoration: none;
+}
+#registrar:hover{
+    color: white;
 }
 
+#izq{
+    float: left;
+    width: 33%;
+    height: 100%;
+    
+}
+#cen{
+    float: left;
+    width: 33%;
+    height: 100%;
+    
+}
+#der{
+    float: left;
+    width: 33%;
+    height: 100%;
+    
+}
 .registro{
-    width: 60%;
+    width: 270px;
 }
+#opcion{
+    font-size: 15px;
+}
+#Tituloreg{
+    width: 100%;
+    height: 7%;
+  font-family: AngsanaUPC;
+  font-size: 30px;
+  background: white;
+  color: black;
+  margin-top: 0px;
+  
+}
+
 #formulario{
-    width: 70%;
-    float:left;
-    margin: 10%;
+    border:  solid white 1px;
+    //background-color: #cccccc;
+    
+    height: 550px;
+    
 }
+.grupo{
+    float: left;
+    width:45%; 
+    height: 430px;
+    margin-left: 15px;
+}
+
+
+#botonreg{
+    float:right;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(45deg,white,gray);
+    margin-right: 50px;
+}
+
+.articulosCaballero a{
+color:white;
+text-decoration:none;
+}
+
