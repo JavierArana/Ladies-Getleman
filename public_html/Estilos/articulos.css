@@ -26,11 +26,11 @@
     box-shadow: 0px 0px 0px 0px rgba(255,255,255, 0.5);
 }
 
-img{
+#seccionArticulos img{
     border-radius: 50%;
 }
 
-img:hover{
+#seccionArticulos img:hover{
     border-radius: 0em;
     transition: border-radius 0.4s;
 }
