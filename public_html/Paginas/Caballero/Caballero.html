@@ -9,6 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../../Estilos/estilo.css">
+		<link rel="stylesheet" href="../../Estilos/articulos.css">
         <title>Ladies & Gentlemen </title>
     </head>
     <body>
@@ -19,10 +20,10 @@ and open the template in the editor.
                         <center>
                             <ul id="menu">
                                 <li class="opcionmenu"><a href="../../Index.html">Home</a></li>
-                                <li class="opcionmenu"><a href="../Caballero/Caballero.html">Caballero</a></li>
-								<li class="opcionmenu"><a href="../Dama/Dama.html">Dama</a></li>
-								<li class="opcionmenu"><a href="../Niño/Ninios.html">Niños</a></li>                    
-								<li class="opcionmenu"><a href="../Niña/Ninias.html">Niñas</a></li>                   
+                                <li class="opcionmenu"><a href="Caballero.html">Caballero</a></li>
+                                <li class="opcionmenu"><a href="Dama.html">Dama</a></li>
+                                <li class="opcionmenu"><a href="Ninios.html">Niños</a></li>                    
+                                <li class="opcionmenu"><a href="Ninias.html">Niñas</a></li>                    
                             </ul>
                         </center>
                     </nav>
@@ -34,7 +35,11 @@ and open the template in the editor.
                     </form>                    
                 </section>
                 <section id="seccionArticulos">
+                    <section class="contenedorbtn">
+			 <input type="button" value="<"  class="bnt_sig_ant"/>	      
+                    </section>
                     <section id="izq">
+                        
                         <article>
                         <figure>
                             <img src="../../Imagenes/Caballero/1.jpg">
@@ -93,19 +98,23 @@ and open the template in the editor.
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
+                        
                     </section>   
+                    <section class="contenedorbtn">
+                        <input type="button" value=">" class="bnt_sig_ant"/>	
+                    </section>
                 </section>
             </section>
             <aside>
                 <p id="titulo">Ladies & Gentlemen</p><br>
                 <img  id="logo" src="../../Imagenes/general.jpg" >
                 <ul id="opcion">
-                    <li class="articulosCaballero"><a href="Caballero.html">Playera</a></li>                    
-                    <li class="articulosCaballero"><a href="Caballero.html">Jeans</a></li>
-					<li class="articulosCaballero"><a href="Caballero.html">Pantalon</a></li>
-                    <li class="articulosCaballero"><a href="Caballero.html">Camisas</a></li>
-                    <li class="articulosCaballero"><a href="Caballero.html">Calzado</a></li>
-                    <li class="articulosCaballero"><a href="Caballero.html">Accesorios</a></li>	
+                    <li class="articulosCaballero" id="playera" onclick="articuloSeleccionado();"><a href="Caballero.html">Playera</a></li>                    
+                    <li class="articulosCaballero" id="jeans" onclick="articuloSeleccionado();"><a href="Caballero.html">Jeans</a></li>
+					<li class="articulosCaballero" id="pantalon" onclick="articuloSeleccionado();"><a href="Caballero.html">Pantalon</a></li>
+                    <li class="articulosCaballero" id="camisas" onclick="articuloSeleccionado();"><a href="Caballero.html">Camisas</a></li>
+                    <li class="articulosCaballero" id="calzado" onclick="articuloSeleccionado();"><a href="Caballero.html">Calzado</a></li>
+                    <li class="articulosCaballero" id="accesorios" onclick="articuloSeleccionado();"><a href="Caballero.html">Accesorios</a></li>	
                 </ul>
                  <input type="search" name="busqueda" id="busqueda" placeholder="Buscar">  <input id="botonBuscar" type="submit" value="Buscar">
             </aside>
