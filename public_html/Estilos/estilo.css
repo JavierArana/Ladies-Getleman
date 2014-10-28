@@ -102,7 +102,6 @@ img{
     width: 163px;
     height: 243px;
     border:black solid 1px;
-    border-radius: 50px;
 }
 
 figcaption{
@@ -121,19 +120,19 @@ figcaption{
 
 #izq{
     float: left;
-    width: 33%;
+    width: 25%;
     height: 100%;
     
 }
 #cen{
     float: left;
-    width: 33%;
+    width: 25%;
     height: 100%;
     
 }
 #der{
     float: left;
-    width: 33%;
+    width: 25%;
     height: 100%;
     
 }
@@ -185,6 +184,3 @@ text-decoration:none;
     color: red;
 }
 
-img{
-    
-}
