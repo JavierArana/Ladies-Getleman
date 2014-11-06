@@ -9,9 +9,47 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../../Estilos/estilo.css">
+        <link rel="stylesheet" href="../../Estilos/articulos.css">
+        <script type="text/javascript" src="../../JavaScript/funciones.js"></script>
         <title>Ladies & Gentlemen </title>
     </head>
     <body>
+    <section id="previa" > 
+
+        <section id="contenedorPrevia">
+            <section id="contenedorImg">
+                <img id="imgfull" src="">
+                <section class="contenedorbtn" name="anterior">
+                    <input type="button" value="<"  id="anterior" class="bnt_sig_ant" />       
+                </section>
+                <section class="contenedorbtn" name="siguiente">
+                    <input type="button" value=">" id ="siguiente" class="bnt_sig_ant"/>    
+                </section>
+            </section>
+            <section id="contenedorArt">
+                <article class="descripcionArt">
+                    <section class="contenedorbtn">
+                    <input type="button" value="X"  id="btncerrar" class="bnt_sig_ant" onclick="cerrarImg();" /> 
+                    </section><br><br><br>
+                    <p id="texto">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <select name="talla">
+                        <option>Chica</option>
+                        <option selected="value">Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <img src="../../Imagenes/s.png" id="comprar">
+                </article>
+            </section>
+</section>
+    
+        </section>
         <section id="cajaPrincipal">
             <section id="contenido">
                 <section id="seccion2">
@@ -37,19 +75,19 @@ and open the template in the editor.
                     <section id="izq">
                         <article>
                         <figure>
-                            <img src="../../Imagenes/Ninia/Pantalon/1.jpg">
+                            <img src="../../Imagenes/Ninia/Pantalon/1.jpg" onclick="abrirImagen();">
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
                     <article>
                         <figure>
-                             <img src="../../Imagenes/Ninia/Pantalon/2.jpg"><br>
+                             <img src="../../Imagenes/Ninia/Pantalon/2.jpg" onclick="abrirImagen();"><br>
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
                         <article>
                         <figure>
-                            <img src="../../Imagenes/Ninia/Pantalon/3.jpg"><br>
+                            <img src="../../Imagenes/Ninia/Pantalon/3.jpg" onclick="abrirImagen();"><br>
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
@@ -57,19 +95,19 @@ and open the template in the editor.
                     <section id="cen">
                         <article>
                         <figure>
-                             <img src="../../Imagenes/Ninia/Pantalon/4.jpg">
+                             <img src="../../Imagenes/Ninia/Pantalon/4.jpg" onclick="abrirImagen();">
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
                     <article>
                         <figure>
-                            <img src="../../Imagenes/Ninia/Pantalon/5.jpg"><br>
+                            <img src="../../Imagenes/Ninia/Pantalon/5.jpg" onclick="abrirImagen();"><br>
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
                         <article>
                         <figure>
-                            <img src="../../Imagenes/Ninia/Pantalon/6.jpg"><br>
+                            <img src="../../Imagenes/Ninia/Pantalon/6.jpg" onclick="abrirImagen();"><br>
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
@@ -77,19 +115,19 @@ and open the template in the editor.
                     <section id="der">
                         <article>
                         <figure>
-                             <img src="../../Imagenes/Ninia/Pantalon/7.jpg">
+                             <img src="../../Imagenes/Ninia/Pantalon/7.jpg" onclick="abrirImagen();">
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
                     <article>
                         <figure>
-                             <img src="../../Imagenes/Ninia/Pantalon/8.jpg"><br>
+                             <img src="../../Imagenes/Ninia/Pantalon/8.jpg" onclick="abrirImagen();"><br>
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
                         <article>
                         <figure>
-                             <img src="../../Imagenes/Ninia/Pantalon/9.jpg"><br>
+                             <img src="../../Imagenes/Ninia/Pantalon/9.jpg" onclick="abrirImagen();"><br>
                             <figcaption>Marca:<br>Costo:$</figcaption>
                         </figure>                        
                     </article>
