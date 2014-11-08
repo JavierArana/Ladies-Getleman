@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+   To change this license header, choose License Headers in Project Properties.
+   To change this template file, choose Tools | Templates
+   and open the template in the editor.
+   -->
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Ladies & Gentlemen </title>
+      <link rel="stylesheet" href="../Estilos/estiloHome.css">
+      <style type="text/css">
+         div{
+         width: 50%;
+         height: 450px;
+         border:solid white 1px;
+         margin-top: 2%;
+         //background: red;
+         }
+         form p {
+         width: 100%;
+         float: left;
+         background-color: white;
+         color: black;
+         margin-top: 0px;
+         font-size: 20px;
+         }	
+         .cont_form{
+         clear: both;
+         margin-left: 2%;
+         }
+         form{
+         text-align: left;
+         }
+         .caja{
+         width: 275px;
+         }
+
+         #productos{
+         	display: none;
+         }
+
+         #ventas{
+         	display: none;
+         }
+
+         #usuarios{
+         	display: none;
+         }
+
+         #proveedores{
+         	display: none;
+         }
+
+         #sugerencias{
+         	display: none;
+         }
+
+
+
+      </style>
+       <script type="text/javascript">
+        function abrirform(formulario){
+           document.getElementById("productos").style.display="none";
+           document.getElementById("ventas").style.display="none";
+           document.getElementById("proveedores").style.display="none";
+           document.getElementById("sugerencias").style.display="none";
+           document.getElementById("usuarios").style.display="none";
+           document.getElementById(formulario).style.display="block";
+        }
+    </script>
+   </head>
+   <body>
+      <section id="seccion1">
+         <p id="titulo">Ladies & Gentlemen</p>
+         <br>
+      </section>
+      <section id="seccion2">
+         <nav>
+            <br>
+            <ul id="menu">
+               <li class="opcionmenu" onclick="abrirform('productos');"><a href="#">Productos</a></li>
+               <li class="opcionmenu" onclick="abrirform('ventas');"><a href="#">Ventas</a></li>
+               <li class="opcionmenu" onclick="abrirform('proveedores');"><a href="#">Proveedores</a></li>
+               <li class="opcionmenu" onclick="abrirform('sugerencias');"><a href="#">Sugerencias</a></li>
+               <li class="opcionmenu" onclick="abrirform('usuarios');"><a href="#">Usuarios</a></li>
+            </ul>
+         </nav>
+      </section>
+      <center>
+         <div id="productos">
+            <form>
+               <p id="TituloMenu">Productos</p>
+               <section class=" cont_form">
+                  <br>
+                  Marca: <br>
+                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  Nombre: <br>
+                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  Talla : 
+                  <select>
+                     <option>Chica</option>
+                     <option selected="value">Mediana</option>
+                     <option>Grande</option>
+                  </select>
+                  &emsp13; &emsp13; 
+                  Genero:
+                  <select>
+                     <option selected="value">Caballero</option>
+                     <option>Dama</option>
+                     <option>Niño</option>
+                     <option>Niña</option>
+                  </select>
+                  <br><br>
+                  Costo:<br>
+                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  Existencias:<br>
+                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+               </section>
+            </form>
+         </div>
+         <!-- producto-->
+         <div id="ventas">
+            <form>
+               <p>Ventas</p>
+               <section class=" cont_form">
+                  <button>Agregar</button>
+                  <button>Consultar</button>        			
+               </section>
+            </form>
+         </div>
+         <div id="proveedores">
+            <form>
+               <p>Proveedores</p>
+               <section class=" cont_form">
+               </section>
+            </form>
+         </div>
+         <div id="sugerencias">
+            <form>
+               <p>Sugerencias</p>
+               <section class=" cont_form">
+               </section>
+            </form>
+         </div>
+         <div id="usuarios">
+            <form>
+               <p>Usuarios</p>
+               <section class=" cont_form">
+               </section>
+            </form>
+         </div>
+      </center>
+   </body>
+</html>
