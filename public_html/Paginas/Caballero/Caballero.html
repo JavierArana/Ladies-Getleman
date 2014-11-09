@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../../Estilos/estilo.css">
         <link rel="stylesheet" href="../../Estilos/articulos.css">
+        <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
         <script type="text/javascript" src="../../JavaScript/funciones.js"></script>
         <title>Ladies & Gentlemen </title>
     </head>
@@ -65,7 +66,7 @@ and open the template in the editor.
                 </section>
                 <section id="seccion3">
                     <form>
-                        Usuario &emsp14;&emsp14;&emsp13;<input id="textbox1" type="text" placeholder="Nick"> <input id="boton" type="button" value="login">
+                       Usuario &emsp14;&emsp14;&emsp13;<input id="textbox1" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"> <input id="boton" type="button" value="login">
                         <br>Password <input id="textbox2" type="password" placeholder="********" >&emsp13;<a id="registrar" href="../Registro.html">Registrarse</a>
                     </form>                    
                 </section>
@@ -149,7 +150,7 @@ and open the template in the editor.
                     <li class="articulosCaballero" id="calzado" onclick="articuloSeleccionado();"><a href="Calzado.html">Calzado</a></li>
                     <li class="articulosCaballero" id="accesorios" onclick="articuloSeleccionado();"><a href="Accesorios.html">Accesorios</a></li>	
                 </ul>
-                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar">  <input id="botonBuscar" type="submit" value="Buscar">
+                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <input id="botonBuscar" type="submit" value="Buscar">
             </aside>
         </section>       
     </body>
