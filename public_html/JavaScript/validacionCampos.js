@@ -1,9 +1,9 @@
 function sololetrassinespacios(e){
-key=e.keyCode || e.which;
-teclado=String.fromCharCode(key).toLowerCase();
-letras="abcdefghijklmnñopqrstuvwxyz";
-especiales="8-37-38-46-164";
-teclado_especial=false;
+var key=e.keyCode || e.which;
+var teclado=String.fromCharCode(key).toLowerCase();
+var letras="abcdefghijklmnñopqrstuvwxyz";
+var especiales="8-37-38-46-164";
+var teclado_especial=false;
 for (var i in especiales) {
 	if(key==especiales[i]){
 		teclado_especial=true;
@@ -17,11 +17,11 @@ if (letras.indexOf(teclado)==-1 && !teclado_especial) {
 
 
 function sololetrasconespacios(e){
-key=e.keyCode || e.which;
-teclado=String.fromCharCode(key).toLowerCase();
-letras=" abcdefghijklmnñopqrstuvwxyz";
-especiales="8-37-38-46-164";
-teclado_especial=false;
+var key=e.keyCode || e.which;
+var teclado=String.fromCharCode(key).toLowerCase();
+var letras=" abcdefghijklmnñopqrstuvwxyz";
+var especiales="8-37-38-46-164";
+var teclado_especial=false;
 for (var i in especiales) {
 	if(key==especiales[i]){
 		teclado_especial=true;
@@ -34,11 +34,11 @@ if (letras.indexOf(teclado)==-1 && !teclado_especial) {
 }
 
 function solonumeros(e){
-key=e.keyCode || e.which;
-teclado=String.fromCharCode(key);
-numero="0123456789";
-especiales="8-37-38-46";
-teclado_especial=false;
+var key=e.keyCode || e.which;
+var teclado=String.fromCharCode(key);
+var numero="0123456789";
+var especiales="8-37-38-46";
+var teclado_especial=false;
 for(var i in especiales){
 	if(key==especiales[i]){
 		teclado_especial=true;
@@ -50,11 +50,11 @@ return false;
 }
 
 function email(e){
-key=e.keyCode || e.which;
-teclado=String.fromCharCode(key).toLowerCase();
-email = "abcdefghijklmnñopqrstuvwxyz0123456789@._-";
-especiales="8-37-38-46-164";
-teclado_especial=false;
+var key=e.keyCode || e.which;
+var teclado=String.fromCharCode(key).toLowerCase();
+var email = "abcdefghijklmnñopqrstuvwxyz0123456789@._-";
+var especiales="8-37-38-46-164";
+var teclado_especial=false;
 for (var i in especiales) {
 	if(key==especiales[i]){
 		teclado_especial=true;
@@ -67,11 +67,11 @@ if (email.indexOf(teclado)==-1 && !teclado_especial) {
 }
 
 function usuario(e){
-key=e.keyCode || e.which;
-teclado=String.fromCharCode(key).toLowerCase();
-letra_numeros = "abcdefghijklmnñopqrstuvwxyz0123456789_.";
-especiales="8-37-38-46-164";
-teclado_especial=false;
+var key=e.keyCode || e.which;
+var teclado=String.fromCharCode(key).toLowerCase();
+var letra_numeros = "abcdefghijklmnñopqrstuvwxyz0123456789_.";
+var especiales="8-37-38-46-164";
+var teclado_especial=false;
 for (var i in especiales) {
 	if(key==especiales[i]){
 		teclado_especial=true;
@@ -84,11 +84,11 @@ if (letra_numeros.indexOf(teclado)==-1 && !teclado_especial) {
 }
 
 function direccion(e){
-key=e.keyCode || e.which;
-teclado=String.fromCharCode(key).toLowerCase();
-dir = " abcdefghijklmnñopqrstuvwxyz0123456789#()./";
-especiales="8-37-38-46-164";
-teclado_especial=false;
+var key=e.keyCode || e.which;
+var teclado=String.fromCharCode(key).toLowerCase();
+var dir = " abcdefghijklmnñopqrstuvwxyz0123456789#()./";
+var especiales="8-37-38-46-164";
+var teclado_especial=false;
 for (var i in especiales) {
 	if(key==especiales[i]){
 		teclado_especial=true;
