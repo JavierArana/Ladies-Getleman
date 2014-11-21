@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-11-12 14:31:06
+Date: 2014-11-19 13:42:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,9 +34,6 @@ CREATE TABLE `productos` (
 -- ----------------------------
 -- Records of productos
 -- ----------------------------
-INSERT INTO `productos` VALUES ('1', 'nike', 'blusa', '5', 'm', '50', '5', '');
-INSERT INTO `productos` VALUES ('2', 'polo', 'playera', '3', 'h', '30', '4', '');
-INSERT INTO `productos` VALUES ('3', 'nel', 'x', '2', 'm', '27', '3', '');
 
 -- ----------------------------
 -- Table structure for proveedores
