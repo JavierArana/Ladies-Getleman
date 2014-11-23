@@ -23,9 +23,9 @@ if(isset($_POST['tabla'])){
 			$email = $_POST['email'];
 			$contra = $_POST['contra'];
 			$tel = $_POST['tel'];
-			//$direccion=$_POST['calle'].$_POST['numext'].$_POST['col'].$_POST['ciudad'].$_POST['estado'];
+			$direccion=($_POST['calle'].' '.$_POST['numext'].' '.$_POST['col'].' '.$_POST['ciudad'].' '.$_POST['estado']);
 			//$direccion=$_POST['calle']+$_POST['numext']+$_POST['col']+$_POST['ciudad']+$_POST['estado'];
-			$direccion = $_POST['calle'.'numext'.'col'.'ciudad'.'estado'];
+			//$direccion = $_POST['calle'.'numext'.'col'.'ciudad'.'estado'];
 			$sql = $sql."'0','$nombre','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";				
 
 		$paginaRetorno = 'Registro.php';
