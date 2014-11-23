@@ -254,7 +254,8 @@
                                 <section id="contenedorbtnreg">
                                     <input type="button" value="Registrar" id="botonreg" />  
                                 </section>
-                            
+                            <br>
+                            <a href="ConUsuario.php"><input type="button" value="CONSULTAR" id="botonreg" /> 
                			</section>
                
                             

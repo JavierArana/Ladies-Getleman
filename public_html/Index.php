@@ -32,7 +32,7 @@ and open the template in the editor.
         </section>
         <section id="seccion3">
             <form>
-                Usuario &emsp14;&emsp14;&emsp13;<input class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/> <input id="boton" type="button" value="login">
+                Usuario &emsp14;&emsp14;&emsp13;<input class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/> <a href="Paginas/admin.php"><input id="boton" type="button" value="login"></a>
                 <br>Password <input class="textbox" type="password" placeholder="*********">&emsp13;<a id="registrar" href="Paginas/Registro.php">Registrarse</a>
             </form>
         </section>

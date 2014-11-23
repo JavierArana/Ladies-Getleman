@@ -1,3 +1,4 @@
+<center background="#000">
 <?php 
 require_once 'config.php';
 class consultar{
@@ -11,10 +12,17 @@ $consulta = mysqli_query($conexion, "select * from usuarios");
 while($fila = mysqli_fetch_array($consulta)){
 echo "<tr>
 		<td>$fila[0]</td>
-		<td><img src='fotos/$fila[2]' width='100px' heigth='100px'></td>
-		<td>
-		<img class='imagen' src='img/usuario_Borrar.png'>
-		<img class='imagen' src='img/usuario_editar.png'>
+		<td>$fila[1]</td>
+		<td>$fila[2]</td>
+		<td>$fila[3]</td>
+		<td>$fila[4]</td>
+		<td>$fila[5]</td>
+		<td>$fila[6]</td>
+		<td>$fila[7]</td>
+		<td>$fila[8]</td>
+        <td>
+		<a href='eliminar.php'><img class='imagen' src='../img/usuario_Borrar.png'></a>
+		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
 
@@ -45,3 +53,4 @@ return $res;
 }
 
 ?>
+</center>
