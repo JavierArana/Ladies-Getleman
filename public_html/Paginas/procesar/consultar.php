@@ -10,6 +10,7 @@ $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$passwo
 $consulta = mysqli_query($conexion, "select * from usuarios");
 
 while($fila = mysqli_fetch_array($consulta)){
+	static $identificador= 1;
 echo "<tr>
 		<td>$fila[0]</td>
 		<td>$fila[1]</td>
@@ -21,7 +22,9 @@ echo "<tr>
 		<td>$fila[7]</td>
 		<td>$fila[8]</td>
         <td>
-		<img class='imagen' src='../img/usuario_Borrar.png'  name='Elim' onclick='eliminar()'>
+	   
+		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+       
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -42,6 +45,7 @@ $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$passwo
 $consulta = mysqli_query($conexion, "select * from productos");
 
 while($fila = mysqli_fetch_array($consulta)){
+	static $identificador= 2;
 echo "<tr>
 		<td>$fila[0]</td>
 		<td>$fila[1]</td>
@@ -54,7 +58,7 @@ echo "<tr>
 		
 		
         <td>
-		<img class='imagen' src='../img/usuario_Borrar.png'  name='Elim' onclick='eliminar()'>
+		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -93,7 +97,7 @@ echo "<tr>
 	
 		
         <td>
-		<img class='imagen' src='../img/usuario_Borrar.png'  name='Elim' onclick='eliminar()'>
+	<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -127,7 +131,7 @@ echo "<tr>
 	
 		
         <td>
-		<img class='imagen' src='../img/usuario_Borrar.png'  name='Elim' onclick='eliminar()'>
+		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -164,7 +168,7 @@ echo "<tr>
 	
 		
         <td>
-		<img class='imagen' src='../img/usuario_Borrar.png'  name='Elim' onclick='eliminar()'>
+		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
