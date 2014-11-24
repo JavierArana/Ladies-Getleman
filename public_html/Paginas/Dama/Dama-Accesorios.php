@@ -76,7 +76,7 @@
              <tr>
                <td >Password</td>
                <td ><input class="textbox" type="password" placeholder="*********"></td>
-               <td><a id="registrar" href="Paginas/Registro.php">Registrarse</a></td>
+               <td><a id="registrar" href="../Registro.php">Registrarse</a></td>
              </tr>
            </table>
                </form>

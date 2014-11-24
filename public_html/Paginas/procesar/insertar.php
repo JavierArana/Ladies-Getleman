@@ -99,8 +99,7 @@
  
  if(isset($_POST['Id']) && isset($_POST['Nick'])
 	&& isset($_POST['Unidad']) && isset($_POST['Estado'])
-	&& isset($_POST['FechaInicio']) && isset($_POST['FechaCierre']))
- {
+	&& isset($_POST['FechaInicio']) && isset($_POST['FechaCierre'])){
 	$id= $_POST['Id'];
 	$nick= $_POST['Nick'];
 	$unidad= $_POST['Unidad'];
