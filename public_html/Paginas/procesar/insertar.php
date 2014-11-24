@@ -23,7 +23,7 @@
 			$email = $_POST['email'];
 			$contra = $_POST['contra'];
 			$tel = $_POST['tel'];
-			$direccion=($_POST['calle'].' '.$_POST['numext'].' '.$_POST['col'].' '.$_POST['ciudad'].' '.$_POST['estado']);
+			$direccion=$_POST['calle'].' '.$_POST['numext'].' '.$_POST['col'].' '.$_POST['ciudad'].' '.$_POST['estado'];
 			//$direccion=$_POST['calle']+$_POST['numext']+$_POST['col']+$_POST['ciudad']+$_POST['estado'];
 			//$direccion = $_POST['calle'.'numext'.'col'.'ciudad'.'estado'];
 			$sql = $sql."'0','$nombre','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";				
@@ -84,7 +84,7 @@
 //----------------------------TABLA SUGERENCIAS ---------------------------------------------
  if($tabla == 'sugerencias'){
 
- if(isset($_POST['sugerencia']) {
+ if(isset($_POST['sugerencia'])){
 
 	$sugerencia= $_POST['sugerencia'];	
  $sql = $sql."'0','$id','$nick','$sugerencia')";
