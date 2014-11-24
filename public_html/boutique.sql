@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-11-22 01:40:27
+Date: 2014-11-23 23:10:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -45,7 +45,7 @@ CREATE TABLE `proveedores` (
   `direccion` varchar(150) NOT NULL,
   `telefono` varchar(20) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `tipoProducto` varchar(30) NOT NULL,
+  `tipoproducto` varchar(30) NOT NULL,
   `cantidad` int(7) NOT NULL,
   PRIMARY KEY (`IdProveedor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -64,8 +64,10 @@ CREATE TABLE `sugerencias` (
   `IdProducto` int(11) NOT NULL,
   `sugerencia` varchar(500) NOT NULL,
   PRIMARY KEY (`IdSugerencia`),
-  KEY `ClienteID` (`IdCliente`),
-  KEY `ProductoID` (`IdProducto`)
+  KEY `IdCliente` (`IdCliente`) USING BTREE,
+  KEY `IdProducto` (`IdProducto`) USING BTREE,
+  CONSTRAINT `ProductoId` FOREIGN KEY (`IdProducto`) REFERENCES `productos` (`IdProducto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ClienteId` FOREIGN KEY (`IdCliente`) REFERENCES `usuarios` (`IdCliente`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -78,10 +80,10 @@ CREATE TABLE `sugerencias` (
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `IdCliente` int(11) NOT NULL AUTO_INCREMENT,
-  `Nombre` varchar(40) NOT NULL,
-  `FechaN` date NOT NULL,
-  `Sexo` varchar(10) NOT NULL,
-  `NickName` varchar(15) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
+  `fechanac` date NOT NULL,
+  `sexo` varchar(10) NOT NULL,
+  `nickname` varchar(15) NOT NULL,
   `email` varchar(150) NOT NULL,
   `contra` varchar(250) NOT NULL,
   `telefono` varchar(20) NOT NULL,
@@ -101,10 +103,10 @@ CREATE TABLE `ventas` (
   `IdVenta` int(11) NOT NULL,
   `IdCliente` int(11) NOT NULL,
   `IdProducto` int(11) NOT NULL,
-  `FechaV` date NOT NULL,
-  `CostoU` float(7,0) NOT NULL,
-  `Cantidad` int(5) NOT NULL,
-  `CostoT` float(7,0) NOT NULL,
+  `fechaventa` date NOT NULL,
+  `costouni` float(7,0) NOT NULL,
+  `cantidad` int(5) NOT NULL,
+  `costototal` float(7,0) NOT NULL,
   PRIMARY KEY (`IdVenta`),
   KEY `IdCliente` (`IdCliente`),
   KEY `IdProducto` (`IdProducto`),

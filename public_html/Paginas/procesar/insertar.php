@@ -1,9 +1,9 @@
 <?php 
-$sql = 'insert into ';
-$paginaRetorno = '';
-$resultadoRetorno = 0;
+ $sql = 'insert into ';
+ $paginaRetorno = '';
+ $resultadoRetorno = 0;
 
-if(isset($_POST['tabla'])){
+ if(isset($_POST['tabla'])){
 
 	$tabla = $_POST['tabla'];
 
@@ -36,19 +36,24 @@ if(isset($_POST['tabla'])){
 
 	}else
 //-------------------------------------TABLA  PRODUCTOS------------------------------------	
-	if($tabla == 'usuarios'){
-		if(isset($_POST['nick']) && isset($_POST['pass']) && isset($_FILES['foto'])){
+	if($tabla == 'productos'){
+		if(isset($_POST['marca']) && isset($_POST['nombre']) && isset($_POST['talla']) && isset($_POST['genero']) && isset($_POST['costo']) 
+			&& isset($_POST['existencia']) && isset($_FILES['foto'])){
 
 
-$extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
+ $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
 
-			$nick = $_POST['nick'];
-			$pass = $_POST['pass'];
-			$archivo =$nick.$extensionArchivo;
-			$sql = $sql."'$nick',password('$pass'),'$archivo')";
+			$marca = $_POST['marca'];
+			$nombre = $_POST['nombre'];
+			$talla = $_POST['talla'];
+			$genero = $_POST['genero'];
+			$costo = $_POST['costo'];
+			$existencia = $_POST['existencia'];
+			$archivo =$marca.$extensionArchivo;
+			$sql = $sql."'0','$marca','$nombre','$talla','$genero','costo','existencia','$archivo')";
 		     move_uploaded_file($_FILES['foto']['tmp_name'],'../fotos/'.$archivo);
 				
-
+ //pendiente pagina de retorno
 		$paginaRetorno = 'regUsuario.php';
 			//$paginaRetorno = $archivo;
 		}else{
@@ -56,105 +61,74 @@ $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['n
 		}
 
 	}else
-
-	if($tabla == 'examenes'){
-//if(FALSE)
-if(isset($_POST['Id']) && isset($_POST['Nick'])
-	&& isset($_POST['Unidad']) && isset($_POST['Estado'])
-	&& isset($_POST['FechaInicio']) && isset($_POST['FechaCierre']))
-{
-	$id= $_POST['Id'];
-	$nick= $_POST['Nick'];
-	$unidad= $_POST['Unidad'];
-	$estado= $_POST['Estado'];
-	$fechaInicio= $_POST['FechaInicio'];
-	$fechaCierre= $_POST['FechaCierre'];	
-$sql = $sql."'$id','$nick',$unidad,'$estado','$fechaInicio','$fechaCierre')";
-
-$paginaRetorno = 'regExamenes.php';
-}else{
-	die('Error en datos: ERROR 0xE');
-}
-	}
 //----------------------------TABLA PROVEEDORES ---------------------------------------------
-if($tabla == 'examenes'){
-//if(FALSE)
-if(isset($_POST['Id']) && isset($_POST['Nick'])
-	&& isset($_POST['Unidad']) && isset($_POST['Estado'])
-	&& isset($_POST['FechaInicio']) && isset($_POST['FechaCierre']))
-{
-	$id= $_POST['Id'];
-	$nick= $_POST['Nick'];
-	$unidad= $_POST['Unidad'];
-	$estado= $_POST['Estado'];
-	$fechaInicio= $_POST['FechaInicio'];
-	$fechaCierre= $_POST['FechaCierre'];	
-$sql = $sql."'$id','$nick',$unidad,'$estado','$fechaInicio','$fechaCierre')";
+ if($tabla == 'proveedores'){
+ if(isset($_POST['nombre']) && isset($_POST['direccion']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['tipoProducto'])
+		 && isset($_POST['cantidad'])){
 
-$paginaRetorno = 'regExamenes.php';
-}else{
-	die('Error en datos: ERROR 0xE');
-}
-	}
+			$nombre = $_POST['nombre'];
+			$direccion = $_POST['direccion'];
+			$tel = $_POST['tel'];
+			$email = $_POST['email'];
+			$tipoProducto = $_POST['tipoProducto'];
+			$cantidad = $_POST['cantidad'];
+			$sql = $sql."'0','$nombre','$direccion','$tel','$email','$tipoProducto','$cantidad')";				
+//keda pendiente pagina de retorno
+		$paginaRetorno = 'Registro.php';
+			//$paginaRetorno = $archivo;
+		}else{
+			die('Error en datos: ERROR 0xU');	
+		}
 
-
+	}else
 //----------------------------TABLA SUGERENCIAS ---------------------------------------------
-if($tabla == 'examenes'){
-//if(FALSE)
-if(isset($_POST['Id']) && isset($_POST['Nick'])
-	&& isset($_POST['Unidad']) && isset($_POST['Estado'])
-	&& isset($_POST['FechaInicio']) && isset($_POST['FechaCierre']))
-{
-	$id= $_POST['Id'];
-	$nick= $_POST['Nick'];
-	$unidad= $_POST['Unidad'];
-	$estado= $_POST['Estado'];
-	$fechaInicio= $_POST['FechaInicio'];
-	$fechaCierre= $_POST['FechaCierre'];	
-$sql = $sql."'$id','$nick',$unidad,'$estado','$fechaInicio','$fechaCierre')";
+ if($tabla == 'sugerencias'){
 
-$paginaRetorno = 'regExamenes.php';
-}else{
+ if(isset($_POST['sugerencia']) {
+
+	$sugerencia= $_POST['sugerencia'];	
+ $sql = $sql."'0','$id','$nick','$sugerencia')";
+
+ $paginaRetorno = 'regExamenes.php';
+ }else{
 	die('Error en datos: ERROR 0xE');
-}
-	}
-
+ }
+	}else
 //----------------------------TABLA VENTAS---------------------------------------------
-if($tabla == 'examenes'){
-//if(FALSE)
-if(isset($_POST['Id']) && isset($_POST['Nick'])
+ if($tabla == 'examenes'){
+ 
+ if(isset($_POST['Id']) && isset($_POST['Nick'])
 	&& isset($_POST['Unidad']) && isset($_POST['Estado'])
 	&& isset($_POST['FechaInicio']) && isset($_POST['FechaCierre']))
-{
+ {
 	$id= $_POST['Id'];
 	$nick= $_POST['Nick'];
 	$unidad= $_POST['Unidad'];
 	$estado= $_POST['Estado'];
 	$fechaInicio= $_POST['FechaInicio'];
 	$fechaCierre= $_POST['FechaCierre'];	
-$sql = $sql."'$id','$nick',$unidad,'$estado','$fechaInicio','$fechaCierre')";
+ $sql = $sql."'$id','$nick',$unidad,'$estado','$fechaInicio','$fechaCierre')";
 
-$paginaRetorno = 'regExamenes.php';
-}else{
+ $paginaRetorno = 'regExamenes.php';
+ }else{
 	die('Error en datos: ERROR 0xE');
-}
+ }
 	}
 
 
 
-//SINO......
+ //SINO......
+ }else{
+ //ERROR POR NO ESPECIFICAR LA TABLA
+ die('La operacion no puede ser realizada: ERROR 0xT');	
+ }
 
-}else{
-//ERROR POR NO ESPECIFICAR LA TABLA
-die('La operacion no puede ser realizada: ERROR 0xT');	
-}
+ require_once 'config.php';
 
-require_once 'config.php';
+ $conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
+ $resultadoRetorno = 1;
+ $res  = mysqli_query($conexion, $sql) or $resultadoRetorno=0;
 
-$conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
-$resultadoRetorno = 1;
-$res  = mysqli_query($conexion, $sql) or $resultadoRetorno=0;
-
-header('Location: ../'.$paginaRetorno.'?res='.$resultadoRetorno);
+ header('Location: ../'.$paginaRetorno.'?res='.$resultadoRetorno);
 
 ?>

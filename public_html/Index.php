@@ -41,7 +41,7 @@ and open the template in the editor.
              <tr>
                <td >Password</td>
                <td ><input class="textbox" type="password" placeholder="*********"></td>
-               <td><a id="registrar" href="Paginas/Registro.html">Registrarse</a></td>
+               <td><a id="registrar" href="Paginas/Registro.php">Registrarse</a></td>
              </tr>
            </table>
             </form>
