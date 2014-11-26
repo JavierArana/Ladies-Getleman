@@ -1,5 +1,8 @@
 meta.foundation-version {
   font-family: "/5.4.5/"; }
+  *{
+    color:white;
+  }
 
 meta.foundation-mq-small {
   font-family: "/only screen/";
@@ -26,7 +29,7 @@ meta.foundation-data-attribute-namespace {
 
 html, body {
   height: 100%; }
-
+/*
 *,
 *:before,
 *:after {
@@ -34,12 +37,11 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-html,
-body {
-  font-size: 100%; }
+*/
+
 
 body {
-  background: white;
+  background: black;
   color: blue;
   padding: 0;
   margin: 0;
@@ -48,14 +50,16 @@ body {
   font-style: normal;
   line-height: 1.5;
   position: relative;
-  cursor: auto; }
+  cursor: auto; 
+}
 
 a:hover {
   cursor: pointer; }
 
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto; 
+}
 
 img {
   -ms-interpolation-mode: bicubic; }
@@ -91,6 +95,8 @@ img {
   display: inline-block;
   vertical-align: middle; }
 
+ 
+
 textarea {
   height: auto;
   min-height: 50px; }
@@ -99,12 +105,22 @@ select {
   width: 100%; }
 
 .row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 62.5rem; }
+
+  width: 98%;
+  margin-left: 10px;
+  margin-top:50px;
+ margin-right: 20px;
+  
+   }
+   .row2{
+    margin-left:0px;
+    
+     
+  background-color:white;
+  box-shadow: gray 0px 0px 10px; 
+  text-shadow:white 0px 0px 10px ;
+   }
+   
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -123,6 +139,7 @@ select {
     margin-right: -0.9375rem;
     margin-top: 0;
     margin-bottom: 0;
+    border-radius: 20px;
     max-width: none; }
     .row .row:before, .row .row:after {
       content: " ";

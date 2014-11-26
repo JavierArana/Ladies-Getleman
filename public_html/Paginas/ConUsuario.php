@@ -2,14 +2,11 @@
 <html >
 <head>
 	<meta charset="UTF-8">
-	       <link rel="stylesheet" type="text/css" href="../Estilos/foundation.css">
-	    <link rel="stylesheet" type="text/css" href="../Estilos/estilo2.css">
+	      <link rel="stylesheet" type="text/css" href="../Estilos/foundation.css">
+	    <!--<link rel="stylesheet" type="text/css" href="../Estilos/estilo2.css">-->
 
-		<script type="text/javascript" src="../js/vendor/modernizr.js"></script>	
 
-<script>
-      $(document).foundation();
-</script>
+
 	<title>Consulta de usuario</title>
 	
 </head>
@@ -18,8 +15,10 @@
 
 
 <div class="row">
-<div>
+<div class="row2">
+
 <h3>Consulta de usuario</h3>
+
 </div>
 </div>
 <div class="row">
