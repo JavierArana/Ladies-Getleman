@@ -23,7 +23,7 @@ echo "<tr>
 		<td>$fila[8]</td>
         <td>
 	   
-		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+		<a href='procesar/eliminar.php?ID=$fila[0] &me=1'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
        
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
@@ -58,7 +58,7 @@ echo "<tr>
 		
 		
         <td>
-		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+		<a href='procesar/eliminar.php?ID=$fila[0] &me=2'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -97,7 +97,7 @@ echo "<tr>
 	
 		
         <td>
-	<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+	<a href='procesar/eliminar.php?ID=$fila[0] &me=3'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -131,7 +131,7 @@ echo "<tr>
 	
 		
         <td>
-		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+		<a href='procesar/eliminar.php?ID=$fila[0] &me=4'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
@@ -168,7 +168,7 @@ echo "<tr>
 	
 		
         <td>
-		<a href='procesar/eliminar.php?ID=$fila[0] &?me=$identificador'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+		<a href='procesar/eliminar.php?ID=$fila[0] &me=5'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
 		<img class='imagen' src='../img/usuario_editar.png'>
 		</td>	
 	</tr>";
