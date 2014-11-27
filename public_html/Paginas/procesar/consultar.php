@@ -25,7 +25,7 @@ echo "<tr>
 	   
 		<a href='procesar/eliminar.php?ID=$fila[0] &me=1'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
        
-		<img class='imagen' src='../img/usuario_editar.png'>
+		<a href='procesar/modificar.php?ID=$fila[0]&me=1'><img class='imagen' src='../img/usuario_editar.png'></a>
 		</td>	
 	</tr>";
 

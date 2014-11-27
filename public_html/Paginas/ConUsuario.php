@@ -11,17 +11,26 @@
 	
 </head>
 <body >
-<center>
 
+<section class="Caja">
 
 <div class="row">
 <div class="row2">
-
+<center>
 <h3>Consulta de usuario</h3>
+</center>
+</div>
 
 </div>
+<div class="link">
+<p ><a href="registro.php"><h5>         Crear Nuevo Usuario</h5></a></p>
 </div>
-<div class="row">
+</div>
+<div class="link">
+<p ><a href="ConUsuario.php"><h5>         Actualizar</h5></a></p>
+</div>
+<center>
+<div class="row" class="pruebas1">
 <div >
 <table>
 <thead>
@@ -54,5 +63,6 @@ $con->consultarUsuarios();
 </div>
 
 </center>
+</section>
 </body>
 </html>

@@ -36,7 +36,7 @@ and open the template in the editor.
              <tr>
                <td>Usuario</td>
                <td><input class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
-               <td> <input id="boton" type="button" value="login"></td>
+               <td> <a href="Paginas/admin.php"><input id="boton" type="button" value="login"></td></a>
              </tr>
              <tr>
                <td >Password</td>

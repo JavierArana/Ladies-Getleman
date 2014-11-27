@@ -51,8 +51,24 @@ body {
   line-height: 1.5;
   position: relative;
   cursor: auto; 
+
 }
 
+.Caja{
+  border: solid 5px white;
+  margin-left: 0.8px;
+  width: 98.2%;
+  height: 97%;
+ 
+
+}
+.pruebas1{
+  border: solid 10px white;
+}
+.link{
+display: inline-block;
+  margin-left: 130px;
+}
 a:hover {
   cursor: pointer; }
 
@@ -108,17 +124,17 @@ select {
 
   width: 98%;
   margin-left: 10px;
-  margin-top:50px;
+  margin-top:10px;
  margin-right: 20px;
-  
+    
    }
    .row2{
     margin-left:0px;
     
      
-  background-color:white;
-  box-shadow: gray 0px 0px 10px; 
-  text-shadow:white 0px 0px 10px ;
+  background-color:blue;
+ // box-shadow: gray 0px 0px 10px; 
+  //text-shadow:white 0px 0px 10px ;
    }
    
   .row:before, .row:after {
@@ -134,20 +150,21 @@ select {
     margin-left: 0;
     margin-right: 0; }
   .row .row {
-    width: auto;
+    
+    width: 70%;
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 20px;
-    max-width: none; }
+    max-width: 1200px; }
     .row .row:before, .row .row:after {
       content: " ";
       display: table; }
     .row .row:after {
       clear: both; }
     .row .row.collapse {
-      width: auto;
+      width: 80%;
       margin: 0;
       max-width: none; }
       .row .row.collapse:before, .row .row.collapse:after {
@@ -160,6 +177,9 @@ select {
 .columns {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
+    padding-left: 0.7375rem;
+  padding-right: 0.7375rem;
+
   width: 100%;
   float: left; }
 
@@ -182,7 +202,7 @@ select {
 
   .small-push-1 {
     position: relative;
-    left: 8.33333%;
+    left: 4.33333%;
     right: auto; }
 
   .small-pull-1 {
@@ -298,7 +318,7 @@ select {
     float: left; }
 
   .small-1 {
-    width: 8.33333%; }
+    width: 4.33333%; }
 
   .small-2 {
     width: 16.66667%; }
