@@ -2,7 +2,7 @@
  $sql = 'insert into ';
  $paginaRetorno = '';
  $resultadoRetorno = 0;
-
+$foto=0;
  if(isset($_POST['tabla'])){
 
 	$tabla = $_POST['tabla'];
@@ -26,12 +26,14 @@
 			$direccion=$_POST['calle'].' '.$_POST['numext'].' '.$_POST['col'].' '.$_POST['ciudad'].' '.$_POST['estado'];
 			//$direccion=$_POST['calle']+$_POST['numext']+$_POST['col']+$_POST['ciudad']+$_POST['estado'];
 			//$direccion = $_POST['calle'.'numext'.'col'.'ciudad'.'estado'];
-			$sql = $sql."'0','$nombre','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";				
+			$sql = $sql."'0','$nombre','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";	
+			mysqli_close($conexion);			
 
 		$paginaRetorno = 'Registro.php';
 			//$paginaRetorno = $archivo;
 		}else{
 			die('Error en datos: ERROR 0xU');	
+			mysqli_close($conexion);
 		}
 
 	}else
@@ -42,22 +44,23 @@
 
 
  $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
-
+		$foto=+1;
 			$marca = $_POST['marca'];
 			$nombre = $_POST['nombre'];
 			$talla = $_POST['talla'];
 			$genero = $_POST['genero'];
 			$costo = $_POST['costo'];
 			$existencia = $_POST['existencia'];
-			$archivo =$marca.$extensionArchivo;
+			$archivo =$nombre.$foto.$extensionArchivo;
 			$sql = $sql."'0','$marca','$nombre','$talla','$genero','costo','existencia','$archivo')";
 		     move_uploaded_file($_FILES['foto']['tmp_name'],'../fotos/'.$archivo);
-				
+				mysqli_close($conexion);
  //pendiente pagina de retorno
-		$paginaRetorno = 'regUsuario.php';
+		$paginaRetorno = 'regProductos.php';
 			//$paginaRetorno = $archivo;
 		}else{
-			die('Error en datos: ERROR 0xU');	
+			die('Error en datos: ERROR 0xU');
+			mysqli_close($conexion);	
 		}
 
 	}else
@@ -72,12 +75,14 @@
 			$email = $_POST['email'];
 			$tipoProducto = $_POST['tipoProducto'];
 			$cantidad = $_POST['cantidad'];
-			$sql = $sql."'0','$nombre','$direccion','$tel','$email','$tipoProducto','$cantidad')";				
+			$sql = $sql."'0','$nombre','$direccion','$tel','$email','$tipoProducto','$cantidad')";	
+			mysqli_close($conexion);			
 //keda pendiente pagina de retorno
 		$paginaRetorno = 'Registro.php';
 			//$paginaRetorno = $archivo;
 		}else{
 			die('Error en datos: ERROR 0xU');	
+			mysqli_close($conexion);
 		}
 
 	}else
@@ -88,10 +93,11 @@
 
 	$sugerencia= $_POST['sugerencia'];	
  $sql = $sql."'0','$id','$nick','$sugerencia')";
-
+mysqli_close($conexion);
  $paginaRetorno = 'regExamenes.php';
  }else{
 	die('Error en datos: ERROR 0xE');
+	mysqli_close($conexion);
  }
 	}else
 //----------------------------TABLA VENTAS---------------------------------------------
@@ -107,14 +113,15 @@
 	$fechaInicio= $_POST['FechaInicio'];
 	$fechaCierre= $_POST['FechaCierre'];	
  $sql = $sql."'$id','$nick',$unidad,'$estado','$fechaInicio','$fechaCierre')";
-
+mysqli_close($conexion);
  $paginaRetorno = 'regExamenes.php';
  }else{
 	die('Error en datos: ERROR 0xE');
+	mysqli_close($conexion);
  }
 	}
-
-
+ 
+ 
 
  //SINO......
  }else{
@@ -125,6 +132,9 @@
  require_once 'config.php';
 
  $conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
+ if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+	die("No se pudo realizar la conexion a la base de datos!");
+}
  $resultadoRetorno = 1;
  $res  = mysqli_query($conexion, $sql) or $resultadoRetorno=0;
 

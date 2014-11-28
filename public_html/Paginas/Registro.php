@@ -4,13 +4,14 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html> 
     <head>
         <title>Registro de Usuario</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../Estilos/estilo.css">
         <script type="text/javascript" src="../JavaScript/validacionCampos.js"></script>
+        <script type="text/javascript" src="../JavaScript/lluvia.js"></script>
     </head>
        <body>
         <section id="cajaPrincipal">

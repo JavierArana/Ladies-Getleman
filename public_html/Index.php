@@ -3,7 +3,7 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
--->
+--> 
 <html>
     <head>
         <meta charset="UTF-8">
@@ -12,9 +12,11 @@ and open the template in the editor.
         <link rel="stylesheet" href="Estilos/estiloHome.css">
         <script type="text/javascript" src="JavaScript/validacionCampos.js"></script>
         <script  type="text/javascript" src="JavaScript/jquery-1.11.1.min.js"></script>
-        <script  type="text/javascript" src="JavaScript/carrucel.js"></script>		
+        <script  type="text/javascript" src="JavaScript/carrucel.js"></script>	
+        <script type="text/javascript" src="JavaScript/lluvia.js"></script>
+
     </head>
-    <body>
+    <body> 
         <section id="seccion1">
             <p id="titulo">Ladies & Gentlemen</p><br>
         </section>
@@ -31,16 +33,17 @@ and open the template in the editor.
             </nav>
         </section>
         <section id="seccion3">
-            <form>
+            <form action="Paginas/procesar/login.php" method="post">
                <table  class="tabla">
              <tr>
                <td>Usuario</td>
-               <td><input class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
-               <td> <a href="Paginas/admin.php"><input id="boton" type="button" value="login"></td></a>
+               <td><input name="usuario" id="usuario" class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
+               <td><button>Entrar</td></button>
+               
              </tr>
              <tr>
                <td >Password</td>
-               <td ><input class="textbox" type="password" placeholder="*********"></td>
+               <td ><input name="pass" id="pass" class="textbox" type="password" placeholder="*********"></td>
                <td><a id="registrar" href="Paginas/Registro.php">Registrarse</a></td>
              </tr>
            </table>

@@ -10,6 +10,7 @@
       <meta name="viewport" content="width=device-width">
       <title>Ladies & Gentlemen </title>
       <link rel="stylesheet" href="../Estilos/estiloHome.css">
+      <script type="text/javascript" src="../JavaScript/lluvia.js"></script>
       <style type="text/css">
          div{
          width: 50%;
@@ -88,6 +89,15 @@
             </ul>
          </nav>
       </section>
+      <?php
+  session_start();
+  if(!isset($_SESSION['inicio'])){
+header("Location: ../Index.php");
+  }
+  ?>  
+  <form action="procesar/login.php" method="post">
+  <button name="sesion" value="1">Cerrar Sesion</button>
+</form>
       <center>
          <div id="productos">
             <form>

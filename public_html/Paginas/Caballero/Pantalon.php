@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="../../Estilos/articulos.css">
       <script type="text/javascript" src="../../JavaScript/OpenedCaballero/funcionesPan.js"></script>
       <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
+       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <title>Ladies & Gentlemen </title>
    </head>
    <body>

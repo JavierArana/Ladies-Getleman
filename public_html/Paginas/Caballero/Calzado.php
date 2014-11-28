@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="../../Estilos/articulos.css">
         <script type="text/javascript" src="../../JavaScript/OpenedCaballero/funcionesCal.js"></script>
         <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
+         <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
         <title>Ladies & Gentlemen </title>
     </head>
     <body>

@@ -13,6 +13,7 @@
        <script  type="text/javascript" src="JavaScript/jquery-1.7.1.js"></script>
       <script type="text/javascript" src="../../JavaScript/OpenedCaballero/funcionesPla.js"></script>
       <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
+       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <!--<script type="text/javascript">
 
       $(document).on("ready",inicio);
