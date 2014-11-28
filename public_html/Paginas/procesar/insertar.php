@@ -40,7 +40,7 @@ $foto=0;
 //-------------------------------------TABLA  PRODUCTOS------------------------------------	
 	if($tabla == 'productos'){
 		if(isset($_POST['marca']) && isset($_POST['nombre']) && isset($_POST['talla']) && isset($_POST['genero']) && isset($_POST['costo']) 
-			&& isset($_POST['existencia']) && isset($_FILES['foto'])){
+			&& isset($_POST['existencia']) && isset($_FILES['foto']) && isset($_POST['descripcion'])){
 
 
  $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
@@ -52,7 +52,8 @@ $foto=0;
 			$costo = $_POST['costo'];
 			$existencia = $_POST['existencia'];
 			$archivo =$nombre.$foto.$extensionArchivo;
-			$sql = $sql."'0','$marca','$nombre','$talla','$genero','costo','existencia','$archivo')";
+			$descripcion=$_POST['descripcion'];
+			$sql = $sql."'0','$marca','$nombre','$talla','$genero','costo','existencia','$archivo','$descripcion')";
 		     move_uploaded_file($_FILES['foto']['tmp_name'],'../fotos/'.$archivo);
 				mysqli_close($conexion);
  //pendiente pagina de retorno
@@ -92,7 +93,7 @@ $foto=0;
  if(isset($_POST['sugerencia'])){
 
 	$sugerencia= $_POST['sugerencia'];	
- $sql = $sql."'0','$id','$nick','$sugerencia')";
+ $sql = $sql."'0','$idcliente','$idproducto','$sugerencia')";
 mysqli_close($conexion);
  $paginaRetorno = 'regExamenes.php';
  }else{
