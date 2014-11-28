@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-11-23 23:10:42
+Date: 2014-11-28 12:39:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,8 +28,9 @@ CREATE TABLE `productos` (
   `costo` float(10,0) NOT NULL,
   `existencia` int(7) NOT NULL,
   `imagen` varchar(200) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
   PRIMARY KEY (`IdProducto`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of productos
@@ -48,7 +49,7 @@ CREATE TABLE `proveedores` (
   `tipoproducto` varchar(30) NOT NULL,
   `cantidad` int(7) NOT NULL,
   PRIMARY KEY (`IdProveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of proveedores
@@ -66,9 +67,9 @@ CREATE TABLE `sugerencias` (
   PRIMARY KEY (`IdSugerencia`),
   KEY `IdCliente` (`IdCliente`) USING BTREE,
   KEY `IdProducto` (`IdProducto`) USING BTREE,
-  CONSTRAINT `ProductoId` FOREIGN KEY (`IdProducto`) REFERENCES `productos` (`IdProducto`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `ClienteId` FOREIGN KEY (`IdCliente`) REFERENCES `usuarios` (`IdCliente`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  CONSTRAINT `ClienteId` FOREIGN KEY (`IdCliente`) REFERENCES `usuarios` (`IdCliente`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `ProductoId` FOREIGN KEY (`IdProducto`) REFERENCES `productos` (`IdProducto`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sugerencias
@@ -89,11 +90,14 @@ CREATE TABLE `usuarios` (
   `telefono` varchar(20) NOT NULL,
   `direccion` varchar(150) NOT NULL,
   PRIMARY KEY (`IdCliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of usuarios
 -- ----------------------------
+INSERT INTO `usuarios` VALUES ('2', 'elizabeth cruz', '1993-04-14', 'Femenino', 'bety', 'betty_cruzz@hotmail.com', '*FAD6A3BC09BBA2A9FC6FE99F0158A1975832DC00', '014351037333', 'erongaricuaro 7 tejerias huetamo Michoacán');
+INSERT INTO `usuarios` VALUES ('3', 'eli', '1993-04-14', 'Femenino', 'betty', 'no@gmail.com', 'binario', '123', 'n 1 t hue Michoacán');
+INSERT INTO `usuarios` VALUES ('4', 'Carlos Reyes Dueñas', '2014-11-12', 'Masculino', 'charly', 'king_slave@gmail.com', '*FAD6A3BC09BBA2A9FC6FE99F0158A1975832DC00', '1234567', 'aurrera 1 centro huetamo Michoacán');
 
 -- ----------------------------
 -- Table structure for ventas
