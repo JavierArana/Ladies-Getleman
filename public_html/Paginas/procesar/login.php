@@ -25,5 +25,5 @@ if(isset($_POST['sesion'])){
  	echo "Datos incorrectos!";
  	//header("Location: ../../Index.php");
  }
-}
+} 
  ?>

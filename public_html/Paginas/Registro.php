@@ -104,25 +104,6 @@ and open the template in the editor.
                                 </section>
                             </fieldset>
                         </form>
-    <?php
-    if(isset($_GET['res'])){
-    $resultado = $_GET['res'];  
-    if($resultado==1){
-    ?>
-    <div data-alert class="alert-box success round">
-     Usuario registrado correctamente!!!  
-    </div>
- <?php 
- }
- else{
- ?>
-    <div data-alert class="alert-box alert round">
-    El usuario no se registro satisfactoriamente!! 
-    </div>
- <?php
- }
-    }
- ?>
                     </div>
                 </section>
             </section>
@@ -132,6 +113,25 @@ and open the template in the editor.
                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar">  <input id="botonBuscar" type="submit" value="Buscar">
                 <br><br>
             </aside>
-        </section>       
+        </section> 
+         <?php
+    if(isset($_GET['res'])){
+    $resultado = $_GET['res'];  
+    if($resultado==1){
+    ?>
+  <script type="text/javascript">
+alert("El usuario se registro satisfactoriamente!! ");
+  </script>
+ <?php 
+ }
+ else{
+ ?>
+    <script type="text/javascript">
+alert("El usuario no se registro satisfactoriamente!! ");
+  </script>
+ <?php
+ }
+    }
+ ?>      
     </body>
 </html>                                

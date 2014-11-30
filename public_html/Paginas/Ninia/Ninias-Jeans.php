@@ -161,7 +161,6 @@
                <li class="articulosCaballero"><a href="Ninias-Jeans.php" style="color:red; font-size:1.5em;">Jeans</a></li>
                <li class="articulosCaballero"><a href="Ninias-Pantalon.php">Pantalon</a></li>
                <li class="articulosCaballero"><a href="Ninias-Vestidos.php">Vestidos</a></li>
-               <li class="articulosCaballero"><a href="Ninias-Calzado.php">Calzado</a></li>
                <li class="articulosCaballero"><a href="Ninias-Faldas.php">Faldas</a></li>
                <li class="articulosCaballero"><a href="Ninias-Short.php">Short</a></li>
                <li class="articulosCaballero"><a href="Ninias-Accesorios.php">Accesorios</a></li>

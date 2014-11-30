@@ -102,7 +102,7 @@
                   </article>
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Ninia/Calzado/1.jpg" onclick="abrirImagen();"><br>
+                        <img src="../../Imagenes/Ninia/Accesorios/2.jpg" onclick="abrirImagen();"><br>
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
@@ -136,7 +136,7 @@
                   </article>
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Ninia/Accesorios/2.jpg" onclick="abrirImagen();"><br>
+                        <img src="../../Imagenes/Ninia/Accesorios/3.jpg" onclick="abrirImagen();"><br>
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
@@ -161,7 +161,6 @@
                <li class="articulosCaballero"><a href="Ninias-Jeans.php">Jeans</a></li>
                <li class="articulosCaballero"><a href="Ninias-Pantalon.php">Pantalon</a></li>
                <li class="articulosCaballero"><a href="Ninias-Vestidos.php">Vestidos</a></li>
-               <li class="articulosCaballero"><a href="Ninias-Calzado.php">Calzado</a></li>
                <li class="articulosCaballero"><a href="Ninias-Faldas.php">Faldas</a></li>
                <li class="articulosCaballero"><a href="Ninias-Short.php">Short</a></li>
                <li class="articulosCaballero"><a href="Ninias-Accesorios.php">Accesorios</a></li>
