@@ -158,7 +158,6 @@ and open the template in the editor.
                     <li class="articulosCaballero" id="jeans" onclick="articuloSeleccionado();"><a href="Jeans.php">Jeans</a></li>
                     <li class="articulosCaballero" id="pantalon" onclick="articuloSeleccionado();"><a href="Pantalon.php">Pantalon</a></li>
                     <li class="articulosCaballero" id="camisas" onclick="articuloSeleccionado();"><a href="Camisa.php">Camisas</a></li>
-                    <li class="articulosCaballero" id="calzado" onclick="articuloSeleccionado();"><a href="Calzado.php">Calzado</a></li>
                     <li class="articulosCaballero" id="accesorios" onclick="articuloSeleccionado();"><a href="Accesorios.php">Accesorios</a></li>	
                 </ul>
                  <input type="search" name="busqueda" id="busqueda" placeholder="Buscar"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  <input id="botonBuscar" type="submit" value="Buscar">

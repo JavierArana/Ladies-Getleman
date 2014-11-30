@@ -161,7 +161,6 @@
                <li class="articulosCaballero"><a href="Jeans.php">Jeans</a></li>
                <li class="articulosCaballero"><a href="Pantalon.php" style="color:red; font-size:1.5em;">Pantalon</a></li>
                <li class="articulosCaballero"><a href="Camisa.php">Camisas</a></li>
-               <li class="articulosCaballero"><a href="Calzado.php">Calzado</a></li>
                <li class="articulosCaballero"><a href="Accesorios.php">Accesorios</a></li>
             </ul>
             <input type="search" name="busqueda" id="busqueda" placeholder="Buscar"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  <input id="botonBuscar" type="submit" value="Buscar">
