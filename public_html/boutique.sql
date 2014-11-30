@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-11-28 12:39:25
+Date: 2014-11-29 19:44:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -90,14 +90,11 @@ CREATE TABLE `usuarios` (
   `telefono` varchar(20) NOT NULL,
   `direccion` varchar(150) NOT NULL,
   PRIMARY KEY (`IdCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of usuarios
 -- ----------------------------
-INSERT INTO `usuarios` VALUES ('2', 'elizabeth cruz', '1993-04-14', 'Femenino', 'bety', 'betty_cruzz@hotmail.com', '*FAD6A3BC09BBA2A9FC6FE99F0158A1975832DC00', '014351037333', 'erongaricuaro 7 tejerias huetamo Michoacán');
-INSERT INTO `usuarios` VALUES ('3', 'eli', '1993-04-14', 'Femenino', 'betty', 'no@gmail.com', 'binario', '123', 'n 1 t hue Michoacán');
-INSERT INTO `usuarios` VALUES ('4', 'Carlos Reyes Dueñas', '2014-11-12', 'Masculino', 'charly', 'king_slave@gmail.com', '*FAD6A3BC09BBA2A9FC6FE99F0158A1975832DC00', '1234567', 'aurrera 1 centro huetamo Michoacán');
 
 -- ----------------------------
 -- Table structure for ventas
