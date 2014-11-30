@@ -44,3 +44,21 @@ function abrirImagen(){
         function abrirform(){
            document.getElementById("productos").style.display="block";
         }
+
+
+function abrirform(formulario){
+
+      document.getElementById("regUsuario").style.display="none"; 
+      document.getElementById("regProductos").style.display="none";
+      document.getElementById("regProveedores").style.display="none";
+          document.getElementById("regSugerencia").style.display="none";
+           //document.getElementById("regVenta").style.display="none";
+           document.getElementById("productos").style.display="none";
+           document.getElementById("ventas").style.display="none";
+           document.getElementById("proveedores").style.display="none";
+           document.getElementById("sugerencias").style.display="none";
+           document.getElementById("usuarios").style.display="none";
+         // alert(formulario);
+           document.getElementById(formulario).style.display="block";
+           document.getElementById(formulario).style.display="block";
+        }
