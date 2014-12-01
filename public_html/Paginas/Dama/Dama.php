@@ -116,7 +116,7 @@
                   </article>
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Dama/Calzado/3.jpg" onclick="abrirImagen();"><br>
+                        <img src="../../Imagenes/Dama/Vestidos/11.jpg" onclick="abrirImagen();"><br>
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
@@ -142,7 +142,7 @@
                   </article>
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Dama/Calzado/2.jpg" onclick="abrirImagen();"><br>
+                        <img src="../../Imagenes/Dama/Short/2.jpg" onclick="abrirImagen();"><br>
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
@@ -161,7 +161,6 @@
                <li class="articulosCaballero"><a href="Dama-Jeans.php">Jeans</a></li>
                <li class="articulosCaballero"><a href="Dama-Pantalon.php">Pantalon</a></li>
                <li class="articulosCaballero"><a href="Dama-Vestidos.php">Vestidos</a></li>
-               <li class="articulosCaballero"><a href="Dama-Calzado.php">Calzado</a></li>
                <li class="articulosCaballero"><a href="Dama-Faldas.php">Faldas</a></li>
                <li class="articulosCaballero"><a href="Dama-Short.php">Short</a></li>
                <li class="articulosCaballero"><a href="Dama-Accesorios.php">Accesorios</a></li>

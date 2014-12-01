@@ -161,7 +161,6 @@
                <li class="articulosCaballero"><a href="Dama-Jeans.php">Jeans</a></li>
                <li class="articulosCaballero"><a href="Dama-Pantalon.php">Pantalon</a></li>
                <li class="articulosCaballero"><a href="Dama-Vestidos.php" style="color:red; font-size:1.5em;">Vestidos</a></li>
-               <li class="articulosCaballero"><a href="Dama-Calzado.php">Calzado</a></li>
                <li class="articulosCaballero"><a href="Dama-Faldas.php">Faldas</a></li>
                <li class="articulosCaballero"><a href="Dama-Short.php">Short</a></li>
                <li class="articulosCaballero"><a href="Dama-Accesorios.php">Accesorios</a></li>

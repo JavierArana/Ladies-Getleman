@@ -90,13 +90,13 @@
                <section id="izq">
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Ninio/calzado/1.jpg" onclick="abrirImagen();">
+                        <img src="../../Imagenes/Ninio/camisas/1.jpg" onclick="abrirImagen();">
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Ninio/calzado/7.jpg" onclick="abrirImagen();"><br>
+                        <img src="../../Imagenes/Ninio/accesorios/7.jpg" onclick="abrirImagen();"><br>
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
@@ -122,7 +122,7 @@
                   </article>
                   <article>
                      <figure>
-                        <img src="../../Imagenes/Ninio/calzado/6.jpg" onclick="abrirImagen();"><br>
+                        <img src="../../Imagenes/Ninio/jeans/6.jpg" onclick="abrirImagen();"><br>
                         <figcaption>Marca:<br>Costo:$</figcaption>
                      </figure>
                   </article>
@@ -161,7 +161,7 @@
                <li class="articulosCaballero"><a href="Ninios-jeans.php">Jeans</a></li>
                <li class="articulosCaballero"><a href="Ninios-pantalones.php">Pantalon</a></li>
                <li class="articulosCaballero"><a href="Ninios-camisas.php">Camisas</a></li>
-               <li class="articulosCaballero"><a href="Ninios-calzado.php">Calzado</a></li>
+               
                <li class="articulosCaballero"><a href="Ninios-accesorios.php">Accesorios</a></li>
             </ul>
             <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false">  <input id="botonBuscar" type="submit" value="Buscar">
