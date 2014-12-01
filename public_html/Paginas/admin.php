@@ -61,7 +61,12 @@ header("Location: ../Index.php");
                         </tr>
                      </thead>
                      <tbody>
-                     <!-- Contenido PHP-->
+                     <?php
+                     require_once 'procesar/consultar.php';
+                    $con = new consultar();
+                    $con->consultarProductos();
+                    ?>
+                     
                      </tbody>
                   </table>
                </section>
@@ -130,7 +135,13 @@ header("Location: ../Index.php");
                         </tr>
                      </thead>
                      <tbody>
-                     <!-- Contenido PHP-->
+                     
+                     <?php 
+
+                     require_once 'procesar/consultar.php';
+                     $con = new consultar();
+                     $con->consultarVentas();
+                     ?>
                      </tbody>
                   </table>
                </section>
@@ -158,7 +169,15 @@ header("Location: ../Index.php");
                         </tr>
                      </thead>
                      <tbody>
-                     <!-- Contenido PHP-->
+                     
+
+
+                     <?php 
+
+                     require_once 'procesar/consultar.php';
+                     $con = new consultar();
+                     $con->consultarProveedores();
+                     ?>
                      </tbody>
                   </table>
                </section>
@@ -215,7 +234,16 @@ header("Location: ../Index.php");
                            <th>Operaciones</th>
                      </thead>
                      <tbody>
-                     <!-- Contenido PHP-->
+                     
+                     <?php 
+
+                      require_once 'procesar/consultar.php';
+                      $con = new consultar();
+                      $con->consultarSugerencias();
+                      ?>
+
+
+
                      </tbody>
                   </table>
                </section>
@@ -265,7 +293,15 @@ header("Location: ../Index.php");
                      </tr>
                   </thead>
                   <tbody>
-                  <!-- Contenido PHP-->
+                
+
+                   <?php 
+
+                   require_once 'procesar/consultar.php';
+                   $con = new consultar();
+                   $con->consultarUsuarios();
+                    ?>
+
                   </tbody>
                </table>
          </div>
