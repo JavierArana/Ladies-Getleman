@@ -61,13 +61,13 @@ header("Location: ../Index.php");
                         </tr>
                      </thead>
                      <tbody>
-                     <!--
+                   
                      <?php
                      require_once 'procesar/consultar.php';
                     $con = new consultar();
                     $con->consultarProductos();
                     ?>
-                     -->
+                     
                                          
                      </tbody>
                   </table>

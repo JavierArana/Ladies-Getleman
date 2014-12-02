@@ -57,7 +57,7 @@ header("Location: ../Index.php");
                            <th>Operaciones</th>
                      </thead>
                      <tbody>
-                     <!--
+                    
                       <?php 
 
                       require_once 'procesar/consultar.php';
@@ -65,7 +65,7 @@ header("Location: ../Index.php");
                       $con->consultarSugerencias();
                       ?>
           
-                     -->
+                    
                     
 
 
