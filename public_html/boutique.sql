@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-11-29 19:44:53
+Date: 2014-12-02 16:35:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -82,6 +82,7 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `IdCliente` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(40) NOT NULL,
+  `tipousuario` varchar(15) NOT NULL,
   `fechanac` date NOT NULL,
   `sexo` varchar(10) NOT NULL,
   `nickname` varchar(15) NOT NULL,
@@ -90,7 +91,7 @@ CREATE TABLE `usuarios` (
   `telefono` varchar(20) NOT NULL,
   `direccion` varchar(150) NOT NULL,
   PRIMARY KEY (`IdCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of usuarios
