@@ -9,7 +9,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <title>Ladies & Gentlemen </title>
-      <link rel="stylesheet" href="../Estilos/estiloHome.css">
+      <link rel="stylesheet" href="../../Estilos/estiloHome.css">
       <script type="text/javascript" src="../JavaScript/lluvia.js"></script>
       <link rel="stylesheet" href="../Estilos/estiloAdmin.css">
       <script  type="text/javascript" src="../JavaScript/funciones.js"></script>   
