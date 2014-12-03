@@ -26,9 +26,7 @@
          }
         
 
-         #productos, #ventas, #usuarios, #proveedores, #sugerencias {
-         	display: none;
-         }
+         
 
         
          .cajausuario{
@@ -64,7 +62,7 @@
          	
 
          }
-         button{
+         .boton{
          	float: right;
             margin-right: 2em;
          }

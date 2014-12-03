@@ -23,11 +23,11 @@
          <nav>
             <br>
             <ul id="menu">
-               <li class="opcionmenu" onclick="abrirform('productos');"><a href="productos.php">Productos</a></li>
-               <li class="opcionmenu" onclick="abrirform('ventas');"><a href="ventas.php">Ventas</a></li>
-               <li class="opcionmenu" onclick="abrirform('proveedores');"><a href="proveedores.php">Proveedores</a></li>
-               <li class="opcionmenu" onclick="abrirform('sugerencias');"><a href="sugerencias.php">Sugerencias</a></li>
-               <li class="opcionmenu" onclick="abrirform('usuarios');"><a href="usuario.php">Usuarios</a></li>
+               <li class="opcionmenu" ><a href="productos.php">Productos</a></li>
+               <li class="opcionmenu" ><a href="ventas.php">Ventas</a></li>
+               <li class="opcionmenu" ><a href="proveedores.php">Proveedores</a></li>
+               <li class="opcionmenu" ><a href="sugerencias.php">Sugerencias</a></li>
+               <li class="opcionmenu" ><a href="usuario.php">Usuarios</a></li>
             </ul>
          </nav>
       </section>
