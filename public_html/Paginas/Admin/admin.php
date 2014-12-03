@@ -23,10 +23,10 @@
          <nav>
             <br>
             <ul id="menu">
-               <li class="opcionmenu" ><a href="Admin/productos.php">Productos</a></li>
-               <li class="opcionmenu" ><a href="Admin/ventas.php">Ventas</a></li>
-               <li class="opcionmenu" ><a href="Admin/proveedores.php">Proveedores</a></li>
-               <li class="opcionmenu" ><a href="Admin/sugerencias.php">Sugerencias</a></li>
+               <li class="opcionmenu" ><a href="productos.php">Productos</a></li>
+               <li class="opcionmenu" ><a href="ventas.php">Ventas</a></li>
+               <li class="opcionmenu" ><a href="proveedores.php">Proveedores</a></li>
+               <li class="opcionmenu" ><a href="sugerencias.php">Sugerencias</a></li>
                <li class="opcionmenu" ><a href="Admin/usuario.php">Usuarios</a></li>
             </ul>
          </nav>
