@@ -23,7 +23,7 @@ if(isset($_POST['sesion'])){
 header("Location: ../../Index.php");
  	}else{
  		if($lector[0]=='admin'){
-header("Location: ../admin.php");
+header("Location: ../Admin/admin.php");
  		}
  	}
  	

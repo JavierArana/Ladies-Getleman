@@ -4,7 +4,7 @@
    To change this template file, choose Tools | Templates
    and open the template in the editor.
    -->
-<html>
+<html> 
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
@@ -34,10 +34,10 @@
       <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
-header("Location: ../Index.php");
+header("Location: ../../Index.php");
   }
   ?>  
-  <form action="procesar/login.php" method="post">
+  <form action="../procesar/login.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
 

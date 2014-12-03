@@ -35,10 +35,10 @@
       <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
-header("Location: ../Index.php");
+header("Location: ../../Index.php");
   }
   ?>  
-  <form action="procesar/login.php" method="post">
+  <form action="../procesar/login.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
