@@ -16,11 +16,17 @@ if(isset($_POST['sesion'])){
  if(mysqli_connect_errno()){//Comprobacion de error en la conexion
 	die("No se pudo realizar la conexion a la base de datos!");
 }
- $res=mysqli_query($conexion,"select * from usuarios where nickname='$nick' and contra=$contra");
+ $res=mysqli_query($conexion,"select tipousuario from usuarios where nickname='$nick' and contra=$contra");
  if($lector=mysqli_fetch_array($res)){
- 	//echo '<script>Alert("Datos correctos!")</script>';
  	$_SESSION['inicio']='ok';
- 	header("Location: ../admin.php");
+ 	if($lector[0]=='cliente'){
+header("Location: ../../Index.php");
+ 	}else{
+ 		if($lector[0]=='admin'){
+header("Location: ../admin.php");
+ 		}
+ 	}
+ 	
  }else{
  	echo "Datos incorrectos!";
  	//header("Location: ../../Index.php");

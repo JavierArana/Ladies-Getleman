@@ -14,7 +14,7 @@ and open the template in the editor.
         <script  type="text/javascript" src="JavaScript/jquery-1.11.1.min.js"></script>
         <script  type="text/javascript" src="JavaScript/carrucel.js"></script>	
         <script type="text/javascript" src="JavaScript/lluvia.js"></script>
-
+ 
     </head>
     <body> 
         <section id="seccion1">

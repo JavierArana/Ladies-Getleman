@@ -43,6 +43,7 @@ and open the template in the editor.
                                 <legend>Datos personales</legend><br>
                                 Nombre:<br>
                                 <input class="registro" type="text" name="nombre" id="nombre" maxlength="40" placeholder="Nombre   Apellido Paterno   Apellido Materno " onkeypress="return sololetrasconespacios(event)" onpaste="return false"/><br><br>
+                                <input type="hidden" name="tipousuario" value="cliente">
                                 Fecha de nacimiento:<br><input type="date" name="fecha" id="fecha"/>
                                 <br><br>
                                 Sexo:

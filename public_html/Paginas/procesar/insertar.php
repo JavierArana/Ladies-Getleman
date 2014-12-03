@@ -12,10 +12,10 @@ $foto=0;
 
 //------------------------------------TABLA USUARIOS ----------------------------------
 	if($tabla == 'usuarios'){
-		if(isset($_POST['nombre']) && isset($_POST['fecha']) && isset($_POST['sexo']) && isset($_POST['nick']) && isset($_POST['email'])
+		if(isset($_POST['nombre']) && isset($_POST['tipousuario']) && isset($_POST['fecha']) && isset($_POST['sexo']) && isset($_POST['nick']) && isset($_POST['email'])
 		 && isset($_POST['contra'])  && isset($_POST['tel'])  && isset($_POST['calle']) && isset($_POST['numext']) && isset($_POST['col'])
 		 && isset($_POST['ciudad']) && isset($_POST['estado'])){
-
+			$tipousuario=$_POST['tipousuario'];
 			$nombre = $_POST['nombre'];
 			$fecha = $_POST['fecha'];
 			$sexo = $_POST['sexo'];
@@ -26,7 +26,7 @@ $foto=0;
 			$direccion=$_POST['calle'].' '.$_POST['numext'].' '.$_POST['col'].' '.$_POST['ciudad'].' '.$_POST['estado'];
 			//$direccion=$_POST['calle']+$_POST['numext']+$_POST['col']+$_POST['ciudad']+$_POST['estado'];
 			//$direccion = $_POST['calle'.'numext'.'col'.'ciudad'.'estado'];
-			$sql = $sql."'0','$nombre','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";	
+			$sql = $sql."'0','$nombre','$tipousuario','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";	
 			mysqli_close($conexion);			
 
 		$paginaRetorno = 'Registro.php';
