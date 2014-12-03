@@ -60,7 +60,7 @@ header("Location: ../../Index.php");
                     
                       <?php 
 
-                      require_once 'procesar/consultar.php';
+                      require_once '../procesar/consultar.php';
                       $con = new consultar();
                       $con->consultarSugerencias();
                       ?>

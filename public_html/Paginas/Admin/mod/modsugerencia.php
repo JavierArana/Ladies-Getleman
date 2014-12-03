@@ -9,10 +9,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <title>Ladies & Gentlemen </title>
+      <link rel="stylesheet" href="../Estilos/estiloHome.css">
       <link rel="stylesheet" href="../../Estilos/estiloHome.css">
       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
-      <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>    
+      <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>   
    </head>
    <body>
       <section id="seccion1">
@@ -31,53 +32,39 @@
             </ul>
          </nav>
       </section>
-      <?php
+  <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
-header("Location: ../../Index.php");
+  header("Location: ../Index.php");
   }
   ?>  
-  <form action="../procesar/login.php" method="post">
+
+  <form action="procesar/../../procesar/modificar.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
-</form>
-      <center>
-       <div id="ventas">
+  </form>
+      <center>         
+         <div id="regSugerencia" class="reg">
             <form>
-               <p>Ventas</p>
+               <p>Modificar Suegerencia</p><br><br>
+               <div class="cajausuario">
+               Id Producto:<br>
+               <select>
                
-               <section class=" cont_form">
-                  <table>
-                     <thead>
-                        <tr>
-                           <th>ID_Venta</th>
-                           <th>ID_Cliente</th>
-                           <th>ID_Producto</th>
-                           <th>Fecha</th>
-                           <th>Costo/U</th>
-                           <th>Cantidad</th>
-                           <th>Costo_Total</th>
-                           <th>Operaciones</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                     
-                     
-                     <?php 
-
-                     require_once '../procesar/consultar.php';
-                     $con = new consultar();
-                     $con->consultarVentas();
-                     ?>
-
-                     
-                     
-                     </tbody>
-                  </table>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+               </select>
+               <br><br>
+               Sugerencia:<br>
+               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"> </textarea> 
+                <section class="contenedorbtn">
+                  <button class="btnguardar">Guardar</button>       
                </section>
+               </div>
+               
             </form>
          </div>
-         <!-- ventas-->
-       
+         <!--regSugerencia-->
          
       </center>
    </body>

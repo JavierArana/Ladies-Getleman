@@ -18,11 +18,12 @@ echo "<tr>
 		<td>$fila[6]</td>
 		<td>$fila[7]</td>
 		<td>$fila[8]</td>
+		<td>$fila[9]</td>
         <td>
 	   
-		<a href='procesar/eliminar.php?ID=$fila[0] &me=1'><img class='imagen' src='../img/usuario_Borrar.png' ></a>
+		<a href='../procesar/eliminar.php?ID=$fila[0] &me=1'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
        
-		<a href='procesar/modificar.php?ID=$fila[0]&me=1'><img class='imagen' src='../img/usuario_editar.png'></a>
+		<a href='mod/modusuario.php?ID=$fila[0]&me=1'><img class='imagen' src='../../img/usuario_editar.png'></a>
 		</td>	
 	</tr>";
 

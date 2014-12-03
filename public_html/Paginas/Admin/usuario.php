@@ -50,9 +50,10 @@ header("Location: ../../Index.php");
                <table>
                   <thead>
                      <tr>
-                        <th>ID_Cliente</th>
+                        <th>ID Cliente</th>
                         <th>Nombre</th>
-                        <th>Fecha_de_Nacimiento</th>
+                        <th>Tipo de usuario</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Sexo</th>
                         <th>NickName</th>
                         <th>Email</th>
@@ -66,7 +67,7 @@ header("Location: ../../Index.php");
                 
                 <?php 
 
-                   require_once 'procesar/consultar.php';
+                   require_once '../procesar/consultar.php';
                    $con = new consultar();
                    $con->consultarUsuarios();
                     ?>

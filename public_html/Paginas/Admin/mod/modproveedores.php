@@ -25,7 +25,7 @@
             <ul id="menu">
                <li class="opcionmenu" ><a href="productos.php">Productos</a></li>
                <li class="opcionmenu" ><a href="ventas.php">Ventas</a></li>
-               <li class="opcionmenu"><a href="proveedores.php">Proveedores</a></li>
+               <li class="opcionmenu" ><a href="proveedores.php">Proveedores</a></li>
                <li class="opcionmenu" ><a href="sugerencias.php">Sugerencias</a></li>
                <li class="opcionmenu" ><a href="usuario.php">Usuarios</a></li>
             </ul>
@@ -34,50 +34,17 @@
       <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
-header("Location: ../../Index.php");
+header("Location: ../Index.php");
   }
   ?>  
-  <form action="../procesar/login.php" method="post">
+  <form action="procesar/../../procesar/modificar.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
-           <div id="proveedores">
-            <form>
-               <p>Proveedores</p>
-               <a href="regproveedores.php"><input type="button" value="Nuevo proveedor" class="boton" /> </a>
-               <section class=" cont_form">
-                  <table>
-                     <thead>
-                        <tr>
-                           <th>ID_Proveedor</th>
-                           <th>Nombre</th>
-                           <th>Direccion</th>
-                           <th>Telefono</th>
-                           <th>Email</th>
-                           <th>Producto</th>
-                           <th>Cantidad</th>
-                           <th>Operaciones</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                 
-                      <?php 
-
-                     require_once '../procesar/consultar.php';
-                     $con = new consultar();
-                     $con->consultarProveedores();
-                     ?>
-                   
-                     
-                     </tbody>
-                  </table>
-               </section>
-            </form>
-         </div>
-         <!-- proveedores-->
+          
          <div id="regProveedores" class="reg">
             <form>
-               <p>Nuevo Proveedor</p>
+               <p>Modificar Proveedor</p>
                <div class="cajausuario">
                   Nombre: <br>
                   <input class="caja" type=text name="nick" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno"><br><br>
@@ -109,7 +76,8 @@ header("Location: ../../Index.php");
                </div>
             </form>
          </div>
-         
+         <!--regProveedores-->
+            
       </center>
    </body>
 </html>

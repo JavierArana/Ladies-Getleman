@@ -8,7 +8,7 @@ if(isset($_GET['ID']) and isset($_GET['me'])){
 
  if($tabla==1){
  	$Eliminacion=mysqli_query($conexion,"DELETE FROM usuarios WHERE IdCliente='$idgeneral'");
-header('Location:../ConUsuario.php');
+header('Location:../Admin/usuario.php');
  }
 
   if($tabla==2){

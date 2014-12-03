@@ -4,15 +4,16 @@
    To change this template file, choose Tools | Templates
    and open the template in the editor.
    -->
+  
 <html>
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <title>Ladies & Gentlemen </title>
       <link rel="stylesheet" href="../Estilos/estiloHome.css">
-      <link rel="stylesheet" href="../../Estilos/estiloHome.css">
+      <link rel="stylesheet" href="../../../Estilos/estiloHome.css">
       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
-      <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
+      <link rel="stylesheet" href="../../../Estilos/estiloAdmin.css">
       <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>  
    </head>
    <body>
@@ -38,14 +39,22 @@
 header("Location: ../Index.php");
   }
   ?>  
-  <form action="procesar/login.php" method="post">
+  <form action="../../procesar/login.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
          
          <div id="regUsuario" class="reg">
-      <form >
-           <p id="titulous" >Nuevo Usuario</p>
+      <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../../procesar/modificar.php">
+       <input type="hidden" name="tabla" value="usuarios">
+       <!-- Incrustar id del usuario marcado para modificar en los procesos-->
+       <?php 
+        $idgeneral=$_GET['ID'];
+        echo
+       "<input type='hidden' name='id' value='$idgeneral'>"
+       ?>
+
+           <p id="titulous" >Modificar Usuario</p>
            <section class=cajausuario>
                 Nombre:<br>
                 <input class="registro" type="text" name="nombre" id="nombre" maxlength="40" placeholder="Nombre   Apellido Paterno   Apellido Materno " onkeypress="return sololetrasconespacios(event)" onpaste="return false"/><br><br>
@@ -104,7 +113,7 @@ header("Location: ../Index.php");
                 <br><br><br>
                 <section id="contenedorbtnreg">
                 <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>
+                  <button class="btnguardar">Guardar Cambios</button>
                 </section>
        
                 </section>           

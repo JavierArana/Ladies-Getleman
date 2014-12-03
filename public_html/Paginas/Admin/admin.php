@@ -27,7 +27,7 @@
                <li class="opcionmenu" ><a href="ventas.php">Ventas</a></li>
                <li class="opcionmenu" ><a href="proveedores.php">Proveedores</a></li>
                <li class="opcionmenu" ><a href="sugerencias.php">Sugerencias</a></li>
-               <li class="opcionmenu" ><a href="Admin/usuario.php">Usuarios</a></li>
+               <li class="opcionmenu" ><a href="usuario.php">Usuarios</a></li>
             </ul>
          </nav>
       </section>

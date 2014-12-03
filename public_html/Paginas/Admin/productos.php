@@ -63,7 +63,7 @@ header("Location: ../../Index.php");
                      <tbody>
                      
                      <?php
-                     require_once 'procesar/consultar.php';
+                     require_once '../procesar/consultar.php';
                     $con = new consultar();
                     $con->consultarProductos();
                     ?>  
