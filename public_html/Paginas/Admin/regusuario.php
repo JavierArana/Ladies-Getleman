@@ -9,7 +9,6 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <title>Ladies & Gentlemen </title>
-      <link rel="stylesheet" href="../Estilos/estiloHome.css">
       <link rel="stylesheet" href="../../Estilos/estiloHome.css">
       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
@@ -35,24 +34,31 @@
       <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
-header("Location: ../Index.php");
+header("Location: ../../Index.php");
   }
   ?>  
-  <form action="procesar/login.php" method="post">
+  <form action="../procesar/login.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
          
          <div id="regUsuario" class="reg">
-      <form >
+      <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
+      <input type="hidden" name="tabla" value="usuarios">
+       <input type="hidden" name="pagina" value="../Paginas/Admin/regusuario.php">
            <p id="titulous" >Nuevo Usuario</p>
            <section class=cajausuario>
                 Nombre:<br>
                 <input class="registro" type="text" name="nombre" id="nombre" maxlength="40" placeholder="Nombre   Apellido Paterno   Apellido Materno " onkeypress="return sololetrasconespacios(event)" onpaste="return false"/><br><br>
-                Fecha de nacimiento:<br><input type="date" id="fecha"/>
+                Tipo de Usuario:
+                 <select name="tipousuario">
+                 <option selected="value">admin</option>
+                 <option>cliente</option>
+                 </select><br><br>
+                Fecha de nacimiento:<br><input type="date" name="fecha" id="fecha"/>
                 <br><br>
                 Sexo:
-                <select name="Sexo">
+                <select name="sexo">
                     <option selected="value">Masculino</option>
                     <option>Femenino</option>
                 </select><br><br>
@@ -63,11 +69,12 @@ header("Location: ../Index.php");
                 <input class="registro" type="tel" name="tel" id="tel" maxlength="15" placeholder="telefono" onkeypress="return solonumeros(event)" onpaste="return false">
            </section>
            <section class=cajausuario>
-               Calle: <br><input class="registro" type=text name="dir" id="dir" maxlength="150" placeholder="Calle" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <br><br> Num.ext: <br><input class="registro" type=text name="numero" id="numext" maxlength="150" placeholder="Num. Exterior" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
-               Colonia: <br><input class="registro" type="text" name="col" id="colonia" maxlength="150" placeholder="Colonia" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
-               Ciudad:<br> <input class="registro" type=text name="ciudad" id="ciudad" maxlength="50" placeholder="ciudad" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
-               Estado:
-               <select name="Estado">
+              Calle: <br><input class="registro" type=text name="calle" id="dir" maxlength="150" placeholder="Calle" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <br><br> 
+              Num.ext: <br><input class="registro" type=text name="numext" id="numext" maxlength="150" placeholder="Num. Exterior" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
+              Colonia: <br><input class="registro" type="text" name="col" id="colonia" maxlength="150" placeholder="Colonia" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
+              Ciudad:<br> <input class="registro" type="text" name="ciudad" id="ciudad" maxlength="50" placeholder="ciudad" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
+              Estado:
+               <select name="estado">
                    <option>Aguascalientes</option>
                    <option>Baja California</option>
                    <option>Baja California Sur</option>
@@ -104,14 +111,32 @@ header("Location: ../Index.php");
                 <br><br><br>
                 <section id="contenedorbtnreg">
                 <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>
+                 <button class="small round button" value="Registrar" id="botonreg">Registrar</button> 
                 </section>
-       
+      
                 </section>           
            </section>
         </form>         
          </div>
-        
       </center>
+      <?php
+    if(isset($_GET['res'])){
+    $resultado = $_GET['res'];  
+    if($resultado==1){
+    ?>
+  <script type="text/javascript">
+alert("El usuario se registro satisfactoriamente!! ");
+  </script>
+ <?php 
+ }
+ else{
+ ?>
+    <script type="text/javascript">
+alert("El usuario no se registro satisfactoriamente!! ");
+  </script>
+ <?php
+ }
+    }
+ ?> 
    </body>
 </html>

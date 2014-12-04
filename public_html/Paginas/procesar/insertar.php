@@ -14,7 +14,7 @@ $foto=0;
 	if($tabla == 'usuarios'){
 		if(isset($_POST['nombre']) && isset($_POST['tipousuario']) && isset($_POST['fecha']) && isset($_POST['sexo']) && isset($_POST['nick']) && isset($_POST['email'])
 		 && isset($_POST['contra'])  && isset($_POST['tel'])  && isset($_POST['calle']) && isset($_POST['numext']) && isset($_POST['col'])
-		 && isset($_POST['ciudad']) && isset($_POST['estado'])){
+		 && isset($_POST['ciudad']) && isset($_POST['estado']) && isset($_POST['pagina'])){
 			$tipousuario=$_POST['tipousuario'];
 			$nombre = $_POST['nombre'];
 			$fecha = $_POST['fecha'];
@@ -24,15 +24,16 @@ $foto=0;
 			$contra = $_POST['contra'];
 			$tel = $_POST['tel'];
 			$direccion=$_POST['calle'].' '.$_POST['numext'].' '.$_POST['col'].' '.$_POST['ciudad'].' '.$_POST['estado'];
+			$pagina=$_POST['pagina'];
 			//$direccion=$_POST['calle']+$_POST['numext']+$_POST['col']+$_POST['ciudad']+$_POST['estado'];
 			//$direccion = $_POST['calle'.'numext'.'col'.'ciudad'.'estado'];
 			$sql = $sql."'0','$nombre','$tipousuario','$fecha','$sexo','$nick','$email',password('$contra'),'$tel','$direccion')";	
 			mysqli_close($conexion);			
 
-		$paginaRetorno = 'Registro.php';
+		$paginaRetorno = $pagina;
 			//$paginaRetorno = $archivo;
 		}else{
-			die('Error en datos: ERROR 0xU');	
+			die('Error en datos: no se envio la informacion correcta');	
 			mysqli_close($conexion);
 		}
 

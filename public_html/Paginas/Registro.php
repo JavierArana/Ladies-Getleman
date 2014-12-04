@@ -29,7 +29,7 @@ and open the template in the editor.
                         </center>
                     </nav>
                 </section>
-                
+                 
                 <section id="seccion3">
                                       
                 </section>
@@ -38,6 +38,7 @@ and open the template in the editor.
                     <div>
                         <form id="formulario" method="post" enctype="multipart/form-data" action="procesar/insertar.php">
                          <input type="hidden" name="tabla" value="usuarios">
+                         <input type="hidden" name="pagina" value="../Registro.php">
                             <p id="Tituloreg">Crear una cuenta</p> 
                             <fieldset class="grupo">
                                 <legend>Datos personales</legend><br>
