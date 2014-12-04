@@ -111,7 +111,7 @@ header("Location: ../../Index.php");
                 <br><br><br>
                 <section id="contenedorbtnreg">
                 <section class="contenedorbtn">
-                 <button class="small round button" value="Registrar" id="botonreg">Registrar</button> 
+                 <button class="btnguardar" value="Registrar" id="botonreg">Registrar</button> 
                 </section>
       
                 </section>           
