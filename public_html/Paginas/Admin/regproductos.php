@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="../../Estilos/estiloHome.css">
       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
+      <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
       <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>   
    </head>
    <body>
@@ -48,7 +49,7 @@ header("Location: ../../Index.php");
                <p>Nuevo Producto</p>
                <div class="cajausuario">
                   Marca: <br>
-                  <input class="caja" type=text name="marca" id="" maxlength="" placeholder="" width="275" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
+                  <input class="caja" type=text name="marca" id="" maxlength="" placeholder="" width="275" onkeypress="return sololetrasconespacios(event)" onpaste="return false"/><br><br>
                   Nombre: <br>
                   <input class="caja" type=text name="nombre" id="" maxlength="" placeholder="" onkeypress="return sololetrasconespacios(event)" onpaste="return false" ><br><br>
                   Talla : 

@@ -6,7 +6,7 @@
 
 	$tabla = $_POST['tabla'];
 
-	$sql = $sql.$tabla.' values(';
+	$sql = $sql.$tabla.' values('; 
  
 
 //------------------------------------TABLA USUARIOS ----------------------------------

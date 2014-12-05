@@ -25,7 +25,7 @@ header('Location: ../../Index.php'.'?nickname='.$nombreusuario);
  	}else{
  		if($lector[0]=='admin'){
 header("Location: ../Admin/admin.php ");
- 		}
+ 		} 
  	}
  	
  }else{

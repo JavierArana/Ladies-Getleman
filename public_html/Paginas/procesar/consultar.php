@@ -17,7 +17,7 @@ echo "<tr>
 		<td>$fila[6]</td>
 		<td>$fila[7]</td>
 		<td>$fila[8]</td>
-		<td>$fila[9]</td>
+		<td>$fila[9]</td> 
         <td>
 	   
 		<a href='../procesar/eliminar.php?ID=$fila[0] &me=1'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
@@ -192,7 +192,7 @@ function eliminar(){
 #---------------------------------------------------------------------
 public function consultarArticulos(){
 $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
-$consulta = mysqli_query($conexion, "select * from  productos");
+$consulta = mysqli_query($conexion, "select * from  productos limit 1,9");
 
 while($fila = mysqli_fetch_array($consulta)){
 echo "

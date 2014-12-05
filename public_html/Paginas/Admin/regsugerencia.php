@@ -13,6 +13,7 @@
       <link rel="stylesheet" href="../../Estilos/estiloHome.css">
       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
+      <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
       <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>   
    </head>
    <body>
