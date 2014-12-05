@@ -76,14 +76,14 @@ header("Location: ../../Index.php");
                 Fecha de venta:<br><input type='date' id='fechaventa' name='fechaventa' value='$fechaventa'/>
                 <br><br>
                 
-                Costo Unitario:<br> <input class='registro' type='text' name='costouni' id='costouni' maxlength='150' placeholder='costo unitario'  onkeypress='return solonumeros(event)' onpaste='return false' value='$costouni'><br><br>
+                Costo Unitario:<br> <input class='registro' type='text' name='costouni' id='costouni' maxlength='150' placeholder='costo unitario'  onkeypress='return decimales(event)' onpaste='return false' value='$costouni'><br><br>
                <br>
                 
-              Cantidad: <br> <input class='registro' type='text' name='cantidad' id='cantidad' maxlength='150' placeholder='cantidad' onkeypress='return solonumeros(event)' onpaste='return false' value='$cantidad'/><br><br>
+              Cantidad: <br> <input class='registro' type='text' name='cantidad' id='cantidad' maxlength='150' placeholder='cantidad' onkeypress='return decimales(event)' onpaste='return false' value='$cantidad'/><br><br>
                 <br>
               
                 Costo Total:<br>
-                <input class='registro' type='text' name='costototal'z id='costototal' maxlength='150' placeholder='costo total' onkeypress='return solonumeros(event)' onpaste='return false' value='$costototal'>
+                <input class='registro' type='text' name='costototal'z id='costototal' maxlength='150' placeholder='costo total' onkeypress='return decimales(event)' onpaste='return false' value='$costototal'>
                 <br><br>
                 <section class='contenedorbtn'>
                   <button class='btnguardar'>Guardar Cambios</button

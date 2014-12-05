@@ -70,7 +70,7 @@
                
                <br><br>
                Sugerencia:<br>
-               <textarea name='sugerencia' id='sugerencia' class ='descripcion' rows='3' cols='38' placeholder='Descripion del articulo'>$sugerencia</textarea> 
+               <textarea name='sugerencia' id='sugerencia' class ='descripcion' rows='3' cols='38' placeholder='Descripion del articulo' onkeypress='return sololetrasconespacios(event)' onpaste='return false'>$sugerencia</textarea> 
                 <section class='contenedorbtn'>
                   <button class='btnguardar'>Guardar</button>       
                </section>

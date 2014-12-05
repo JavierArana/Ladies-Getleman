@@ -111,7 +111,7 @@ header("Location: ../../Index.php");
            <section class=cajausuario>
               
               <br>
-              direccion:<br> <textarea name='direccion' id='direccion' class ='descripcion' rows='5' cols='20' placeholder='Descripion del articulo'>$direccion </textarea>
+              direccion:<br> <textarea name='direccion' id='direccion' class ='descripcion' rows='5' cols='20' placeholder='Descripion del articulo' onkeypress='return direccion(event)' onpaste='return false'>$direccion </textarea>
                 <br><br><br>
                 <section id='contenedorbtnreg'>
                 <section class='contenedorbtn'>

@@ -55,7 +55,7 @@ header("Location: ../../Index.php");
                </select>
                <br><br>
                Sugerencia:<br>
-               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"> </textarea> 
+               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> </textarea> 
                 <section class="contenedorbtn">
                   <button class="btnguardar">Guardar</button>       
                </section>

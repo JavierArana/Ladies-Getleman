@@ -47,13 +47,13 @@ header("Location: ../../Index.php");
                <p>Nuevo Proveedor</p>
                <div class="cajausuario">
                   Nombre: <br>
-                  <input class="caja" type=text name="nick" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno"><br><br>
+                  <input class="caja" type=text name="nick" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
                   Direccion: <br>
-                  <input class"caja" type=text name="nick" id="" maxlength="" placeholder="Direccion"><br><br>
+                  <input class"caja" type=text name="nick" id="" maxlength="" placeholder="Direccion" onkeypress="return direccion(event)" onpaste="return false"><br><br>
                   Telefono: <br>
-                  <input class="caja" type=text name="nick" id="tel" maxlength"15" placeholder"Telefono"><br><br>
+                  <input class="caja" type=text name="nick" id="tel" maxlength"15" placeholder"Telefono" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
                   Email: <br>
-                  <input class="caja" type=text name="nick" id="email" maxlength="150" placeholder="ejemplo@example.com"><br><br>
+                  <input class="caja" type=text name="nick" id="email" maxlength="150" placeholder="ejemplo@example.com" onkeypress="return email(event)" onpaste="return false"><br><br>
                   Tipo de Producto:<br>
                   <select>
                      <option>Playera</option>
@@ -69,7 +69,7 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Cantidad:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="Ejemplo 3"><br><br>
+                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="Ejemplo 3" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
                   <section class="contenedorbtn">
                   <button class="btnguardar">Guardar</button>       
                </section>

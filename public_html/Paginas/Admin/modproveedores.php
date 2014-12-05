@@ -75,13 +75,13 @@ header("Location: ../../Index.php");
                <p>Modificar Proveedor</p>
                <div class='cajausuario'>
                   Nombre: <br>
-                  <input class='caja' type=text name='nombre' id='nombre' maxlength='40' placeholder='Nombre  Apellido Paterno  Apellido Materno' value='$nombre'><br><br>
+                  <input class='caja' type=text name='nombre' id='nombre' maxlength='40' placeholder='Nombre  Apellido Paterno  Apellido Materno' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'><br><br>
                   Direccion: <br>
-                  <input class'caja' type=text name='direccion' id='direccion' maxlength='' placeholder='Direccion' value='$direccion'><br><br>
+                  <input class'caja' type=text name='direccion' id='direccion' maxlength='' placeholder='Direccion' value='$direccion' onkeypress='return direccion(event)' onpaste='return false'><br><br>
                   Telefono: <br>
-                  <input class='caja' type=text name='tel' id='tel' maxlength='150' placeholder'Telefono' value='$telefono'><br><br>
+                  <input class='caja' type=text name='tel' id='tel' maxlength='150' placeholder'Telefono' value='$telefono' onkeypress='return solonumeros(event)' onpaste='return false'><br><br>
                   Email: <br>
-                  <input class='caja' type=text name='email' id='email' maxlength='150' placeholder='ejemplo@example.com' value='$email'><br><br>
+                  <input class='caja' type=text name='email' id='email' maxlength='150' placeholder='ejemplo@example.com' value='$email' onkeypress='return email(event)' onpaste='return false'><br><br>
                   Tipo de Producto:<br>
                   <select name='tipoproducto' id='tipoproducto' value='tipoproducto'>
                      <option>Playera</option>
@@ -97,7 +97,7 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Cantidad:<br>
-                  <input class='caja' type=text name='cantidad' id='cantidad' maxlength='' placeholder='cantidad' value='$cantidad'><br><br>
+                  <input class='caja' type=text name='cantidad' id='cantidad' maxlength='' placeholder='cantidad' value='$cantidad' onkeypress='return solonumeros(event)' onpaste='return false'><br><br>
                   <section class='contenedorbtn'>
                   <button class='btnguardar'>Guardar</button>       
                </section>

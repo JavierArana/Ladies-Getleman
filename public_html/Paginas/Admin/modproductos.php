@@ -77,9 +77,9 @@ header("Location: ../../Index.php");
                
 
                   Marca: <br>
-                  <input class='caja' type=text name='marca' id='marca' maxlength='150' placeholder='marca' width='275' value='$marca'><br><br>
+                  <input class='caja' type=text name='marca' id='marca' maxlength='150' placeholder='marca' width='275' value='$marca' onkeypress='return sololetrasconespacios(event)' onpaste='return false'><br><br>
                   Nombre: <br>
-                  <input class='caja' type=text name='nombre' id='nombre' maxlength='' placeholder='nombre' value='$nombre'><br><br>
+                  <input class='caja' type=text name='nombre' id='nombre' maxlength='' placeholder='nombre' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'><br><br>
                   Talla : 
                   <select name='talla' id='talla' value='$talla'>
                      <option>Chica</option>
@@ -96,15 +96,15 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Costo:<br>
-                  <input class='caja' type=text name='costo' id='costo' maxlength='' placeholder='costo' value='$costo'><br><br>
+                  <input class='caja' type=text name='costo' id='costo' maxlength='' placeholder='costo' value='$costo' onkeypress='return decimales(event)' onpaste='return false'><br><br>
                   Existencias:<br>
-                  <input class='caja' type=text name='existencia' id='existencia' maxlength='' placeholder='existencia' value='$existencia'><br><br>
+                  <input class='caja' type=text name='existencia' id='existencia' maxlength='' placeholder='existencia' value='$existencia' onkeypress='return solonumeros(event)' onpaste='return false'><br><br>
                   
                     Imagen:<br>
                     <input class='caja' type='file' name='foto' accept='image' value='$imagen'/>
                     <br><br>
                     Descripcion:<br>
-                    <textarea name='descripcion' id='descripcion' class ='descripcion' rows='3' cols='38' placeholder='Descripion del articulo'>$descripcion</textarea>
+                    <textarea name='descripcion' id='descripcion' class ='descripcion' rows='3' cols='38' placeholder='Descripion del articulo' onkeypress='return sololetrasconespacios(event)' onpaste='return false'>$descripcion</textarea>
                     <section class='contenedorbtn'>
                   <button class='btnguardar'>Guardar</button>       
                </section>

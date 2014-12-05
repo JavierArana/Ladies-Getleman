@@ -48,9 +48,9 @@ header("Location: ../../Index.php");
                <p>Nuevo Producto</p>
                <div class="cajausuario">
                   Marca: <br>
-                  <input class="caja" type=text name="marca" id="" maxlength="" placeholder="" width="275"><br><br>
+                  <input class="caja" type=text name="marca" id="" maxlength="" placeholder="" width="275" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
                   Nombre: <br>
-                  <input class="caja" type=text name="nombre" id="" maxlength="" placeholder=""><br><br>
+                  <input class="caja" type=text name="nombre" id="" maxlength="" placeholder="" onkeypress="return sololetrasconespacios(event)" onpaste="return false" ><br><br>
                   Talla : 
                   <select name="talla">
                      <option>Chica</option>
@@ -67,15 +67,15 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Costo:<br>
-                  <input class="caja" type=text name="costo" id="" maxlength="" placeholder=""><br><br>
+                  <input class="caja" type=text name="costo" id="" maxlength="" placeholder="" onkeypress="return decimales(event)" onpaste="return false"><br><br>
                   Existencias:<br>
-                  <input class="caja" type=text name="existencia" id="" maxlength="" placeholder=""><br><br>
+                  <input class="caja" type=text name="existencia" id="" maxlength="" placeholder="" onkeypress="return solonumerso(event)" onpaste="return false"><br><br>
                   
                     Imagen:<br>
                     <input class="caja" type="file" name="foto" >
                     <br><br>
                     Descripcion:<br>
-                    <textarea name="descripcion" class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"></textarea>
+                    <textarea name="descripcion" class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"></textarea>
           <section class="contenedorbtn">
           <button class="btnguardar" value="Guardar" id="botonreg">Guardar</button>      
                </section>
