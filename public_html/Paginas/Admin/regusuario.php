@@ -18,7 +18,7 @@
       <section id="seccion1">
          <p id="titulo">Ladies & Gentlemen</p>
          <br>
-      </section>
+      </section> 
       <section id="seccion2">
          <nav>
             <br>
@@ -132,7 +132,7 @@ alert("El usuario se registro satisfactoriamente!! ");
  else{
  ?>
     <script type="text/javascript">
-alert("El usuario no se registro satisfactoriamente!! ");
+alert("Error de envio de datos... asegurese de llenar todos los campos!");
   </script>
  <?php
  }

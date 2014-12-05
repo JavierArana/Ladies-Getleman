@@ -38,7 +38,7 @@ and open the template in the editor.
                     <div>
                         <form id="formulario" method="post" enctype="multipart/form-data" action="procesar/insertar.php">
                          <input type="hidden" name="tabla" value="usuarios">
-                         <input type="hidden" name="pagina" value="Registro.php">
+                         <input type="hidden" name="pagina" value="../Registro.php">
                             <p id="Tituloreg">Crear una cuenta</p> 
                             <fieldset class="grupo">
                                 <legend>Datos personales</legend><br>
@@ -129,7 +129,7 @@ alert("El usuario se registro satisfactoriamente!! ");
  else{
  ?>
     <script type="text/javascript">
-alert("El usuario no se registro satisfactoriamente!! ");
+alert("Error de envio de datos... asegurese de llenar todos los campos!");
   </script>
  <?php
  }

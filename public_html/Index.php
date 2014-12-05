@@ -41,9 +41,9 @@ and open the template in the editor.
             <form action="Paginas/procesar/login.php" method="post">
                <table  class="tabla">
              <tr>
-               <td>Usuario</td>
+               <td>Usuario</td>&emsp13;
                <td><input name="usuario" id="usuario" class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
-               <td><button>Entrar</td></button>
+               &emsp13;<td><button>Entrar</td></button>
                
              </tr> 
              <tr>

@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
+    <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../../Estilos/estilo.css">
@@ -92,8 +92,7 @@ and open the template in the editor.
                       
                     
 
-<!--
-          
+<!--      
                        <section  class="base">
                         <article>
                             <figure>
@@ -103,12 +102,13 @@ and open the template in the editor.
                         </article>
                        </section>
           -->
-            <?php 
+
+
+                  <?php 
                       require_once '../procesar/consultar.php';
                       $con = new consultar();
                       $con->consultarArticulos();
                       ?>
-
 
 
                     </div>

@@ -2,13 +2,12 @@
  $sql = 'insert into ';
  $paginaRetorno = '';
  $resultadoRetorno = 0;
-$foto=0;
  if(isset($_POST['tabla'])){
 
 	$tabla = $_POST['tabla'];
 
 	$sql = $sql.$tabla.' values(';
-
+ 
 
 //------------------------------------TABLA USUARIOS ----------------------------------
 	if($tabla == 'usuarios'){
@@ -43,25 +42,23 @@ $foto=0;
 		if(isset($_POST['marca']) && isset($_POST['nombre']) && isset($_POST['talla']) && isset($_POST['genero']) && isset($_POST['costo']) 
 			&& isset($_POST['existencia']) && isset($_FILES['foto']) && isset($_POST['descripcion'])){
 
-
  $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
-		$foto=+1;
+		$nfoto=++$nfoto;
 			$marca = $_POST['marca'];
 			$nombre = $_POST['nombre'];
 			$talla = $_POST['talla'];
 			$genero = $_POST['genero'];
 			$costo = $_POST['costo'];
 			$existencia = $_POST['existencia'];
-			$archivo =$nombre.$foto.$extensionArchivo;
+			$archivo =$nombre.$nfoto.$extensionArchivo;
 			$descripcion=$_POST['descripcion'];
-			$sql = $sql."'0','$marca','$nombre','$talla','$genero','costo','existencia','$archivo','$descripcion')";
+			$pagina=$_POST['pagina'];
+			$sql = $sql."'0','$marca','$nombre','$talla','$genero','$costo','$existencia','$archivo','$descripcion')";
 		     move_uploaded_file($_FILES['foto']['tmp_name'],'../fotos/'.$archivo);
-				mysqli_close($conexion);
- //pendiente pagina de retorno
-		$paginaRetorno = 'regProductos.php';
-			//$paginaRetorno = $archivo;
+		$paginaRetorno = $pagina;
+		mysqli_close($conexion);
 		}else{
-			die('Error en datos: ERROR 0xU'); 
+			die('Error en datos: no se envio la informacion correcta'); 
 			mysqli_close($conexion);	
 		}
 

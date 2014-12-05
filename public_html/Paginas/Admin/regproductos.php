@@ -31,35 +31,35 @@
             </ul>
          </nav>
       </section>
-      <?php
+     <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
 header("Location: ../../Index.php");
   }
-  ?>  
+  ?>   
   <form action="../procesar/login.php" method="post">
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
         <div id="regProductos" class="reg">
-            <form>
+              <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
+      <input type="hidden" name="tabla" value="productos">
+       <input type="hidden" name="pagina" value="../Admin/regproductos.php">
                <p>Nuevo Producto</p>
                <div class="cajausuario">
-               
-
                   Marca: <br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="" width="275"><br><br>
+                  <input class="caja" type=text name="marca" id="" maxlength="" placeholder="" width="275"><br><br>
                   Nombre: <br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  <input class="caja" type=text name="nombre" id="" maxlength="" placeholder=""><br><br>
                   Talla : 
-                  <select>
+                  <select name="talla">
                      <option>Chica</option>
                      <option selected="value">Mediana</option>
                      <option>Grande</option>
                   </select>
                   &emsp13; &emsp13; 
                   Genero:
-                  <select>
+                  <select name="genero">
                      <option selected="value">Caballero</option>
                      <option>Dama</option>
                      <option>Niño</option>
@@ -67,24 +67,41 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Costo:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  <input class="caja" type=text name="costo" id="" maxlength="" placeholder=""><br><br>
                   Existencias:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  <input class="caja" type=text name="existencia" id="" maxlength="" placeholder=""><br><br>
                   
                     Imagen:<br>
-                    <input class="caja" type="file" name="foto" accept="image/*">
+                    <input class="caja" type="file" name="foto" >
                     <br><br>
                     Descripcion:<br>
-                    <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"> </textarea>
+                    <textarea name="descripcion" class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"></textarea>
           <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>       
+          <button class="btnguardar" value="Guardar" id="botonreg">Guardar</button>      
                </section>
                   
                </div>
             </form>
-         </div>
-
-                  
+         </div>     
       </center>
+         <?php
+    if(isset($_GET['res'])){
+    $resultado = $_GET['res'];  
+    if($resultado==1){
+    ?>
+  <script type="text/javascript">
+alert("El producto se registro satisfactoriamente!! ");
+  </script>
+ <?php 
+ }
+ else{
+ ?>
+    <script type="text/javascript">
+alert("Error de envio de datos... asegurese de llenar todos los campos!");
+  </script>
+ <?php
+ }
+    }
+ ?> 
    </body>
 </html>

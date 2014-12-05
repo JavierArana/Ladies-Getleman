@@ -10,7 +10,7 @@ while($fila = mysqli_fetch_array($consulta)){
 echo "<tr>
 		<td>$fila[0]</td>
 		<td>$fila[1]</td>
-		<td>$fila[2]</td> 
+		<td>$fila[2]</td>  
 		<td>$fila[3]</td> 
 		<td>$fila[4]</td>
 		<td>$fila[5]</td>
@@ -179,22 +179,6 @@ mysqli_close($conexion);
 mysqli_free_result($consulta);
 }
 
-public function consultarLogin($nick,$pass){
-$res = false;
-$conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
-$comandoSQL = sprintf("select * from usuarios where nickname='$nick' and contra='$pass'", 
-mysqli_real_escape_string($nick),mysqli_real_escape_string($pass)
-	);
-$consulta = mysqli_query($conexion, $comandoSQL);
-
-if($fila = mysqli_fetch_array($consulta)){
-$res = true;
-}
-
-mysqli_close($conexion);
-mysqli_free_result($consulta);
-return $res;
-}
 
 function eliminar(){
 	$IdCliente=$_GET['IdCliente'];
@@ -214,7 +198,7 @@ echo "
 <section  class='base'>
 	<article>
     	<figure>
-        	<img  src='$fila[7]' alt='Caballero/1' onclick='abrirImagen();'/>
+        	<img  src='../fotos/$fila[7]' alt='Caballero/1' onclick='abrirImagen();'/>
         	<figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
    		 </figure>
 	</article>
