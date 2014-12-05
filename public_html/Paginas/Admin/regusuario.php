@@ -45,7 +45,7 @@ header("Location: ../../Index.php");
          <div id="regUsuario" class="reg">
       <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
       <input type="hidden" name="tabla" value="usuarios">
-       <input type="hidden" name="pagina" value="../Paginas/Admin/regusuario.php">
+       <input type="hidden" name="pagina" value="../Admin/regusuario.php">
            <p id="titulous" >Nuevo Usuario</p>
            <section class=cajausuario>
                 Nombre:<br>

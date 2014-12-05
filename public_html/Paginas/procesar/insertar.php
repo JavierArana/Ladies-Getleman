@@ -61,7 +61,7 @@ $foto=0;
 		$paginaRetorno = 'regProductos.php';
 			//$paginaRetorno = $archivo;
 		}else{
-			die('Error en datos: ERROR 0xU');
+			die('Error en datos: ERROR 0xU'); 
 			mysqli_close($conexion);	
 		}
 
@@ -140,6 +140,6 @@ mysqli_close($conexion);
  $resultadoRetorno = 1;
  $res  = mysqli_query($conexion, $sql) or $resultadoRetorno=0;
 
- header('Location: ../'.$paginaRetorno.'?res='.$resultadoRetorno);
+ header('Location: '.$paginaRetorno.'?res='.$resultadoRetorno);
 
 ?>

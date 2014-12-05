@@ -13,7 +13,7 @@
       <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
       <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
       <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>   
-   </head>
+   </head> 
    <body>
       <section id="seccion1">
          <p id="titulo">Ladies & Gentlemen</p>
