@@ -57,6 +57,7 @@ header("Location: ../../Index.php");
                            <th>Costo</th>
                            <th>Existencias</th>
                            <th>Imgen</th>
+                           <th>Descripcion</th>
                            <th>Operaciones</th>
                         </tr>
                      </thead>

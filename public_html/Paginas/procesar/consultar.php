@@ -48,6 +48,7 @@ echo "<tr>
 		<td>$fila[5]</td>
 		<td>$fila[6]</td>
 		<td>$fila[7]</td>
+		<td>$fila[8]</td>
 		
 		
         <td>

@@ -42,8 +42,16 @@ header("Location: ../../Index.php");
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
-         
-         <div id="regUsuario" class="reg">
+         <?php
+         require_once '../procesar/config.php';
+         $conexion=mysqli_connect(config::$servidor,config::$usuario,config::$password,config::$baseDeDatos);
+          if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+          die("No se pudo realizar la conexion a la base de datos!");
+          }
+          mysqli_close($conexion);
+         ?>
+
+      <div id="regUsuario" class="reg">
       <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/modificar.php">
        <input type="hidden" name="tabla" value="usuarios">
        <!-- Incrustar id del usuario marcado para modificar en los procesos-->
@@ -53,70 +61,66 @@ header("Location: ../../Index.php");
        "<input type='hidden' name='id' value='$idgeneral'>"
        ?>
 
-           <p id="titulous" >Modificar Usuario</p>
+
+       <?php
+       require_once '../procesar/config.php';
+       $conexion=mysqli_connect(config::$servidor,config::$usuario,config::$password,config::$baseDeDatos);
+       if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+       die("No se pudo realizar la conexion a la base de datos!");
+       }
+       $consulta=mysqli_query($conexion, "SELECT * FROM usuarios");
+       while($fila = mysqli_fetch_array($consulta)){
+        $nombre=$fila[1];
+        $tipousuario=$fila[2];
+        $fechanac=$fila[3];
+        $sexo=$fila[4];
+        $nickname=$fila[5];
+        $email=$fila[6];
+        $contra=$fila[7];
+        $telefono=$fila[8];
+        $direccion=$fila[9];
+       }
+       echo
+
+           "<p id='titulous' >Modificar Usuario</p>
            <section class=cajausuario>
                 Nombre:<br>
-                <input class="registro" type="text" name="nombre" id="nombre" maxlength="40" placeholder="Nombre   Apellido Paterno   Apellido Materno " onkeypress="return sololetrasconespacios(event)" onpaste="return false"/><br><br>
-                Fecha de nacimiento:<br><input type="date" id="fecha"/>
+                <input class='registro' type='text' name='nombre' id='nombre' maxlength='40' placeholder='Nombre   Apellido Paterno   Apellido Materno ' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'/><br><br>
+               
+                 Tipo de Usuario:
+                 <select name='tipousuario' id='tipousuario' value='$tipousuario'>
+                 <option selected='value'>admin</option>
+                 <option>cliente</option>
+                 </select><br><br>
+
+                Fecha de nacimiento:<br><input type='date' id='fecha' name='fecha' value='$fechanac' />
                 <br><br>
+                
+
                 Sexo:
-                <select name="Sexo">
-                    <option selected="value">Masculino</option>
+                <select name='sexo' id='sexo' value='$sexo'>
+                    <option selected='value'>Masculino</option>
                     <option>Femenino</option>
                 </select><br><br>
-                Nickname:<br> <input class="registro" type=text name="nick" id="nick" maxlength="15" placeholder="Nick"  onkeypress="return usuario(event)" onpaste="return false"><br><br>
-                Email: <br> <input class="registro" type="email" name="email" id="email" maxlength="150" placeholder="ejemplo@example.com" onkeypress="return correo(event)" onpaste="return false"/><br><br>
-                Contraseña:<br> <input class="registro" type="password" name="contra" id="contra" maxlength="250" placeholder="********"><br><br> 
+                Nickname:<br> <input class='registro' type=text name='nick' id='nick' maxlength='15' placeholder='Nick'  onkeypress='return usuario(event)' onpaste='return false' value='$nickname'><br><br>
+                Email: <br> <input class='registro' type='email' name='email' id='email' maxlength='150' placeholder='ejemplo@example.com' onkeypress='return correo(event)' onpaste='return false' value='$email'/><br><br>
+                Contraseña:<br> <input class='registro' type='password' name='contra' id='contra' maxlength='250' placeholder='********' value='$contra'><br><br> 
                 Telefono:<br>
-                <input class="registro" type="tel" name="tel" id="tel" maxlength="15" placeholder="telefono" onkeypress="return solonumeros(event)" onpaste="return false">
+                <input class='registro' type='tel' name='tel' id='tel' maxlength='15' placeholder='telefono' onkeypress='return solonumeros(event)' onpaste='return false' value='$telefono'>
            </section>
            <section class=cajausuario>
-               Calle: <br><input class="registro" type=text name="dir" id="dir" maxlength="150" placeholder="Calle" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <br><br> Num.ext: <br><input class="registro" type=text name="numero" id="numext" maxlength="150" placeholder="Num. Exterior" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
-               Colonia: <br><input class="registro" type="text" name="col" id="colonia" maxlength="150" placeholder="Colonia" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
-               Ciudad:<br> <input class="registro" type=text name="ciudad" id="ciudad" maxlength="50" placeholder="ciudad" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
-               Estado:
-               <select name="Estado">
-                   <option>Aguascalientes</option>
-                   <option>Baja California</option>
-                   <option>Baja California Sur</option>
-                   <option>Campeche</option>
-                   <option>Chiapas</option>
-                   <option>Chihuahua</option>
-                   <option>Coahuila</option>
-                   <option>Colima</option>
-                   <option selected="value">Distrito Federal</option>
-                   <option>Durango</option>
-                   <option>Estado de México</option>
-                   <option>Guanajuato</option>
-                   <option>Guerrero</option>
-                   <option>Hidalgo</option>
-                   <option>Jalisco</option>
-                   <option>Michoacán</option>
-                   <option>Morelos</option>
-                   <option>Nayarit</option>
-                   <option>Nuevo León</option>
-                   <option>Oaxaca</option>
-                   <option>Puebla</option>
-                   <option>Querétaro</option>
-                   <option>Quintana Roo</option>
-                   <option>San Luis Potosí</option>
-                   <option>Sinaloa</option>
-                   <option>Sonora</option>
-                   <option>Tabasco</option>
-                   <option>Tamaulipas</option>
-                   <option>Tlaxcala</option>
-                   <option>Veracruz</option>
-                   <option>Yucatán</option>
-                   <option>Zacatecas</option>
-                </select>
+              
+              <br>
+              direccion:<br> <textarea name='direccion' id='direccion' class ='descripcion' rows='5' cols='20' placeholder='Descripion del articulo'>$direccion </textarea>
                 <br><br><br>
-                <section id="contenedorbtnreg">
-                <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar Cambios</button>
+                <section id='contenedorbtnreg'>
+                <section class='contenedorbtn'>
+                  <button class='btnguardar'>Guardar Cambios</button>
                 </section>
        
                 </section>           
-           </section>
+           </section>"
+           ?>
         </form>         
          </div>
         

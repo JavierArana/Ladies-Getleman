@@ -2,7 +2,7 @@
 class config{ 
 static $servidor = "localhost";
 static $usuario = "root";
-static $password = "binario";
+static $password = "root";
 static $baseDeDatos = "boutique";
 }
  ?>

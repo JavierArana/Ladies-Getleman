@@ -75,40 +75,7 @@ header("Location: ../../Index.php");
             </form>
          </div>
          <!-- proveedores-->
-         <div id="regProveedores" class="reg">
-            <form>
-               <p>Nuevo Proveedor</p>
-               <div class="cajausuario">
-                  Nombre: <br>
-                  <input class="caja" type=text name="nick" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno"><br><br>
-                  Direccion: <br>
-                  <input class"caja" type=text name="nick" id="" maxlength="" placeholder="Direccion"><br><br>
-                  Telefono: <br>
-                  <input class="caja" type=text name="nick" id="tel" maxlength"15" placeholder"Telefono"><br><br>
-                  Email: <br>
-                  <input class="caja" type=text name="nick" id="email" maxlength="150" placeholder="ejemplo@example.com"><br><br>
-                  Tipo de Producto:<br>
-                  <select>
-                     <option>Playera</option>
-                     <option>Jeans</option>
-                     <option>Pantalon</option>
-                     <option>Camisas</option>
-                     <option>Blusas</option>
-                     <option>Vestidos</option>
-                     <option>Faldas</option>
-                     <option>Short</option>
-                     <option>Calzado</option>
-                     <option>Accesorios</option>
-                  </select>
-                  <br><br>
-                  Cantidad:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="Ejemplo 3"><br><br>
-                  <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>       
-               </section>
-               </div>
-            </form>
-         </div>
+         
          
       </center>
    </body>

@@ -45,23 +45,37 @@
          <div id="regSugerencia" class="reg">
             <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/modificar.php">
        <input type="hidden" name="tabla" value="sugerencias">
-               <p>Modificar Suegerencia</p><br><br>
-               <div class="cajausuario">
-               Id Producto:<br>
-               <select>
+
+       <?php
+         $idgeneral=$_GET['ID'];
+        echo
+       "<input type='hidden' name='id' value='$idgeneral'>"
+
+       ?>
+
+       <?php
+       require_once '../procesar/config.php';
+       $conexion=mysqli_connect(config::$servidor,config::$usuario,config::$password,config::$baseDeDatos);
+       if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+       die("No se pudo realizar la conexion a la base de datos!");
+       }
+       $consulta=mysqli_query($conexion, "SELECT * FROM sugerencias");
+       while($fila = mysqli_fetch_array($consulta)){
+        $sugerencia=$fila[3];
+        
+       }
+       echo
+              "<p>Modificar Suegerencia</p><br><br>
+               <div class='cajausuario'>
                
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-               </select>
                <br><br>
                Sugerencia:<br>
-               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"> </textarea> 
-                <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>       
+               <textarea name='sugerencia' id='sugerencia' class ='descripcion' rows='3' cols='38' placeholder='Descripion del articulo'>$sugerencia</textarea> 
+                <section class='contenedorbtn'>
+                  <button class='btnguardar'>Guardar</button>       
                </section>
-               </div>
-               
+               </div>"
+               ?>
             </form>
          </div>
          <!--regSugerencia-->

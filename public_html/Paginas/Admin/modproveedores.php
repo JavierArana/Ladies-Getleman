@@ -45,18 +45,45 @@ header("Location: ../../Index.php");
          <div id="regProveedores" class="reg">
           <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/modificar.php">
        <input type="hidden" name="tabla" value="proveedores">
+
+
+       <?php
+       $idgeneral=$_GET['ID'];
+        echo
+       "<input type='hidden' name='id' value='$idgeneral'>"
+       ?>
+
+       <?php
+
+
+       require_once '../procesar/config.php';
+       $conexion=mysqli_connect(config::$servidor,config::$usuario,config::$password,config::$baseDeDatos);
+       if(mysqli_connect_errno($conexion)){
+        die("no se pudo realizar la conexion a la base de datos");
+       }
+       $consulta=mysqli_query($conexion,"SELECT * FROM proveedores");
+       while($fila=mysqli_fetch_array($consulta)){
+
+        $nombre=$fila[1];
+        $direccion=$fila[2];
+        $telefono=$fila[3];
+        $email=$fila[4];
+        $tipoproducto=$fila[5];
+        $cantidad=$fila[6];
+       }
+       echo "
                <p>Modificar Proveedor</p>
-               <div class="cajausuario">
+               <div class='cajausuario'>
                   Nombre: <br>
-                  <input class="caja" type=text name="nick" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno"><br><br>
+                  <input class='caja' type=text name='nombre' id='nombre' maxlength='40' placeholder='Nombre  Apellido Paterno  Apellido Materno' value='$nombre'><br><br>
                   Direccion: <br>
-                  <input class"caja" type=text name="nick" id="" maxlength="" placeholder="Direccion"><br><br>
+                  <input class'caja' type=text name='direccion' id='direccion' maxlength='' placeholder='Direccion' value='$direccion'><br><br>
                   Telefono: <br>
-                  <input class="caja" type=text name="nick" id="tel" maxlength"15" placeholder"Telefono"><br><br>
+                  <input class='caja' type=text name='tel' id='tel' maxlength='150' placeholder'Telefono' value='$telefono'><br><br>
                   Email: <br>
-                  <input class="caja" type=text name="nick" id="email" maxlength="150" placeholder="ejemplo@example.com"><br><br>
+                  <input class='caja' type=text name='email' id='email' maxlength='150' placeholder='ejemplo@example.com' value='$email'><br><br>
                   Tipo de Producto:<br>
-                  <select>
+                  <select name='tipoproducto' id='tipoproducto' value='tipoproducto'>
                      <option>Playera</option>
                      <option>Jeans</option>
                      <option>Pantalon</option>
@@ -70,11 +97,12 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Cantidad:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="Ejemplo 3"><br><br>
-                  <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>       
+                  <input class='caja' type=text name='cantidad' id='cantidad' maxlength='' placeholder='cantidad' value='$cantidad'><br><br>
+                  <section class='contenedorbtn'>
+                  <button class='btnguardar'>Guardar</button>       
                </section>
-               </div>
+               </div>"
+               ?>
             </form>
          </div>
          <!--regProveedores-->

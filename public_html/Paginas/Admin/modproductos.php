@@ -41,47 +41,76 @@ header("Location: ../../Index.php");
   <button name="sesion" value="1">Cerrar Sesion</button>
 </form>
       <center>
-        <div id="regProductos" class="reg">
-            <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/modificar.php">
-       <input type="hidden" name="tabla" value="productos">
+        <form id='formularioModificacion' method='POST' enctype='multipart/form-data' action='../procesar/modificar.php'>
+       <input type='hidden' name="tabla" value="productos">
+      <?php 
+        $idgeneral=$_GET['ID'];
+        echo
+       "<input type='hidden' name='id' value='$idgeneral'>"
+       ?>
+      <?php
+       require_once '../procesar/config.php';
+       $conexion=mysqli_connect(config::$servidor,config::$usuario,config::$password,config::$baseDeDatos);
+       if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+       die("No se pudo realizar la conexion a la base de datos!");
+       }
+       $consulta=mysqli_query($conexion, "SELECT * FROM productos");
+       while($fila = mysqli_fetch_array($consulta)){
+        $marca=$fila[1];
+        $nombre=$fila[2];
+        $talla=$fila[3];
+        $genero=$fila[4];
+        $costo=$fila[5];
+        $existencia=$fila[6];
+        $imagen=$fila[7];
+        $descripcion=$fila[8];
+       
+       }
+
+
+
+        echo
+       " <div id='regProductos' class='reg'>
+          
                <p>Modificar Producto</p>
-               <div class="cajausuario">
+               <div class='cajausuario'>
                
 
                   Marca: <br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="" width="275"><br><br>
+                  <input class='caja' type=text name='marca' id='marca' maxlength='150' placeholder='marca' width='275' value='$marca'><br><br>
                   Nombre: <br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  <input class='caja' type=text name='nombre' id='nombre' maxlength='' placeholder='nombre' value='$nombre'><br><br>
                   Talla : 
-                  <select>
+                  <select name='talla' id='talla' value='$talla'>
                      <option>Chica</option>
-                     <option selected="value">Mediana</option>
+                     <option selected='value'>Mediana</option>
                      <option>Grande</option>
                   </select>
                   &emsp13; &emsp13; 
                   Genero:
-                  <select>
-                     <option selected="value">Caballero</option>
+                  <select name='genero' id='genero' value='$genero'>
+                     <option selected='value';>Caballero</option>
                      <option>Dama</option>
                      <option>Niño</option>
                      <option>Niña</option>
                   </select>
                   <br><br>
                   Costo:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  <input class='caja' type=text name='costo' id='costo' maxlength='' placeholder='costo' value='$costo'><br><br>
                   Existencias:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder=""><br><br>
+                  <input class='caja' type=text name='existencia' id='existencia' maxlength='' placeholder='existencia' value='$existencia'><br><br>
                   
                     Imagen:<br>
-                    <input class="caja" type="file" name="foto" accept="image/*">
+                    <input class='caja' type='file' name='foto' accept='image' value='$imagen'/>
                     <br><br>
                     Descripcion:<br>
-                    <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo"> </textarea>
-          <section class="contenedorbtn">
-                  <button class="btnguardar">Guardar</button>       
+                    <textarea name='descripcion' id='descripcion' class ='descripcion' rows='3' cols='38' placeholder='Descripion del articulo'>$descripcion</textarea>
+                    <section class='contenedorbtn'>
+                  <button class='btnguardar'>Guardar</button>       
                </section>
                   
-               </div>
+               </div>"
+               ?>
             </form>
          </div>
 
