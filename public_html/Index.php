@@ -32,6 +32,11 @@ and open the template in the editor.
                 </ul>
             </nav>
         </section>
+         <?php
+  session_start();
+  if(!isset($_SESSION['inicio'])){
+//header("Location: Index.php");
+  ?>  
         <section id="seccion3">
             <form action="Paginas/procesar/login.php" method="post">
                <table  class="tabla">
@@ -40,16 +45,33 @@ and open the template in the editor.
                <td><input name="usuario" id="usuario" class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
                <td><button>Entrar</td></button>
                
-             </tr>
+             </tr> 
              <tr>
                <td >Password</td>
                <td ><input name="pass" id="pass" class="textbox" type="password" placeholder="*********"></td>
                <td><a id="registrar" href="Paginas/Registro.php">Registrarse</a></td>
              </tr>
            </table>
-            </form>
-            
+            </form>  
         </section>
+        <?php 
+}else{
+        ?>
+<form action="Paginas/procesar/login.php" method="post">
+ <table  class="tabla">
+             <tr>
+               <td>Usuario:</td>
+    <?php
+    if(isset($_GET['nickname'])){
+    $nickname = $_GET['nickname']; 
+    echo "<td>$nickname</td>"; } ?>
+               <td><button name="sesion" value="1">Cerrar Sesion</button></td>
+               </tr>
+               </table>
+</form>
+<?php
+}
+?>
         <div>
             <center>
                 <article id="carrucel">
@@ -61,7 +83,14 @@ and open the template in the editor.
                         <img class="wall" alt="" src="Imagenes/Slider/3.png">
                         <img class="wall" alt="" src="Imagenes/Slider/4.png">
                         
-                            
+<?php 
+if(isset($_GET['resul'])){
+    $resul=$_GET['resul'];
+    if($resul==0){
+echo "<script type='text/javascript'>
+alert('El usuario y/o password son incorrectos!!');
+  </script>";
+}}?>  
                         
                         <!--<img class="wall" alt="" src="hd/1.jpg">
                         <img class="wall" alt="" src="hd/2.jpg">
