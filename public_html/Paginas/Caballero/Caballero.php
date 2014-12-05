@@ -81,75 +81,52 @@ and open the template in the editor.
            </table>
                     </form>                    
                 </section>
-                <section id="seccionArticulos">
-                    <section class="contenedorbtn">
-                        <input type="button" value="<"  class="bnt_sig_ant" />	      
-                    </section>
-                    <section id="izq">
+
+     <section id="seccionArticulos">
+
+               <section class="contenedorbtn">
+                  <input type="button" value="<"  class="bnt_sig_ant" />       
+               </section>
+
+                    <div>
+                      
+                    
+
+<!--
+          
+                       <section  class="base">
                         <article>
                             <figure>
                                 <img  src="../../Imagenes/Caballero/1.jpg" alt="Caballero/1" onclick="abrirImagen();" >
                                 <figcaption>Marca:<br>Costo:$</figcaption>
                             </figure>
                         </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/4.jpg" alt="Caballero/2" onclick="abrirImagen4();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/5.jpg" alt="Caballero/3" onclick="abrirImagen5();" ><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                    </section>
-                    <section id="cen">
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/2.jpg"  onclick="abrirImagen2();" >
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                            </article>
-                            <article>
-                                <figure>
-                                    <img src="../../Imagenes/Caballero/3.jpg" onclick="abrirImagen3();"  ><br>
-                                    <figcaption>Marca:<br>Costo:$</figcaption>
-                                </figure>                        
-                            </article>
-                            <article>
-                                <figure>
-                                    <img src="../../Imagenes/Caballero/6.jpg"  onclick="abrirImagen6();" ><br>
-                                    <figcaption>Marca:<br>Costo:$</figcaption>
-                                </figure>                        
-                            </article>
-                    </section>
-                    <section id="der">
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/7.jpg"  onclick="abrirImagen7();" >
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/1.jpg" onclick="abrirImagen();" ><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/2.jpg"  onclick="abrirImagen2();" ><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                    </section>   
-                    <section class="contenedorbtn">
-                        <input type="button" value=">" class="bnt_sig_ant"/>	
-                    </section>
+                       </section>
+          -->
+            <?php 
+                      require_once '../procesar/consultar.php';
+                      $con = new consultar();
+                      $con->consultarArticulos();
+                      ?>
+
+
+
+                    </div>
+
+<section class="contenedorbtn">
+                  <input type="button" value=">" class="bnt_sig_ant"/>    
+               </section>
+
+
+
+
+                    
+
                 </section>
-            </section>
+    
+                </section>
+               
+           
             <aside>
                 <p id="titulo">Ladies & Gentlemen</p><br>
                 <img  id="logo" src="../../Imagenes/general.jpg" >

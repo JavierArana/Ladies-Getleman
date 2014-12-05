@@ -282,3 +282,48 @@ text-decoration:none;
    // background-color: black;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.base{
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        padding: 0px;
+                        float: left;
+                        width: 180px;
+                        height: 282px;
+                        
+                        
+                    }
+
+                    .base article{
+                        padding: 0px;
+                        margin-top: 0px;
+                        margin-left: 0px;
+                    }
+
+                    figure{
+                        margin-top: 0px;
+                        margin-left: 0px;
+                    }
+
+                    div{
+                        float: left;
+                        margin-left: 80px;
+                        width: 800px;
+                        height: 650px;
+                        
+                    }
