@@ -27,8 +27,6 @@ and open the template in the editor.
                         <input type="button" value=">" id ="siguiente" class="bnt_sig_ant"/>
                     </section>
                 </section>
-
-
                 <section id="contenedorArt">
                     <article class="descripcionArt">
                         <section class="contenedorbtn">
@@ -50,9 +48,6 @@ and open the template in the editor.
                         <img src="../../Imagenes/s.png" id="comprar">
                     </article>
                 </section>
-
-
-
             </section>
         </section>
         <section id="cajaPrincipal">
@@ -61,75 +56,112 @@ and open the template in the editor.
                     <nav><br>
                         <center>
                             <ul id="menu">
-                                <li class="opcionmenu"><a href="../../Index.html">Home</a></li>
-                                <li class="opcionmenu"><a href="Caballero.html">Caballero</a></li>
-                                <li class="opcionmenu"><a href="../Dama/Dama.html">Dama</a></li>
-                                <li class="opcionmenu"><a href="../Niño/Ninios.html">Niños</a></li>                    
-                                <li class="opcionmenu"><a href="../Niña/Ninias.html">Niñas</a></li>                  
+                               <li class="opcionmenu"><a href="../../Index.php">Home</a></li>
+                        <li class="opcionmenu"><a href="../Caballero/Caballero.php">Caballero</a></li>
+                        <li class="opcionmenu"><a href="../Dama/Dama.php">Dama</a></li>
+                        <li class="opcionmenu"><a href="../Ninio/Ninios.php">Niños</a></li>
+                        <li class="opcionmenu"><a href="../Ninia/Ninias.php">Niñas</a></li>                
                             </ul>
                         </center>
                     </nav>
                 </section>
                 <section id="seccion3">
                     <form>
-                        Usuario &emsp14;&emsp14;&emsp13;<input id="textbox1" type="text" placeholder="Nick"> <input id="boton" type="button" value="login">
-                        <br>Password <input id="textbox2" type="password" placeholder="********" >&emsp13;<a id="registrar" href="../Registro.html">Registrarse</a>
+                        <table  class="tabla">
+             <tr>
+               <td>Usuario</td>
+               <td><input class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
+               <td> <input id="boton" type="button" value="login"></td>
+             </tr>
+             <tr>
+               <td >Password</td>
+               <td ><input class="textbox" type="password" placeholder="*********"></td>
+               <td><a id="registrar" href="../Registro.php">Registrarse</a></td>
+             </tr>
+           </table>
                     </form>                    
                 </section>
-
                 <section id="seccionArticulos">
-
-               <section class="contenedorbtn">
-                  <input type="button" value="<"  class="bnt_sig_ant" />       
-               </section>
-
-                    <div>
-                    	
-                    
-
-
-					<!-- 
-                       <section  class="base">
+                    <section class="contenedorbtn">
+                        <input type="button" value="<"  class="bnt_sig_ant" />	      
+                    </section>
+                    <section id="izq">
                         <article>
                             <figure>
                                 <img  src="../../Imagenes/Caballero/1.jpg" alt="Caballero/1" onclick="abrirImagen();" >
                                 <figcaption>Marca:<br>Costo:$</figcaption>
                             </figure>
                         </article>
-                       </section>
-					-->
-
-
-
-                    </div>
-
-<section class="contenedorbtn">
-                  <input type="button" value=">" class="bnt_sig_ant"/>    
-               </section>
-
-
-
-
-                    
-
+                        <article>
+                            <figure>
+                                <img src="../../Imagenes/Caballero/4.jpg" alt="Caballero/2" onclick="abrirImagen4();"><br>
+                                <figcaption>Marca:<br>Costo:$</figcaption>
+                            </figure>                        
+                        </article>
+                        <article>
+                            <figure>
+                                <img src="../../Imagenes/Caballero/5.jpg" alt="Caballero/3" onclick="abrirImagen5();" ><br>
+                                <figcaption>Marca:<br>Costo:$</figcaption>
+                            </figure>                        
+                        </article>
+                    </section>
+                    <section id="cen">
+                        <article>
+                            <figure>
+                                <img src="../../Imagenes/Caballero/2.jpg"  onclick="abrirImagen2();" >
+                                <figcaption>Marca:<br>Costo:$</figcaption>
+                            </figure>                        
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="../../Imagenes/Caballero/3.jpg" onclick="abrirImagen3();"  ><br>
+                                    <figcaption>Marca:<br>Costo:$</figcaption>
+                                </figure>                        
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="../../Imagenes/Caballero/6.jpg"  onclick="abrirImagen6();" ><br>
+                                    <figcaption>Marca:<br>Costo:$</figcaption>
+                                </figure>                        
+                            </article>
+                    </section>
+                    <section id="der">
+                        <article>
+                            <figure>
+                                <img src="../../Imagenes/Caballero/7.jpg"  onclick="abrirImagen7();" >
+                                <figcaption>Marca:<br>Costo:$</figcaption>
+                            </figure>                        
+                        </article>
+                        <article>
+                            <figure>
+                                <img src="../../Imagenes/Caballero/1.jpg" onclick="abrirImagen();" ><br>
+                                <figcaption>Marca:<br>Costo:$</figcaption>
+                            </figure>                        
+                        </article>
+                        <article>
+                            <figure>
+                                <img src="../../Imagenes/Caballero/2.jpg"  onclick="abrirImagen2();" ><br>
+                                <figcaption>Marca:<br>Costo:$</figcaption>
+                            </figure>                        
+                        </article>
+                    </section>   
+                    <section class="contenedorbtn">
+                        <input type="button" value=">" class="bnt_sig_ant"/>	
+                    </section>
                 </section>
-
             </section>
             <aside>
                 <p id="titulo">Ladies & Gentlemen</p><br>
                 <img  id="logo" src="../../Imagenes/general.jpg" >
                 <ul id="opcion">
-                    <li class="articulosCaballero" id="playera" onclick="articuloSeleccionado();"><a href="Playera.html">Playera</a></li>                    
-                    <li class="articulosCaballero" id="jeans" onclick="articuloSeleccionado();"><a href="Jeans.html">Jeans</a></li>
-                    <li class="articulosCaballero" id="pantalon" onclick="articuloSeleccionado();"><a href="Pantalon.html">Pantalon</a></li>
-                    <li class="articulosCaballero" id="camisas" onclick="articuloSeleccionado();"><a href="Camisa.html">Camisas</a></li>
-                    <li class="articulosCaballero" id="calzado" onclick="articuloSeleccionado();"><a href="Calzado.html">Calzado</a></li>
-                    <li class="articulosCaballero" id="accesorios" onclick="articuloSeleccionado();"><a href="Accesorios.html">Accesorios</a></li>	
+                    <li class="articulosCaballero" id="playera" onclick="articuloSeleccionado();"><a href="Playera.php">Playera</a></li>                    
+                    <li class="articulosCaballero" id="jeans" onclick="articuloSeleccionado();"><a href="Jeans.php">Jeans</a></li>
+                    <li class="articulosCaballero" id="pantalon" onclick="articuloSeleccionado();"><a href="Pantalon.php">Pantalon</a></li>
+                    <li class="articulosCaballero" id="camisas" onclick="articuloSeleccionado();"><a href="Camisa.php">Camisas</a></li>
+                    <li class="articulosCaballero" id="accesorios" onclick="articuloSeleccionado();"><a href="Accesorios.php">Accesorios</a></li>	
                 </ul>
-                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar">  <input id="botonBuscar" type="submit" value="Buscar">
+                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  <input id="botonBuscar" type="submit" value="Buscar">
             </aside>
         </section>       
     </body>
 </html>
-
-
