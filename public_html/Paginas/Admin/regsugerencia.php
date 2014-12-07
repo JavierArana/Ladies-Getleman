@@ -58,19 +58,20 @@ header("Location: ../../Index.php");
 
       <center>         
          <div id="regSugerencia" class="reg">
-            <form>
+      <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
+      <input type="hidden" name="tabla" value="sugerencias">
+       <input type="hidden" name="pagina" value="../Admin/regsugerencia.php">
                <p>Nueva Suegerencia</p><br><br>
                <div class="cajausuario">
                Id Producto:<br>
-               <select>
-               
-                <option>1</option>
+               <select name="idproducto">
+                <option selected="value">1</option>
                 <option>2</option>
                 <option>3</option>
                </select>
                <br><br>
                Sugerencia:<br>
-               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> </textarea> 
+               <textarea class ="descripcion" name="sugerencia" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> </textarea> 
                 <section class="contenedorbtn">
                   <button class="btnguardar">Guardar</button>       
                </section>
@@ -78,8 +79,25 @@ header("Location: ../../Index.php");
                
             </form>
          </div>
-         <!--regSugerencia-->
- 
       </center>
+        <?php
+    if(isset($_GET['res'])){
+    $resultado = $_GET['res'];  
+    if($resultado==1){
+    ?>
+  <script type="text/javascript">
+alert("La sugerencia se registro satisfactoriamente!! ");
+  </script>
+ <?php 
+ }
+ else{
+ ?>
+    <script type="text/javascript">
+alert("Error de envio de datos... asegurese de llenar todos los campos!");
+  </script>
+ <?php
+ }
+    }
+ ?> 
    </body>
 </html>

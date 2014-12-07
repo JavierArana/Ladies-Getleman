@@ -36,7 +36,7 @@
   session_start();
   if(!isset($_SESSION['inicio'])){
 header("Location: ../../Index.php");
-  }
+  } 
   ?>  
  <form action="../procesar/login.php" method="post">
   <input type="hidden" name="pagina" value="../Admin/regproveedores.php">
@@ -58,24 +58,26 @@ header("Location: ../../Index.php");
       <center>
           
          <div id="regProveedores" class="reg">
-            <form>
+             <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
+      <input type="hidden" name="tabla" value="proveedores">
+       <input type="hidden" name="pagina" value="../Admin/regproveedores.php">
                <p>Nuevo Proveedor</p>
                <div class="cajausuario">
                   Nombre: <br>
-                  <input class="caja" type=text name="nick" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
+                  <input class="caja" type=text name="nombre" id="nombre" maxlength="40" placeholder="Nombre  Apellido Paterno  Apellido Materno" onkeypress="return sololetrasconespacios(event)" onpaste="return false"><br><br>
                   Direccion: <br>
-                  <input class"caja" type=text name="nick" id="" maxlength="" placeholder="Direccion" onkeypress="return direccion(event)" onpaste="return false"><br><br>
+                  <input class"caja" type=text name="direccion" id="" maxlength="150" placeholder="Direccion" onkeypress="return direccion(event)" onpaste="return false"><br><br>
                   Telefono: <br>
-                  <input class="caja" type=text name="nick" id="tel" maxlength"15" placeholder"Telefono" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
+                  <input class="caja" type=text name="tel" id="tel" maxlength"15" placeholder"Telefono" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
                   Email: <br>
-                  <input class="caja" type=text name="nick" id="email" maxlength="150" placeholder="ejemplo@example.com" onkeypress="return email(event)" onpaste="return false"><br><br>
+                  <input class="caja" type=text name="email" id="email" maxlength="150" placeholder="ejemplo@example.com" onkeypress="return email(event)" onpaste="return false"><br><br>
                   Tipo de Producto:<br>
-                  <select>
+                  <select name="tipoproducto">
                      <option>Playera</option>
                      <option>Jeans</option>
                      <option>Pantalon</option>
                      <option>Camisas</option>
-                     <option>Blusas</option>
+                     <option selected="value">Blusas</option>
                      <option>Vestidos</option>
                      <option>Faldas</option>
                      <option>Short</option>
@@ -84,15 +86,32 @@ header("Location: ../../Index.php");
                   </select>
                   <br><br>
                   Cantidad:<br>
-                  <input class="caja" type=text name="nick" id="" maxlength="" placeholder="Ejemplo 3" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
+                  <input class="caja" type=text name="cantidad" id="" maxlength="" placeholder="Ejemplo 3" onkeypress="return solonumeros(event)" onpaste="return false"><br><br>
                   <section class="contenedorbtn">
                   <button class="btnguardar">Guardar</button>       
                </section>
                </div>
             </form>
-         </div>
-         <!--regProveedores-->
-            
+         </div>            
       </center>
+       <?php
+    if(isset($_GET['res'])){
+    $resultado = $_GET['res'];  
+    if($resultado==1){
+    ?>
+  <script type="text/javascript">
+alert("El proveedor se registro satisfactoriamente!! ");
+  </script>
+ <?php 
+ }
+ else{
+ ?>
+    <script type="text/javascript">
+alert("Error de envio de datos... asegurese de llenar todos los campos!");
+  </script>
+ <?php
+ }
+    }
+ ?> 
    </body>
 </html>

@@ -6,7 +6,7 @@
  if(isset($_POST['tabla'])){
 
 	$tabla = $_POST['tabla'];
- 
+  
 	$sql = $sql.$tabla.' values('; 
  
  
@@ -41,7 +41,7 @@
 //-------------------------------------TABLA  PRODUCTOS------------------------------------	
 	if($tabla == 'productos'){
 		if(isset($_POST['marca']) && isset($_POST['nombre']) && isset($_POST['talla']) && isset($_POST['genero']) && isset($_POST['costo']) 
-			&& isset($_POST['existencia']) && isset($_FILES['foto']) && isset($_POST['descripcion'])){
+			&& isset($_POST['existencia']) && isset($_FILES['foto']) && isset($_POST['descripcion']) && isset($_POST['pagina'])){
 
  $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
 		++$nfoto;
@@ -66,39 +66,40 @@
 	}else
 //----------------------------TABLA PROVEEDORES ---------------------------------------------
  if($tabla == 'proveedores'){
- if(isset($_POST['nombre']) && isset($_POST['direccion']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['tipoProducto'])
-		 && isset($_POST['cantidad'])){
-
+ if(isset($_POST['nombre']) && isset($_POST['direccion']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['tipoproducto'])
+		 && isset($_POST['cantidad']) && isset($_POST['pagina'])){
+ 			$pagina=$_POST['pagina'];
 			$nombre = $_POST['nombre'];
 			$direccion = $_POST['direccion'];
 			$tel = $_POST['tel'];
 			$email = $_POST['email'];
-			$tipoProducto = $_POST['tipoProducto'];
+			$tipoProducto = $_POST['tipoproducto'];
 			$cantidad = $_POST['cantidad'];
-			$sql = $sql."'0','$nombre','$direccion','$tel','$email','$tipoProducto','$cantidad')";	
-			mysqli_close($conexion);			
-//keda pendiente pagina de retorno
-		$paginaRetorno = 'Registro.php';
-			//$paginaRetorno = $archivo;
+			$sql = $sql."'0','$nombre','$direccion','$tel','$email','$tipoproducto','$cantidad')";	
+			$paginaRetorno = $pagina;
+		mysqli_close($conexion);
 		}else{
-			die('Error en datos: ERROR 0xU');	
-			mysqli_close($conexion);
+			die('Error en datos: no se envio la informacion correcta'); 
+			mysqli_close($conexion);	
 		}
+
 
 	}else
 //----------------------------TABLA SUGERENCIAS ---------------------------------------------
  if($tabla == 'sugerencias'){
 
- if(isset($_POST['sugerencia'])){
-
+ if(isset($_POST['sugerencia']) && isset($_POST['idcliente']) && isset($_POST['idproducto']) && isset($_POST['pagina'])){
+    $pagina=$_POST['pagina'];
+    $idcliente=$_POST['idcliente'];
 	$sugerencia= $_POST['sugerencia'];	
+	$idproducto=$_POST['idproducto'];
  $sql = $sql."'0','$idcliente','$idproducto','$sugerencia')";
+ $paginaRetorno = $pagina;
 mysqli_close($conexion);
- $paginaRetorno = 'regExamenes.php';
- }else{
-	die('Error en datos: ERROR 0xE');
-	mysqli_close($conexion);
- }
+		}else{
+			die('Error en datos: no se envio la informacion correcta'); 
+			mysqli_close($conexion);	
+		}
 	}else
 //----------------------------TABLA VENTAS---------------------------------------------
  if($tabla == 'examenes'){
