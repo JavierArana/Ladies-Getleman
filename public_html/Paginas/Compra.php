@@ -188,6 +188,10 @@ and open the template in the editor.
                 		Descripcion
  
                 </aside>
+                <br><br>
+               
+               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> </textarea> 
+               
                 </div>
                 
                 
