@@ -100,23 +100,55 @@ header("Location: ../../Index.php");
            "<p id='titulous' >Modificar Usuario</p>
            <section class=cajausuario>
                 Nombre:<br>
-                <input class='registro' type='text' name='nombre' id='nombre' maxlength='40' placeholder='Nombre   Apellido Paterno   Apellido Materno ' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'/><br><br>
-               
-                 Tipo de Usuario:
+                <input class='registro' type='text' name='nombre' id='nombre' maxlength='40' placeholder='Nombre   Apellido Paterno   Apellido Materno ' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'/><br><br>"
+                              ?>
+                              <?php
+                
+                ?>
+                <?php
+                 if($tipousuario=='admin'){
+                     $opcion3='selected';
+                     $opcion4='';
+                    }
+                    
+                    if($tipousuario=='cliente'){
+                     $opcion4='selected';
+                     $opcion3='';
+                    }
+                    ?>
+                <?php
+                 echo "Tipo de Usuario:
                  <select name='tipousuario' id='tipousuario' value='$tipousuario'>
-                 <option selected='value'>admin</option>
-                 <option>cliente</option>
+                 <option $opcion3>admin</option>
+                 <option $opcion4>cliente</option>
                  </select><br><br>
 
                 Fecha de nacimiento:<br><input type='date' id='fecha' name='fecha' value='$fechanac' />
-                <br><br>
-                
+                <br><br>"
+                ?>
+                <?php
 
-                Sexo:
-                <select name='sexo' id='sexo' value='$sexo'>
-                    <option selected='value'>Masculino</option>
-                    <option>Femenino</option>
-                </select><br><br>
+               
+                    if($sexo=='Masculino'){
+                     $opcion1='selected';
+                     $opcion2='';
+                    }
+                    
+                    if($sexo=='Femenino'){
+                     $opcion2='selected';
+                     $opcion1='';
+                    }
+                     
+                    ?>
+                   
+                  <?php 
+                  echo " <select name='sexo' id='sexo' value='$sexo'>
+                         <option $opcion1>Masculino</option>
+                         <option $opcion2>Femenino</option>
+                         </select><br><br>
+
+
+
                 Nickname:<br> <input class='registro' type=text name='nick' id='nick' maxlength='15' placeholder='Nick'  onkeypress='return usuario(event)' onpaste='return false' value='$nickname'><br><br>
                 Email: <br> <input class='registro' type='email' name='email' id='email' maxlength='150' placeholder='ejemplo@example.com' onkeypress='return correo(event)' onpaste='return false' value='$email'/><br><br>
                 Contraseña:<br> <input class='registro' type='password' name='contra' id='contra' maxlength='250' placeholder='********' value='$contra'><br><br> 

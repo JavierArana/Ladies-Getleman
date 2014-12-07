@@ -97,18 +97,46 @@ header("Location: ../../Index.php");
                   <input class='caja' type=text name='tel' id='tel' maxlength='150' placeholder'Telefono' value='$telefono' onkeypress='return solonumeros(event)' onpaste='return false'><br><br>
                   Email: <br>
                   <input class='caja' type=text name='email' id='email' maxlength='150' placeholder='ejemplo@example.com' value='$email' onkeypress='return email(event)' onpaste='return false'><br><br>
-                  Tipo de Producto:<br>
-                  <select name='tipoproducto' id='tipoproducto' value='tipoproducto'>
-                     <option>Playera</option>
-                     <option>Jeans</option>
-                     <option>Pantalon</option>
-                     <option>Camisas</option>
-                     <option>Blusas</option>
-                     <option>Vestidos</option>
-                     <option>Faldas</option>
-                     <option>Short</option>
-                     <option>Calzado</option>
-                     <option>Accesorios</option>
+                  Tipo de Producto:<br>"
+                  ?>
+                  <?php
+                  $opcion1='';
+                   $opcion2='';
+                   $opcion3='';
+                   $opcion4='';
+                   $opcion5='';
+                   $opcion6='';
+                   $opcion7='';
+                   $opcion8='';
+                   $opcion9='';
+                   
+
+                    if($tipoproducto=='Playeras'){$opcion1='selected';}
+                    if($tipoproducto=='Blusas'){$opcion2='selected';}
+                    if($tipoproducto=='Jeans'){$opcion3='selected';}
+                    if($tipoproducto=='Pantalon'){$opcion4='selected';}
+                    if($tipoproducto=='Vestidos'){$opcion5='selected';}
+                    if($tipoproducto=='Camisas'){$opcion6='selected';}
+                    if($tipoproducto=='Faldas'){$opcion7='selected';}
+                     if($tipoproducto=='Short'){$opcion8='selected';}
+                     if($tipoproducto=='Accesorios'){$opcion9='selected';}
+                  ?>
+
+                  <?php
+
+                  echo"<select name='tipoproducto' id='tipoproducto' value='tipoproducto'>
+                     <option $opcion1>Playeras</option>
+                     <option $opcion2>Blusas</option>
+                     <option $opcion3>Jeans</option>
+                     <option $opcion4>Pantalon</option>
+                     <option $opcion5>Vestidos</option>
+                     <option $opcion6>Camisas</option>
+                   
+                     
+                     <option $opcion7>Faldas</option>
+                     <option $opcion8>Short</option>
+                     
+                     <option $opcion9>Accesorios</option>
                   </select>
                   <br><br>
                   Cantidad:<br>

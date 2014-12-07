@@ -82,8 +82,8 @@ header("Location: ../../Index.php");
        
        }
 
-
-
+?>
+<?php
         echo
        " <div id='regProductos' class='reg'>
           
@@ -93,31 +93,83 @@ header("Location: ../../Index.php");
  
                   Marca: <br>
                   <input class='caja' type=text name='marca' id='marca' maxlength='150' placeholder='marca' width='275' value='$marca' onkeypress='return sololetrasconespacios(event)' onpaste='return false'><br><br>
-                   Prenda: <br>
-                  <select name='nombre' id='nombre' value='$nombre'>
-                     <option>Playera</option>
-                     <option>Blusa</option>
-                     <option>Jeans</option>
-                     <option>Pantalon</option>
-                     <option>Vestido</option>
-                     <option>Camisa</option>
-                     <option>Falda</option>
-                     <option>Short</option>
-                     <option>Accesorio</option>
-                  </select><br><br>
-                  Talla : 
+                   Prenda: <br>"
+                   ?>
+                   <?php
+
+                   $opcion1='';
+                   $opcion2='';
+                   $opcion3='';
+                   $opcion4='';
+                   $opcion5='';
+                   $opcion6='';
+                   $opcion7='';
+                   $opcion8='';
+                   $opcion9='';
+                   
+
+                    if($nombre=='Playera'){$opcion1='selected';}
+                    if($nombre=='Blusa'){$opcion2='selected';}
+                    if($nombre=='Jeans'){$opcion3='selected';}
+                    if($nombre=='Pantalon'){$opcion4='selected';}
+                    if($nombre=='Vestido'){$opcion5='selected';}
+                    if($nombre=='Camisa'){$opcion6='selected';}
+                    if($nombre=='Falda'){$opcion7='selected';}
+                     if($nombre=='Short'){$opcion8='selected';}
+                     if($nombre=='Accesorio'){$opcion9='selected';}
+                   ?>
+                   <?php
+                 echo  "<select name='nombre' id='nombre' value='$nombre'>
+                     <option $opcion1>Playera</option>
+                     <option $opcion2>Blusa</option>
+                     <option $opcion3>Jeans</option>
+                     <option $opcion4>Pantalon</option>
+                     <option $opcion5>Vestido</option>
+                     <option $opcion6>Camisa</option>
+                     <option $opcion7>Falda</option>
+                     <option $opcion8>Short</option>
+                     <option $opcion9>Accesorio</option>
+                  </select><br><br>"
+
+                    ?>
+                    <?php
+                    $opcion10='';
+                    $opcion11='';
+                    $opcion12='';
+                    if($talla=='Chica'){$opcion10='selected';}
+                    if($talla=='Mediana'){$opcion11='selected';}
+                    if($talla=='Grande'){$opcion12='selected';}
+
+                    ?>
+
+                    <?php
+
+                  echo "Talla : 
                   <select name='talla' id='talla' value='$talla'>
-                     <option>Chica</option>
-                     <option selected='value'>Mediana</option>
-                     <option>Grande</option>
+                     <option $opcion10>Chica</option>
+                     <option $opcion11>Mediana</option>
+                     <option $opcion12>Grande</option>
                   </select>
-                  &emsp13; &emsp13; 
-                  Genero:
+                  &emsp13; &emsp13; "
+                  ?>
+                  <?php
+                   $opcion13='';
+                    $opcion14='';
+                    $opcion15='';
+                    if($genero=='Dama'){$opcion13='selected';}
+                    if($genero=='Niño'){$opcion14='selected';}
+                    if($genero=='Niña'){$opcion15='selected';}
+
+
+                  ?>
+                   <?php
+                   echo
+                 " Genero:
                   <select name='genero' id='genero' value='$genero'>
                      <option selected='value';>Caballero</option>
-                     <option>Dama</option>
-                     <option>Niño</option>
-                     <option>Niña</option>
+                     <option $opcion13>Dama</option>
+                     <option $opcion14>Niño</option>
+                     <option $opcion15>Niña</option>
                   </select>
                   <br><br>
                   Costo:<br>
