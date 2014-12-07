@@ -20,7 +20,7 @@
          <section id="contenedorPrevia">
             <section id="contenedorImg">
                <img id="imgfull" src="">
-               <section class="contenedorbtn" name="anterior">
+             
               
             </section>
             <section id="contenedorArt">
