@@ -46,7 +46,11 @@ and open the template in the editor.
         div table td{
         	padding: 2px;
         }
-
+        #sugerencia{
+        	clear: both;
+        	margin-top: 20px;
+        	float: left;
+        }
 
         </style>
     </head>
@@ -188,7 +192,18 @@ and open the template in the editor.
                 		Descripcion
  
                 </aside>
+
+               
+               <br><br>
+               Sugerencia:<br>
+               <textarea class ="descripcion" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> </textarea> 
+                <section class="contenedorbtn">
+                  <button class="btnguardar">Comentar</button>       
+               </section>
                 </div>
+                </div>
+
+                
                 
                 
                 
