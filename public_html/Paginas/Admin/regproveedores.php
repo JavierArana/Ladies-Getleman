@@ -38,9 +38,23 @@
 header("Location: ../../Index.php");
   }
   ?>  
-  <form action="../procesar/login.php" method="post">
-  <button name="sesion" value="1">Cerrar Sesion</button>
+ <form action="../procesar/login.php" method="post">
+  <input type="hidden" name="pagina" value="../Admin/regproveedores.php">
+  <input type="hidden" name="cerrarsesion" value="../../Index.php">
+ <table  class="tabla">
+             <tr>
+               <td>Bienvenido:</td>
+               <td><img alt="usuario" width="25" src="../../Imagenes/usuario.png"></td>
+    <?php
+    if(isset($_GET['nickname'])){
+    $nickname = $_GET['nickname']; 
+    echo "<td>$nickname</td>"; } ?>
+                <td><img alt="config" width="25" src="../../Imagenes/config.png"></td> &emsp13; 
+               <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
+               </tr>
+               </table>
 </form>
+
       <center>
           
          <div id="regProveedores" class="reg">

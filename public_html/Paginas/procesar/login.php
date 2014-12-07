@@ -1,11 +1,16 @@
 <?php
 require_once 'config.php';
+if(isset($_POST['pagina'])){
+$paginaRetorno=$_POST['pagina'];
+
  session_start();
-if(isset($_POST['sesion'])){
+if(isset($_POST['sesion']) && isset($_POST['cerrarsesion'])){
 	$sesion=$_POST['sesion'];
+	$cerrarsesion=$_POST['cerrarsesion'];
 	if($sesion==1)
 		session_destroy();
-	header("Location: ../../Index.php");
+	//header("Location: ../../Index.php");
+	header('Location: '.$cerrarsesion);
 }
 
  if(isset($_POST['usuario']) && isset($_POST['pass'])){
@@ -21,16 +26,19 @@ if(isset($_POST['sesion'])){
  	$_SESSION['inicio']='ok';
  	if($lector[0]=='cliente'){
  		$nombreusuario=$lector[1];
-header('Location: ../../Index.php'.'?nickname='.$nombreusuario);
+header('Location: '.$paginaRetorno.'?nickname='.$nombreusuario);
  	}else{
  		if($lector[0]=='admin'){
-header("Location: ../Admin/admin.php ");
+ 		$nombreusuario=$lector[1];
+header('Location: ../Admin/admin.php'.'?nickname='.$nombreusuario);
  		} 
  	}
  	
  }else{
  		$resul=0;
- header('Location: ../../Index.php'.'?resul='.$resul);
+ 		header('Location: '.$paginaRetorno.'?resul='.$resul);
+ //header('Location: ../../Index.php'.'?resul='.$resul);
  }
 } 
+}
  ?>

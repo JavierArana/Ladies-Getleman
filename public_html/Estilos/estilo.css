@@ -4,326 +4,273 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 16/10/2014, 12:28:00 AM
-    Author     : Javier
+Created on : 16/10/2014, 12:28:00 AM
+Author     : Javier
 */
 #cajaPrincipal{
-    border: solid 1px black;
-    width: 100%;
-    height: 550px;
+border: solid 1px black;
+width: 100%;
+height: 550px;
 }
-
 aside{
-    float: left;
-    border: 0px;
-    width: 25%;
-    height: 100%;
-    /*background-color: #0000ff;*/
+float: left;
+border: 0px;
+width: 25%;
+height: 100%;
+/*background-color: #0000ff;*/
 }
 #contenido{
-    float: right;
-    width: 75%;
-    height: 100%;
-    /*background-color: gray;*/
+float: right;
+width: 75%;
+height: 100%;
+/*background-color: gray;*/
 }
 body{
-    background-color: black;
-    color: white;   
+background-color: black;
+color: white;   
 }
 #seccion1{
-    float: left;
-    width: 30%;
+float: left;
+width: 30%;
 }
 #seccion2{
-    float: left;
-    width: 40%; 
+float: left;
+width: 40%; 
 }
 #seccion3{
-    float: right;
-    width: 40%;
+float: right;
+width: 40%;
 }
 #titulo{
-    text-align: left;
-    font-size: 30px;
-    font-family: Vivaldi;
+text-align: left;
+font-size: 30px;
+font-family: Vivaldi;
 }
-
-
 .opcionmenu{
-    display: inline;
-    padding: 5px;
-    font-family: Kunstler Script;
-    font-size: 27px;
+display: inline;
+padding: 5px;
+font-family: Kunstler Script;
+font-size: 27px;
 }
 .opcionmenu:hover a{
-    cursor: pointer;
-    background-color: #ffffff;
-    color: black;
+cursor: pointer;
+background-color: #ffffff;
+color: black;
 }
 .opcionmenu a{
-    text-decoration:none;
-    color:white;	
+text-decoration:none;
+color:white;    
 }
 #logo{
-    float: left;
-    margin: 0px;
+float: left;
+margin: 0px;
 }
 #opcion{    
-    float: left;
-    list-style: none;
+float: left;
+list-style: none;
 }
 #botonBuscar{
-    border-radius: 4em;
-    margin-top: 15px;
+border-radius: 4em;
+margin-top: 15px;
 }
-
 #busqueda{
-    margin-top: 15px;
-    width: 190px;
+margin-top: 15px;
+width: 190px;
 }
 #seccionArticulos{
-    clear: both;
-    width: 100%;
-    height: 88.5%;
-    border: solid black 1px;
-    overflow:auto;
+clear: both;
+width: 100%;
+height: 88.5%;
+border: solid black 1px;
+overflow:auto;
 }
 #seccionArticuloss{
-    clear: both;
-    width: 100%;
-    height: 90%;
-    border: solid black 1px;
-	
+clear: both;
+width: 100%;
+height: 90%;
+border: solid black 1px;
 }
 img{
-    margin-left: 6%;
-    margin-top: 2%;
-    border: solid white 1px;
-    float: left;
-    width: 163px;
-    height: 243px;
-    border:black solid 1px;
+margin-left: 6%;
+margin-top: 2%;
+border: solid white 1px;
+float: left;
+width: 163px;
+height: 243px;
+border:black solid 1px;
 }
-
 figcaption{
-    clear: both;
-    margin-left: 6%;
+clear: both;
+margin-left: 6%;
 }
-
-
 #registrar{
-    color:white;
-    text-decoration: none;
+color:white;
+text-decoration: none;
 }
 #registrar:hover{
-    color: white;
+color: white;
 }
-
 #izq{
-    float: left;
-    width: 25%;
-    height: 100%;
-    
+float: left;
+width: 25%;
+height: 100%;
 }
 #cen{
-    float: left;
-    width: 25%;
-    height: 100%;
-    
+float: left;
+width: 25%;
+height: 100%;
 }
 #der{
-    float: left;
-    width: 25%;
-    height: 100%;
-    
+float: left;
+width: 25%;
+height: 100%;
 }
 .registro{
-    width: 270px;
+width: 270px;
 }
 #opcion{
-    font-size: 15px;
+font-size: 15px;
 }
 #Tituloreg{
-    width: 100%;
-    height: 7%;
-  font-family: AngsanaUPC;
-  font-size: 30px;
-  background: white;
-  color: black;
-  margin-top: 0px;
-  
+width: 100%;
+height: 7%;
+font-family: AngsanaUPC;
+font-size: 30px;
+background: white;
+color: black;
+margin-top: 0px;
 }
-
 #formulario{
-    border:  solid white 1px;
-    //background-color: #cccccc;
-    
-    height: 550px;
-    
+border:  solid white 1px;
+//background-color: #cccccc;
+height: 550px;
 }
 .grupo{
-    float: left;
-    width:43%; 
-    height: 430px;
-    margin-left: 15px;
-	
+float: left;
+width:43%; 
+height: 430px;
+margin-left: 15px;
 }
-
-
 #botonreg{
-    float:right;
-    border-radius: 50%;
-    color: white;
-    background-color: black;
-    width: 70px;
-    height: 70px;
-    margin:0px;
-   
+float:right;
+border-radius: 50%;
+color: white;
+background-color: black;
+width: 70px;
+height: 70px;
+margin:0px;
 }
 .botonmod{
-    
-    border-radius: 50%;
-    color: white;
-    background-color: black;
-    width: 70px;
-    height: 70px;
-    margin:0px;
-   
+border-radius: 50%;
+color: white;
+background-color: black;
+width: 70px;
+height: 70px;
+margin:0px;
 }
 .botonmod2{
-    
-    border-radius: 50%;
-    color: white;
-    background-color: black;
-    width: 70px;
-    height: 70px;
-    margin:0px;
-   
+border-radius: 50%;
+color: white;
+background-color: black;
+width: 70px;
+height: 70px;
+margin:0px;
 }
 .botonmod:a{
-    box-shadow: 0px 0px 0px 0px rgba(255,255,255, 1);   
+box-shadow: 0px 0px 0px 0px rgba(255,255,255, 1);   
 }
-
-
 #contenedorbtnreg{
-    float: right;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 0px 20px rgba(255,255,255, 0);
-    transition: box-shadow 0.4s;
+float: right;
+width: 70px;
+height: 70px;
+border-radius: 50%;
+box-shadow: 0px 0px 0px 20px rgba(255,255,255, 0);
+transition: box-shadow 0.4s;
 }
 #contenedorbtnmod{
-    display: inline-block;
-    float: right;
-    width: 170px;
-    height: 70px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 0px 20px rgba(255,255,255, 0);
-    transition: box-shadow 0.4s;
+display: inline-block;
+float: right;
+width: 170px;
+height: 70px;
+border-radius: 50%;
+box-shadow: 0px 0px 0px 20px rgba(255,255,255, 0);
+transition: box-shadow 0.4s;
 }
 #contenedorbtnreg:hover{
 box-shadow: 0px 0px 0px 0px rgba(255,255,255, 1);    
 }
 #contenedorbtnmod:hover{
- 
 }
-
 .articulosCaballero a{
 color:white;
 text-decoration:none;
 }
 .articulosCaballero:hover a{
-    color: red;
+color: red;
 }
-
 #previa{
-    background: rgba(0,0,0, 0.9);
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: fixed;
+background: rgba(0,0,0, 0.9);
+display: none;
+height: 100%;
+width: 100%;
+position: fixed;
 }
-
 #contenedorPrevia{
-    width: 80%;
-    height: 90%;
-    margin: 25px auto;
-   // background-color: green;
-    overflow: auto;
+width: 80%;
+height: 90%;
+margin: 25px auto;
+// background-color: green;
+overflow: auto;
 }
-
 #contenedorImg{
-    float: left;
-    width: 36%;
-    height: 100%;
-   // background-color: red;
+float: left;
+width: 36%;
+height: 100%;
+// background-color: red;
 }
-
 #contenedorImg img{
-    width: 384px;
-    height: 449px;
-    margin: 0px;
+width: 384px;
+height: 449px;
+margin: 0px;
 }
-
-
 #contenedorArt{
-    margin: 0px;
-    float: left;
-    width: 63%;
-    height: 100%;
-    //background-color: white;
+margin: 0px;
+float: left;
+width: 63%;
+height: 100%;
+//background-color: white;
 }
 .descripcionArt{
-    width: 98%;
-    height:449px;
-    margin: 10px;
-    margin-top: 0px;
-   // background-color: black;
+width: 98%;
+height:449px;
+margin: 10px;
+margin-top: 0px;
+// background-color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .base{
-                        margin-top: 10px;
-                        margin-left: 10px;
-                        padding: 0px;
-                        float: left;
-                        width: 180px;
-                        height: 282px;
-                        
-                        
-                    }
-
-                    .base article{
-                        padding: 0px;
-                        margin-top: 0px;
-                        margin-left: 0px;
-                    }
-
-                    figure{
-                        margin-top: 0px;
-                        margin-left: 0px;
-                    }
-
-                    div{
-                        float: left;
-                        margin-left: 80px;
-                        width: 800px;
-                        height: 650px;
-                        
-                    }
+margin-top: 10px;
+margin-left: 10px;
+padding: 0px;
+float: left;
+width: 180px;
+height: 282px;
+}
+.base article{
+padding: 0px;
+margin-top: 0px;
+margin-left: 0px;
+}
+figure{
+margin-top: 0px;
+margin-left: 0px;
+}
+div{
+float: left;
+margin-left: 80px;
+width: 800px;
+height: 650px;
+}
+td img{
+width: 25px;
+height: 25px;
+}

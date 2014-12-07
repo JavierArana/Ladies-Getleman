@@ -38,9 +38,23 @@
 header("Location: ../../Index.php");
   }
   ?>   
-  <form action="../procesar/login.php" method="post">
-  <button name="sesion" value="1">Cerrar Sesion</button>
+ <form action="../procesar/login.php" method="post">
+  <input type="hidden" name="pagina" value="../Admin/regproductos.php">
+  <input type="hidden" name="cerrarsesion" value="../../Index.php">
+ <table  class="tabla">
+             <tr>
+               <td>Bienvenido:</td>
+               <td><img alt="usuario" width="25" src="../../Imagenes/usuario.png"></td>
+    <?php
+    if(isset($_GET['nickname'])){
+    $nickname = $_GET['nickname']; 
+    echo "<td>$nickname</td>"; } ?>
+                <td><img alt="config" width="25" src="../../Imagenes/config.png"></td> &emsp13; 
+               <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
+               </tr>
+               </table>
 </form>
+
       <center>
         <div id="regProductos" class="reg">
               <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
@@ -50,13 +64,25 @@ header("Location: ../../Index.php");
                <div class="cajausuario">
                   Marca: <br>
                   <input class="caja" type=text name="marca" id="" maxlength="" placeholder="" width="275" onkeypress="return sololetrasconespacios(event)" onpaste="return false"/><br><br>
-                  Nombre: <br>
-                  <input class="caja" type=text name="nombre" id="" maxlength="" placeholder="" onkeypress="return sololetrasconespacios(event)" onpaste="return false" ><br><br>
+                  Prenda: <br>
+                  <select name="nombre">
+                     <option>Playera</option>
+                     <option selected="value">Blusa</option>
+                     <option>Jeans</option>
+                     <option>Pantalon</option>
+                     <option>Vestido</option>
+                     <option>Camisa</option>
+                     <option>Falda</option>
+                     <option>Short</option>
+                     <option>Accesorio</option>
+                  </select>
+                  <br><br>
                   Talla : 
                   <select name="talla">
                      <option>Chica</option>
                      <option selected="value">Mediana</option>
                      <option>Grande</option>
+                     <option>Unitalla</option>
                   </select>
                   &emsp13; &emsp13; 
                   Genero:

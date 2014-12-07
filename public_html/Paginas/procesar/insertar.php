@@ -2,13 +2,14 @@
  $sql = 'insert into ';
  $paginaRetorno = '';
  $resultadoRetorno = 0;
+ static $nfoto = 0;
  if(isset($_POST['tabla'])){
 
 	$tabla = $_POST['tabla'];
-
+ 
 	$sql = $sql.$tabla.' values('; 
  
-
+ 
 //------------------------------------TABLA USUARIOS ----------------------------------
 	if($tabla == 'usuarios'){
 		if(isset($_POST['nombre']) && isset($_POST['tipousuario']) && isset($_POST['fecha']) && isset($_POST['sexo']) && isset($_POST['nick']) && isset($_POST['email'])
@@ -43,7 +44,7 @@
 			&& isset($_POST['existencia']) && isset($_FILES['foto']) && isset($_POST['descripcion'])){
 
  $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
-		$nfoto=++$nfoto;
+		++$nfoto;
 			$marca = $_POST['marca'];
 			$nombre = $_POST['nombre'];
 			$talla = $_POST['talla'];

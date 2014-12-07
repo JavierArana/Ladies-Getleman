@@ -67,22 +67,50 @@
                   </center>
                </nav>
             </section>
-            <section id="seccion3">
-               <form>
-                  <table  class="tabla">
+                                 <section id="seccion3">
+            <?php
+  session_start();
+  if(!isset($_SESSION['inicio'])){
+  ?>  
+            <form action="../procesar/login.php" method="post">
+<input type="hidden" name="pagina" value="../Ninia/Ninias-Faldas.php">
+               <table  class="tabla">
              <tr>
-               <td>Usuario</td>
-               <td><input class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
-               <td> <input id="boton" type="button" value="login"></td>
-             </tr>
+               <td>Usuario</td>&emsp13;
+               <td><input name="usuario" id="usuario" class="textbox" type="text" placeholder="Nick" onkeypress="return usuario(event)" onpaste="return false"/></td>
+               &emsp13;<td><button>Entrar</td></button>
+               
+             </tr> 
              <tr>
                <td >Password</td>
-               <td ><input class="textbox" type="password" placeholder="*********"></td>
+               <td ><input name="pass" id="pass" class="textbox" type="password" placeholder="*********"></td>
                <td><a id="registrar" href="../Registro.php">Registrarse</a></td>
              </tr>
            </table>
-               </form>
-            </section>
+            </form>  
+        <?php 
+}else{
+        ?>
+<form action="../procesar/login.php" method="post">
+<input type="hidden" name="pagina" value="../Ninia/Ninias-Faldas.php">
+<input type="hidden" name="cerrarsesion" value="../Ninia/Ninias-Faldas.php">
+ <table  class="tabla">
+             <tr>
+               <td>Bienvenido:</td>
+               <td><img class="login" alt="usuario" src="../../Imagenes/usuario.png"></td>
+    <?php
+    if(isset($_GET['nickname'])){
+    $nickname = $_GET['nickname']; 
+    echo "<td>$nickname</td>"; } ?>
+                <td><img id="login" alt="config" src="../../Imagenes/config.png"></td> &emsp13; 
+               <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
+               </tr>
+               </table>
+</form>
+<?php
+}
+?>
+        </section>
             <section id="seccionArticulos">
                <section class="contenedorbtn">
                   <input type="button" value="<"  class="bnt_sig_ant" />        
@@ -168,5 +196,13 @@
            <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <input id="botonBuscar" type="submit" value="Buscar">
          </aside>
       </section>
+      <?php 
+if(isset($_GET['resul'])){
+    $resul=$_GET['resul'];
+    if($resul==0){
+echo "<script type='text/javascript'>
+alert('El usuario y/o password son incorrectos!!');
+  </script>";
+}}?> 
    </body>
 </html>

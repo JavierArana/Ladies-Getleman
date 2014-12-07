@@ -39,8 +39,22 @@ header("Location: ../../Index.php");
   }
   ?>  
 <form action="../procesar/login.php" method="post">
-  <button name="sesion" value="1">Cerrar Sesion</button>
+  <input type="hidden" name="pagina" value="../Admin/modproductos.php">
+  <input type="hidden" name="cerrarsesion" value="../../Index.php">
+ <table  class="tabla">
+             <tr>
+               <td>Bienvenido:</td>
+               <td><img alt="usuario" width="25" src="../../Imagenes/usuario.png"></td>
+    <?php
+    if(isset($_GET['nickname'])){
+    $nickname = $_GET['nickname']; 
+    echo "<td>$nickname</td>"; } ?>
+                <td><img alt="config" width="25" src="../../Imagenes/config.png"></td> &emsp13; 
+               <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
+               </tr>
+               </table>
 </form>
+
       <center>
         <form id='formularioModificacion' method='POST' enctype='multipart/form-data' action='../procesar/modificar.php'>
        <input type='hidden' name="tabla" value="productos">
@@ -76,11 +90,21 @@ header("Location: ../../Index.php");
                <p>Modificar Producto</p>
                <div class='cajausuario'>
                
-
+ 
                   Marca: <br>
                   <input class='caja' type=text name='marca' id='marca' maxlength='150' placeholder='marca' width='275' value='$marca' onkeypress='return sololetrasconespacios(event)' onpaste='return false'><br><br>
-                  Nombre: <br>
-                  <input class='caja' type=text name='nombre' id='nombre' maxlength='' placeholder='nombre' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'><br><br>
+                   Prenda: <br>
+                  <select name='nombre' id='nombre' value='$nombre'>
+                     <option>Playera</option>
+                     <option>Blusa</option>
+                     <option>Jeans</option>
+                     <option>Pantalon</option>
+                     <option>Vestido</option>
+                     <option>Camisa</option>
+                     <option>Falda</option>
+                     <option>Short</option>
+                     <option>Accesorio</option>
+                  </select><br><br>
                   Talla : 
                   <select name='talla' id='talla' value='$talla'>
                      <option>Chica</option>

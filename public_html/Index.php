@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -16,7 +16,7 @@ and open the template in the editor.
         <script type="text/javascript" src="JavaScript/lluvia.js"></script>
  
     </head>
-    <body> 
+    <body>  
         <section id="seccion1">
             <p id="titulo">Ladies & Gentlemen</p><br>
         </section>
@@ -32,13 +32,14 @@ and open the template in the editor.
                 </ul>
             </nav>
         </section>
+        <section id="seccion3">
          <?php
   session_start();
   if(!isset($_SESSION['inicio'])){
 //header("Location: Index.php");
   ?>  
-        <section id="seccion3">
             <form action="Paginas/procesar/login.php" method="post">
+            <input type="hidden" name="pagina" value="../../Index.php">
                <table  class="tabla">
              <tr>
                <td>Usuario</td>&emsp13;
@@ -53,25 +54,29 @@ and open the template in the editor.
              </tr>
            </table>
             </form>  
-        </section>
         <?php 
 }else{
         ?>
 <form action="Paginas/procesar/login.php" method="post">
+<input type="hidden" name="pagina" value="../../Index.php">
+            <input type="hidden" name="cerrarsesion" value="../../Index.php">
  <table  class="tabla">
              <tr>
-               <td>Usuario:</td>
+               <td>Bienvenido:</td>
+               <td><img alt="usuario" width="25" src="Imagenes/usuario.png"></td>
     <?php
     if(isset($_GET['nickname'])){
     $nickname = $_GET['nickname']; 
     echo "<td>$nickname</td>"; } ?>
-               <td><button name="sesion" value="1">Cerrar Sesion</button></td>
+                <td><img alt="config" width="25" src="Imagenes/config.png"></td> &emsp13; 
+               <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>
 </form>
 <?php
 }
 ?>
+    </section>
         <div>
             <center>
                 <article id="carrucel">
