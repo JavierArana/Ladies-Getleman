@@ -20,12 +20,7 @@
          <section id="contenedorPrevia">
             <section id="contenedorImg">
                <img id="imgfull" src="">
-               <section class="contenedorbtn" name="anterior">
-                  <input type="button" value="<"  id="anterior" class="bnt_sig_ant" />       
-               </section>
-               <section class="contenedorbtn" name="siguiente">
-                  <input type="button" value=">" id ="siguiente" class="bnt_sig_ant"/>    
-               </section>
+               
             </section>
             <section id="contenedorArt">
                <article class="descripcionArt">
@@ -46,7 +41,7 @@
                      <option selected="value">Mediana</option>
                      <option>Grande</option>
                   </select>
-                  <img src="../../Imagenes/s.png" id="comprar">
+                 <a href="../Compra.php"><img src="../../Imagenes/s.png" id="comprar"></a>
                </article>
             </section>
          </section>

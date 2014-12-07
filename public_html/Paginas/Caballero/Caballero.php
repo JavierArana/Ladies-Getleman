@@ -45,7 +45,7 @@ and open the template in the editor.
                             <option selected="value">Mediana</option>
                             <option>Grande</option>
                         </select>
-                        <img src="../../Imagenes/s.png" id="comprar">
+                        <a href="../Compra.php"><img src="../../Imagenes/s.png" id="comprar"></a>
                     </article>
                 </section>
             </section>
