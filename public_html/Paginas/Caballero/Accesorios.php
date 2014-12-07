@@ -95,7 +95,7 @@ and open the template in the editor.
     if(isset($_GET['nickname'])){
     $nickname = $_GET['nickname']; 
     echo "<td>$nickname</td>"; } ?>
-                <td><img id="login" alt="config" src="../../Imagenes/config.png"></td> &emsp13; 
+                <td><a href="../Usuario.php"><img id="login" alt="config" src="../../Imagenes/config.png"></a></td> &emsp13; 
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>
