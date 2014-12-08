@@ -99,9 +99,10 @@ and open the template in the editor.
                <td>Bienvenido:</td>
                <td><img alt="usuario" width="25" src="../../Imagenes/usuario.png"></td>
     <?php
-    if(isset($_GET['nickname'])){
-    $nickname = $_GET['nickname']; 
-    echo "<td>$nickname</td>"; } ?>
+    session_name();
+    $nickname=$_SESSION['usuario'];
+    $idusuario=$_SESSION['id'];
+    echo "<td>$nickname</td>"; ?>
                 <td><img alt="config" width="25" src="../../Imagenes/config.png"></td> &emsp13; 
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>

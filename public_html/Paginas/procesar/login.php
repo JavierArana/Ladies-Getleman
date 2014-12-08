@@ -21,16 +21,20 @@ if(isset($_POST['sesion']) && isset($_POST['cerrarsesion'])){
  if(mysqli_connect_errno()){//Comprobacion de error en la conexion
 	die("No se pudo realizar la conexion a la base de datos!");
 }
- $res=mysqli_query($conexion,"select tipousuario,nickname from usuarios where nickname='$nick' and contra=$contra");
+ $res=mysqli_query($conexion,"select tipousuario,nickname,IdCliente from usuarios where nickname='$nick' and contra=$contra");
  if($lector=mysqli_fetch_array($res)){
+ 	session_start();
  	$_SESSION['inicio']='ok';
+ 	$nickname=$lector[1];
+ 	$idusuario=$lector[2];
+ 	$_SESSION['id']=$idusuario;
+ 	$_SESSION['usuario'] = $nickname;  
  	if($lector[0]=='cliente'){
- 		$nombreusuario=$lector[1];
-header('Location: '.$paginaRetorno.'?nickname='.$nombreusuario);
+ 		
+header('Location: '.$paginaRetorno);
  	}else{
  		if($lector[0]=='admin'){
- 		$nombreusuario=$lector[1];
-header('Location: ../Admin/admin.php'.'?nickname='.$nombreusuario);
+header('Location: ../Admin/admin.php');
  		} 
  	}
  	

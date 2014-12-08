@@ -94,9 +94,10 @@
                <td>Bienvenido:</td>
                <td><img class="login" alt="usuario" src="../../Imagenes/usuario.png"></td>
     <?php
-    if(isset($_GET['nickname'])){
-    $nickname = $_GET['nickname']; 
-    echo "<td>$nickname</td>"; } ?>
+ session_name();
+    $nickname=$_SESSION['usuario'];
+    $idusuario=$_SESSION['id'];
+    echo "<td>$nickname</td>"; ?>
                 <td><a href="../Usuario.php"><img id="login" alt="config" src="../../Imagenes/config.png"></a></td> &emsp13; 
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>

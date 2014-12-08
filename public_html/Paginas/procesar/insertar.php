@@ -73,7 +73,7 @@
 			$direccion = $_POST['direccion'];
 			$tel = $_POST['tel'];
 			$email = $_POST['email'];
-			$tipoProducto = $_POST['tipoproducto'];
+			$tipoproducto = $_POST['tipoproducto'];
 			$cantidad = $_POST['cantidad'];
 			$sql = $sql."'0','$nombre','$direccion','$tel','$email','$tipoproducto','$cantidad')";	
 			$paginaRetorno = $pagina;
