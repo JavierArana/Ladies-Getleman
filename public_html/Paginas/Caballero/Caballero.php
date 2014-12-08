@@ -20,12 +20,6 @@ and open the template in the editor.
             <section id="contenedorPrevia">
                 <section id="contenedorImg">
                     <img id="imgfull" src="">
-                    <section class="contenedorbtn" name="anterior">
-                        <input type="button" value="<"  id="anterior" class="bnt_sig_ant" />
-                    </section>
-                    <section class="contenedorbtn" name="siguiente">
-                        <input type="button" value=">" id ="siguiente" class="bnt_sig_ant"/>
-                    </section>
                 </section>
                 <section id="contenedorArt">
                     <article class="descripcionArt">
