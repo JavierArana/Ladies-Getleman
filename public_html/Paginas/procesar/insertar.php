@@ -4,7 +4,9 @@
  $resultadoRetorno = 0;
  static $nfoto = 0;
  if(isset($_POST['tabla'])){
-
+session_start();
+ 	$idcliente=$_SESSION['id'];
+ 	$idproducto=$_SESSION['idproducto'];
 	$tabla = $_POST['tabla'];
   
 	$sql = $sql.$tabla.' values('; 
@@ -88,11 +90,10 @@
 //----------------------------TABLA SUGERENCIAS ---------------------------------------------
  if($tabla == 'sugerencias'){
 
- if(isset($_POST['sugerencia']) && isset($_POST['idcliente']) && isset($_POST['idproducto']) && isset($_POST['pagina'])){
+ if(isset($_POST['sugerencia']) && isset($_POST['idproducto'])&& isset($_POST['pagina'])){
     $pagina=$_POST['pagina'];
-    $idcliente=$_POST['idcliente'];
-	$sugerencia= $_POST['sugerencia'];	
-	$idproducto=$_POST['idproducto'];
+	$sugerencia= $_POST['sugerencia'];
+	$idproducto=$_POST['idproducto'];	
  $sql = $sql."'0','$idcliente','$idproducto','$sugerencia')";
  $paginaRetorno = $pagina;
 mysqli_close($conexion);

@@ -15,7 +15,7 @@
       <link rel="stylesheet" href="../../Estilos/estiloAdmin.css">
       <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
       <script  type="text/javascript" src="../../JavaScript/funciones.js"></script>   
-   </head>
+   </head> 
    <body>
       <section id="seccion1">
          <p id="titulo">Ladies & Gentlemen</p>
@@ -51,7 +51,7 @@ header("Location: ../../Index.php");
     $nickname=$_SESSION['usuario'];
     $idusuario=$_SESSION['id'];
     echo "<td>$nickname</td>"; ?>
-                <td><a href="modusuario.php"><img alt="config" width="25" src="../../Imagenes/config.png"></a></td> &emsp13; 
+                    <td><a href="modusuario.php"><img alt="config" width="25" src="../../Imagenes/config.png"></a></td> &emsp13; 
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>

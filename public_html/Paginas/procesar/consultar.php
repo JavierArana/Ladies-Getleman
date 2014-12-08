@@ -192,8 +192,9 @@ function eliminar(){
 #---------------------------------------------------------------------
 public function consultarArticulos(){
 $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
-$consulta = mysqli_query($conexion, "select * from  productos limit 1,9");
-
+$a=1;
+$b=9;
+$consulta = mysqli_query($conexion, "select * from  productos limit '$a','b'");
 while($fila = mysqli_fetch_array($consulta)){
 echo "
 <section  class='base'>
@@ -212,5 +213,32 @@ mysqli_free_result($consulta);
 
 
 }
+
+#---------------------------------------------------------------------
+public function consultarArticuloDesc(){
+$conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
+
+$consulta = mysqli_query($conexion, "select * from  productos where IdProducto=$idproducto");
+while($fila = mysqli_fetch_array($consulta)){
+	session_start();
+ 	$_SESSION['idproducto']=$fila['0'];
+echo "
+<section  class='base'>
+	<article>
+    	<figure>
+        	<img  src='../fotos/$fila[7]' alt='Caballero/1' onclick='abrirImagen();'/>
+        	<figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
+   		 </figure>
+	</article>
+</section>
+";
+
+}
+mysqli_close($conexion);
+mysqli_free_result($consulta);
+
+
+}
+
 }
 ?>
