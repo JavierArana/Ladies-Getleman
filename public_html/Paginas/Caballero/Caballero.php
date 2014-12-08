@@ -128,26 +128,20 @@ echo "
 <section  class='base'>
   <article>
       <figure>
-          <img  src='../fotos/$fila[7]' alt='Caballero/1' onclick='abrirImagen();'/>
+          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='abrirImagen();'/>
           <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
        </figure>
   </article>
 </section>
 ";
-
 }
 mysqli_close($conexion);
 mysqli_free_result($consulta);
-
                       ?>
-
-
                     </div>
-
 <section class="contenedorbtn">
                   <input type="button" value=">" class="bnt_sig_ant"/>    
                </section>
-
                 </section>
     
                 </section>

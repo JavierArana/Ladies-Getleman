@@ -112,7 +112,28 @@
                   <input type="button" value="<"  class="bnt_sig_ant" />        
                </section>
                <div>
-                 
+  <?php 
+  require_once '../procesar/config.php';
+ $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
+//$a=1;
+//$b=9;
+//$consulta = mysqli_query($conexion, "select * from productos where nombre='Accesorio' and genero='Dama' limit $a,$b");
+$consulta = mysqli_query($conexion, "select * from productos where nombre='Vestido' and genero='Dama'");
+while($fila = mysqli_fetch_array($consulta)){
+echo "
+<section  class='base'>
+  <article>
+      <figure>
+          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='abrirImagen();'/>
+          <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
+       </figure>
+  </article>
+</section>
+";
+}
+mysqli_close($conexion);
+mysqli_free_result($consulta);
+                      ?>                  
                </div>
                <section class="contenedorbtn">
                   <input type="button" value=">" class="bnt_sig_ant"/>    
