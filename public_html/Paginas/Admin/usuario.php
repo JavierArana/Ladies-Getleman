@@ -50,7 +50,8 @@ header("Location: ../../Index.php");
     $nickname=$_SESSION['usuario'];
     $idusuario=$_SESSION['id'];
     echo "<td>$nickname</td>"; ?>
-                <td><img alt="config" width="25" src="../../Imagenes/config.png"></td> &emsp13; 
+                <td><a href="modusuario.php"><img alt="config" width="25" src="../../Imagenes/config.png"></a></td> &emsp13; 
+                
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>
