@@ -194,7 +194,7 @@ public function consultarArticulos(){
 $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
 $a=1;
 $b=9;
-$consulta = mysqli_query($conexion, "select * from  productos limit '$a','b'");
+$consulta = mysqli_query($conexion, "select * from  productos limit $a,$b");
 while($fila = mysqli_fetch_array($consulta)){
 echo "
 <section  class='base'>
