@@ -125,66 +125,9 @@ function abrirImagen(){
                <section class="contenedorbtn">
                   <input type="button" value="<"  class="bnt_sig_ant" />       
                </section>
-               <section id="izq">
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/1.jpg" alt="Caballero/Playera/1" name="im" onclick="abrirImagen()">
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/2.jpg" onclick="abrirImagen2();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/3.jpg" onclick="abrirImagen3();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-               </section>
-               <section id="cen">
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/4.jpg" onclick="abrirImagen4();">
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/5.jpg" onclick="abrirImagen5();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/6.jpg" onclick="abrirImagen6();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-               </section>
-               <section id="der">
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/7.jpg" onclick="abrirImagen7();">
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/8.jpg" onclick="abrirImagen8();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Caballero/Playera/9.jpg" onclick="abrirImagen9();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-               </section>
+               <div>
+               	
+               </div>
                <section class="contenedorbtn">
                   <input type="button" value=">" class="bnt_sig_ant"/>    
                </section>

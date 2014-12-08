@@ -111,66 +111,9 @@
                <section class="contenedorbtn">
                   <input type="button" value="<"  class="bnt_sig_ant" />        
                </section>
-               <section id="izq">
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/1.jpg" onclick="abrirImagen();">
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/2.jpg" onclick="abrirImagen();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/3.jpg" onclick="abrirImagen();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-               </section>
-               <section id="cen">
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/4.jpg" onclick="abrirImagen();">
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/5.jpg" onclick="abrirImagen();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/6.jpg" onclick="abrirImagen();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-               </section>
-               <section id="der">
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/7.jpg" onclick="abrirImagen();">
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/8.jpg" onclick="abrirImagen();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-                  <article>
-                     <figure>
-                        <img src="../../Imagenes/Ninia/Faldas/9.jpg" onclick="abrirImagen();"><br>
-                        <figcaption>Marca:<br>Costo:$</figcaption>
-                     </figure>
-                  </article>
-               </section>
+               <div>
+                 
+               </div>
                <section class="contenedorbtn">
                   <input type="button" value=">" class="bnt_sig_ant"/>    
                </section>

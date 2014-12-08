@@ -109,66 +109,9 @@ and open the template in the editor.
                     <section class="contenedorbtn">
                         <input type="button" value="<"  class="bnt_sig_ant" />       
                     </section>
-                    <section id="izq">
-                        <article>
-                        <figure>
-                            <img src="../../Imagenes/Caballero/Accesorios/1.jpg" onclick="abrirImagen();">
-                            <figcaption>Marca:<br>Costo:$</figcaption>
-                        </figure>                        
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/2.jpg" onclick="abrirImagen2();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                            <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/3.jpg" onclick="abrirImagen3();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        </section>
-                        <section id="cen">
-                            <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/4.jpg" onclick="abrirImagen4();">
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/5.jpg" onclick="abrirImagen5();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                            <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/6.jpg" onclick="abrirImagen6();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        </section>
-                        <section id="der">
-                            <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/7.jpg" onclick="abrirImagen7();">
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/8.jpg" onclick="abrirImagen8();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                            <article>
-                            <figure>
-                                <img src="../../Imagenes/Caballero/Accesorios/9.jpg" onclick="abrirImagen9();"><br>
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>                        
-                        </article>
-                        </section>   
+                    <div>
+                    	
+                    </div>   
                         <section class="contenedorbtn">
                             <input type="button" value=">" class="bnt_sig_ant"/>    
                         </section>
