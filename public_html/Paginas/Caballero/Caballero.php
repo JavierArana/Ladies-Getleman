@@ -112,29 +112,33 @@ and open the template in the editor.
 ?>
   </section>
      <section id="seccionArticulos">
-
                <section class="contenedorbtn">
                   <input type="button" value="<"  class="bnt_sig_ant" />       
                </section>
 
                     <div>            
-
-<!--      
-                       <section  class="base">
-                        <article>
-                            <figure>
-                                <img  src="../../Imagenes/Caballero/1.jpg" alt="Caballero/1" onclick="abrirImagen();" >
-                                <figcaption>Marca:<br>Costo:$</figcaption>
-                            </figure>
-                        </article>
-                       </section>
-          -->
-
-
                   <?php 
-                      require_once '../procesar/consultar.php';
-                      $con = new consultar();
-                      $con->consultarArticulos();
+  require_once '../procesar/config.php';
+ $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
+$a=1;
+$b=9;
+$consulta = mysqli_query($conexion, "select * from productos where genero='Caballero' limit $a,$b");
+while($fila = mysqli_fetch_array($consulta)){
+echo "
+<section  class='base'>
+  <article>
+      <figure>
+          <img  src='../fotos/$fila[7]' alt='Caballero/1' onclick='abrirImagen();'/>
+          <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
+       </figure>
+  </article>
+</section>
+";
+
+}
+mysqli_close($conexion);
+mysqli_free_result($consulta);
+
                       ?>
 
 
@@ -143,11 +147,6 @@ and open the template in the editor.
 <section class="contenedorbtn">
                   <input type="button" value=">" class="bnt_sig_ant"/>    
                </section>
-
-
-
-
-                    
 
                 </section>
     
