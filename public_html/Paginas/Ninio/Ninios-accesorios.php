@@ -118,7 +118,7 @@
 //$a=1;
 //$b=9;
 //$consulta = mysqli_query($conexion, "select * from productos where nombre='Accesorio' and genero='Dama' limit $a,$b");
-$consulta = mysqli_query($conexion, "select * from productos where genero='Niño'");
+$consulta = mysqli_query($conexion, "select * from productos where nombre='Accesorio' and genero='Niño'");
 while($fila = mysqli_fetch_array($consulta)){
 echo "
 <section  class='base'>
