@@ -1,14 +1,18 @@
 <?php 
+ if(isset($_SESSION['inicio'])){
+ 	 session_start();
+ 	$idcliente=$_SESSION['id'];
+ 	$idproducto=$_SESSION['idproducto'];
+	
+}
+
  $sql = 'insert into ';
  $paginaRetorno = '';
  $resultadoRetorno = 0;
  static $nfoto = 0;
+
  if(isset($_POST['tabla'])){
-session_start();
- 	$idcliente=$_SESSION['id'];
- 	$idproducto=$_SESSION['idproducto'];
-	$tabla = $_POST['tabla'];
-  
+ 	$tabla = $_POST['tabla'];
 	$sql = $sql.$tabla.' values('; 
  
  
