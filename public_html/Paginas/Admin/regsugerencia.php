@@ -62,7 +62,7 @@ header("Location: ../../Index.php");
       <form id="formulario" method="post" enctype="multipart/form-data" action="../procesar/insertar.php">
       <input type="hidden" name="tabla" value="sugerencias">
        <input type="hidden" name="pagina" value="../Admin/regsugerencia.php">
-               <p>Nueva Suegerencia</p><br><br>
+               <p>Nueva Sugerencia</p><br><br>
                <div class="cajausuario">
                Id Producto:<br>
                <select name="idproducto">
