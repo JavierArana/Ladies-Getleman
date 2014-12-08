@@ -72,9 +72,8 @@ header("Location: ../../Index.php");
        <input type="hidden" name="tabla" value="usuarios">
        <!-- Incrustar id del usuario marcado para modificar en los procesos-->
        <?php 
-        $idgeneral=$_GET['ID'];
         echo
-       "<input type='hidden' name='id' value='$idgeneral'>"
+       "<input type='hidden' name='id' value='$idusuario'>"
        ?>
 
 
