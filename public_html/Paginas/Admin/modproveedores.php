@@ -77,7 +77,7 @@ header("Location: ../../Index.php");
        if(mysqli_connect_errno($conexion)){
         die("no se pudo realizar la conexion a la base de datos");
        }
-       $consulta=mysqli_query($conexion,"SELECT * FROM proveedores");
+       $consulta=mysqli_query($conexion,"SELECT * FROM  IdProveedor='$idgeneral'");
        while($fila=mysqli_fetch_array($consulta)){
 
         $nombre=$fila[1];

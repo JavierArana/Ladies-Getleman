@@ -75,7 +75,7 @@
        if(mysqli_connect_errno()){//Comprobacion de error en la conexion
        die("No se pudo realizar la conexion a la base de datos!");
        }
-       $consulta=mysqli_query($conexion, "SELECT * FROM sugerencias");
+       $consulta=mysqli_query($conexion, "SELECT * FROM sugerencias where IdSugerencia='$idgeneral'");
        while($fila = mysqli_fetch_array($consulta)){
         $sugerencia=$fila[3];
         

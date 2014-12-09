@@ -72,8 +72,9 @@ header("Location: ../../Index.php");
        <input type="hidden" name="tabla" value="usuarios">
        <!-- Incrustar id del usuario marcado para modificar en los procesos-->
        <?php 
+        $idgeneral=$_GET['ID'];
         echo
-       "<input type='hidden' name='id' value='$idusuario'>"
+       "<input type='hidden' name='id' value='$idgeneral'>"
        ?>
 
 
@@ -83,7 +84,7 @@ header("Location: ../../Index.php");
        if(mysqli_connect_errno()){//Comprobacion de error en la conexion
        die("No se pudo realizar la conexion a la base de datos!");
        }
-       $consulta=mysqli_query($conexion, "SELECT * FROM usuarios");
+       $consulta=mysqli_query($conexion, "SELECT * FROM usuarios where IdCliente='$idgeneral'");
        while($fila = mysqli_fetch_array($consulta)){
         $nombre=$fila[1];
         $tipousuario=$fila[2];

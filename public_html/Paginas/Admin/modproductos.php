@@ -70,7 +70,7 @@ header("Location: ../../Index.php");
        if(mysqli_connect_errno()){//Comprobacion de error en la conexion
        die("No se pudo realizar la conexion a la base de datos!");
        }
-       $consulta=mysqli_query($conexion, "SELECT * FROM productos");
+       $consulta=mysqli_query($conexion, "SELECT * FROM productos where IdProducto='$idgeneral'");
        while($fila = mysqli_fetch_array($consulta)){
         $marca=$fila[1];
         $nombre=$fila[2];
