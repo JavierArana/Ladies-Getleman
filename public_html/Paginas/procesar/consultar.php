@@ -20,7 +20,7 @@ echo "<tr>
 		<td>$fila[9]</td> 
         <td>
 	   
-		<a href='../procesar/eliminar.php?ID=$fila[0] &me=1'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
+		<a href='javascript:Preguntareliminar($fila[0],1)'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
        
 		<a href='modusuario.php?ID=$fila[0]&me=1'><img class='imagen' src='../../img/usuario_editar.png'></a>
 		</td>	
@@ -52,7 +52,7 @@ echo "<tr>
 		
 		
         <td>
-			<a href='../procesar/eliminar.php?ID=$fila[0] &me=2'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
+			<a href='javascript:Preguntareliminar($fila[0],2)'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
        
 		<a href='modproductos.php?ID=$fila[0]&me=1'><img class='imagen' src='../../img/usuario_editar.png'></a>
 		</td>	
@@ -92,7 +92,7 @@ echo "<tr>
 	
 		
         <td>
-		<a href='../procesar/eliminar.php?ID=$fila[0] &me=3'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
+		<a href='javascript:Preguntareliminar($fila[0],3)'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
        
 		<a href='modproveedores.php?ID=$fila[0]&me=1'><img class='imagen' src='../../img/usuario_editar.png'></a>
 		</td>	
@@ -127,7 +127,7 @@ echo "<tr>
 	
 		
         <td>
-			<a href='../procesar/eliminar.php?ID=$fila[0] &me=4'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
+			<a href='javascript:Preguntareliminar($fila[0],4)'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
        
 		<a href='modsugerencia.php?ID=$fila[0]&me=1'><img class='imagen' src='../../img/usuario_editar.png'></a>
 		</td>	
@@ -165,7 +165,7 @@ echo "<tr>
 	
 		
         <td>
-		<a href='../procesar/eliminar.php?ID=$fila[0] &me=5'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
+		<a href='javascript:Preguntareliminar($fila[0],5)'><img class='imagen' src='../../img/usuario_Borrar.png' ></a>
        
 		<a href='modventas.php?ID=$fila[0]&me=1'><img class='imagen' src='../../img/usuario_editar.png'></a>
 		</td>	

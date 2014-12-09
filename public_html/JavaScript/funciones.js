@@ -62,3 +62,12 @@ function abrirform(formulario){
            document.getElementById(formulario).style.display="block";
            document.getElementById(formulario).style.display="block";
         }
+
+        
+        function Preguntareliminar(identificador,Numtabla){
+          if(confirm("Realmente desea eliminar este registro?, el proceso es irreversible"))
+        {
+          window.location="../procesar/eliminar.php?ID="+identificador+"&me="+Numtabla;
+        }
+
+        }
