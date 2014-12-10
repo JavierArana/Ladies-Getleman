@@ -3,9 +3,7 @@
  $paginaRetorno = '';
  $resultadoRetorno = 0;
  if(isset($_POST['tabla'])){
- 	 session_start();
- 	$idcliente=$_SESSION['id'];
- 	$idproducto=$_SESSION['idproducto'];
+
  	$tabla = $_POST['tabla'];
 	$sql = $sql.$tabla.' values('; 
  
@@ -94,6 +92,11 @@
 	}else
 //----------------------------TABLA SUGERENCIAS ---------------------------------------------
  if($tabla == 'sugerencias'){
+
+ 	 session_start();
+ 	$idcliente=$_SESSION['id'];
+ 	 $idproducto=$_SESSION['idproducto'];
+
 
  if(isset($_POST['sugerencia']) && isset($_POST['idproducto'])&& isset($_POST['pagina'])){
     $pagina=$_POST['pagina'];

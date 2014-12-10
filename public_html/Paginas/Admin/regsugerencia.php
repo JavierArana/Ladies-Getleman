@@ -68,7 +68,7 @@ header("Location: ../../Index.php");
                <select name="idproducto">
                 <option selected="value">1</option>
                 <option>2</option>
-                <option>3</option>
+                <option>49</option>
                </select>
                <br><br>
                Sugerencia:<br>

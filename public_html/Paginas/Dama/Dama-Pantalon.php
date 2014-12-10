@@ -132,6 +132,16 @@ mysqli_free_result($consulta);
                <li class="articulosCaballero"><a href="Dama-Accesorios.php">Accesorios</a></li>
             </ul>
              <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <input id="botonBuscar" type="submit" value="Buscar">
+          <!-- .......... acomodar servicios web porfavor con estilos.......................... -->
+          
+          
+          <?php
+          include('../serviciosWeb/cliente.php');
+          ?>
+           
+           
+           <!-- .................................................................................. -->
+
          </aside>
       </section>
             <?php 

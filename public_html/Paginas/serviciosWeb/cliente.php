@@ -34,16 +34,50 @@ else{
         }
         else {
             echo "
-            <center>
-            <h2>Promociones de Articulos !</h2>
-            <br>
+        <div id='servicio'>
+            <h3>Promocion</h3>         
+            <img src='../fotos/$imagen' width='30px' heigth='30px'>
+            <br><br>
+            <p><h4>Marca: $marca <br>Costo: $costo</h2></p>
+        </div>
+    
+    <style>
+          #servicio{
+            clear:both;
+            text-align:left;
+            margin-left:0px;
+            height:100px;
+          }
+
+          h3{
+            color:rgb(51,255,0);
+          }
+          
+          #servicio img{
+            margin-left:0px;
+            margin-top:2px;
+            width:10em;
+            height:10em;
+            margin-right: 25px;
+
+          }
+
+          p{
+            clear:both;
+            float:left;
+            margin-top:0px;
+           margin-left:3px;
            
-           <p><img src='../fotos/$imagen' whidth='50px' heigth='50px'></p>
-           <br><br>
-          <p><h2>$nombre</h2></p>
-          <p><h2>Marca: $marca</h2></p>
-          <p><h2>a solo $ $costo</h2></p>
-          </center>
+          }
+
+          h4{
+            font-size: 14px;
+          }
+
+         
+
+    </style>
+
        ";
                                  
         }

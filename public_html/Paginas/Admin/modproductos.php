@@ -57,6 +57,7 @@ header("Location: ../../Index.php");
 </form>
 
       <center>
+      <div id='regProductos' class='reg'>
         <form id='formularioModificacion' method='POST' enctype='multipart/form-data' action='../procesar/modificar.php'>
        <input type='hidden' name="tabla" value="productos">
       <?php 
@@ -86,7 +87,7 @@ header("Location: ../../Index.php");
 ?>
 <?php
         echo
-       " <div id='regProductos' class='reg'>
+       " 
           
                <p>Modificar Producto</p>
                <div class='cajausuario'>
