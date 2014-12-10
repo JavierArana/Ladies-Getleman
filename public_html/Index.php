@@ -68,8 +68,16 @@ and open the template in the editor.
   session_name();
     $nickname=$_SESSION['usuario'];
     $idusuario=$_SESSION['id'];
-    echo "<td>$nickname</td>"; ?>
-                <td><a href="Paginas/Usuario.php"><img alt="config" width="25" src="Imagenes/config.png"></a></td> &emsp13; 
+    $tipouser=$_SESSION['tipouser'];
+    echo "<td>$nickname</td>"; 
+    if($tipouser=='admin'){
+        $configuser='Paginas/UsuarioAdmin.php';
+    }else{
+         $configuser='Paginas/Usuario.php';
+    }
+    echo "<td><a href='$configuser'><img alt='config' width='25' src='Imagenes/config.png'></a></td> &emsp13; ";
+    ?>
+                
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>

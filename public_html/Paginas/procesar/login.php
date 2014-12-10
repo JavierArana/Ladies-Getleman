@@ -27,13 +27,15 @@ if(isset($_POST['sesion']) && isset($_POST['cerrarsesion'])){
  	$_SESSION['inicio']='ok';
  	$nickname=$lector[1];
  	$idusuario=$lector[2];
+
  	$_SESSION['id']=$idusuario;
  	$_SESSION['usuario'] = $nickname;  
+ 	$_SESSION['tipouser']=$lector[0];
  	if($lector[0]=='cliente'){
- 		
 header('Location: '.$paginaRetorno);
  	}else{
  		if($lector[0]=='admin'){
+
 header('Location: ../Admin/admin.php');
  		} 
  	}

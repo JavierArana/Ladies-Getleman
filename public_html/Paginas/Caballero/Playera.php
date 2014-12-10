@@ -107,13 +107,20 @@ function abrirImagen(){
              <tr>
                <td>Bienvenido:</td>
                <td><img alt="usuario" width="25" src="../../Imagenes/usuario.png"></td>
-    <?php
-    session_name();
+<?php
+  session_name();
     $nickname=$_SESSION['usuario'];
     $idusuario=$_SESSION['id'];
-    echo "<td>$nickname</td>"; ?>
-                <td><a href="../Usuario.php"><img alt="config" width="25" src="../../Imagenes/config.png"></a></td> &emsp13; 
-               <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
+    $tipouser=$_SESSION['tipouser'];
+    echo "<td>$nickname</td>"; 
+    if($tipouser=='admin'){
+        $configuser='../UsuarioAdmin.php';
+    }else{
+         $configuser='../Usuario.php';
+    }
+    echo "<td><a href='$configuser'><img alt='config' width='25' src='../../Imagenes/config.png'></a></td> &emsp13; ";
+    ?>
+               &emsp13;<td><button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>
 </form>
