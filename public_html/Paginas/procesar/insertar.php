@@ -2,7 +2,6 @@
  $sql = 'insert into ';
  $paginaRetorno = '';
  $resultadoRetorno = 0;
- static $nfoto = 0;
  if(isset($_POST['tabla'])){
  	 session_start();
  	$idcliente=$_SESSION['id'];
@@ -45,13 +44,20 @@
 			&& isset($_POST['existencia']) && isset($_FILES['foto']) && isset($_POST['descripcion']) && isset($_POST['pagina'])){
 
  $extensionArchivo  =  substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'],'.'));
-		++$nfoto;
 			$marca = $_POST['marca'];
 			$nombre = $_POST['nombre'];
 			$talla = $_POST['talla'];
 			$genero = $_POST['genero'];
 			$costo = $_POST['costo'];
 			$existencia = $_POST['existencia'];
+			 require_once 'config.php';
+			$conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
+			$consulta = mysqli_query($conexion, "select * from productos order by IdProducto desc LIMIT 1");
+			if($fila = mysqli_fetch_array($consulta)){
+				$nfoto=$fila[0]+1;
+			}else{
+				$nfoto=1;
+			}
 			$archivo =$nombre.$nfoto.$extensionArchivo;
 			$descripcion=$_POST['descripcion'];
 			$pagina=$_POST['pagina'];
