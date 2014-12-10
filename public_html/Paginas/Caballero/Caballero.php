@@ -14,6 +14,7 @@ and open the template in the editor.
         <script type="text/javascript" src="../../JavaScript/validacionCampos.js"></script>
          <script type="text/javascript" src="../../JavaScript/lluvia.js"></script>
         <title>Ladies & Gentlemen </title>
+        
     </head>
     <body>
         <section id="previa" >
