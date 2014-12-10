@@ -24,7 +24,7 @@ if($nombretabla == 'usuarios'){
     $tel=$_POST['tel'];
     $direccion=$_POST['direccion'];
     //Actualizacion
-    $modificacion= "UPDATE $nombretabla SET nombre='$nombre',tipousuario='$tipousuario',fechanac='$fecha',sexo='$sexo', nickname='$nick',email='$email',contra='$contra',telefono='$tel', direccion='$direccion' WHERE IdCliente='$idgeneral'";
+    $modificacion= "UPDATE $nombretabla SET nombre='$nombre',tipousuario='$tipousuario',fechanac='$fecha',sexo='$sexo', nickname='$nick',email='$email',contra=password('$contra'),telefono='$tel', direccion='$direccion' WHERE IdCliente='$idgeneral'";
     //$sql="UPDATE '$nombretabla' SET nombre=''$nombre''";
     echo "UPDATE $nombretabla SET nombre='$nombre',fechanac='$fecha',sexo='$sexo', nickname='$nick',email='$email',contra='$contra',telefono='$tel', direccion='$direccion' WHERE IdCliente='$idgeneral'";
 
