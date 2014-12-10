@@ -17,9 +17,38 @@ and open the template in the editor.
         
     </head>
     <body>
+      <section id="previa" >
+            <section id="contenedorPrevia">
+                <section id="contenedorImg">
 
+                    <img id="imgfull" src=""><!--  imagen a mostrar   -->
+
+                </section>
+                <section id="contenedorArt">
+                    <article class="descripcionArt">
+                        <section class="contenedorbtn">
+                            <input type="button" value="X"  id="btncerrar" class="bnt_sig_ant" onclick="cerrarImg();" /> 
+                        </section><br><br><br>
+                        <p id="texto">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <select name="talla"> 
+                            <option>Chica</option>
+                            <option selected="value">Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <a href="../Compra.php"><img src="../../Imagenes/s.png" id="comprar"></a>
+                    </article>
+                </section>
+            </section>
+        </section>
         <section id="cajaPrincipal">
-            <section id="contenido">
+            <section id="contenido"> 
                 <section id="seccion2">
                     <nav><br>
                         <center>
@@ -111,17 +140,25 @@ $busquedaelegida ="select * from productos where genero='Caballero' limit $a,$b"
 }
 $consulta= mysqli_query($conexion,$busquedaelegida);
 #--------------------------------------------------------------------
+   $datos =  array();
+         
+  $contador=0;
+#--------------------------------------------------------------
 while($fila = mysqli_fetch_array($consulta)){
-echo "
-<section  class='base'>
+  $datos[$contador]=$fila[7];
+  #echo"la direccion de la imagen es".$datos[$contador]."con el indice".$contador."br";?>
+  <?php
+echo "<section  class='base'>
   <article>
       <figure>
-          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='abrirImagen();'/>
+        <a href='../Articulo.php?direccion=$fila[7]'>  <img  src='../fotos/$fila[7]' alt='producto/1' /></a>
           <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
        </figure>
   </article>
 </section>
 ";
+  $contador++;
+
 }
 mysqli_close($conexion);
 mysqli_free_result($consulta);

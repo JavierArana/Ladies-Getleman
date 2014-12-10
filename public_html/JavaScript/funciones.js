@@ -46,6 +46,15 @@ function abrirImagen(){
         }
 
 
+      function abrirformulariosDinamicos(direccion){
+
+         document.getElementById("previa").style.display="block";
+            
+            document.getElementById('imgfull').src = "../Paginas/fotos/"+direccion;
+
+      }
+
+
 function abrirform(formulario){
 
       document.getElementById("regUsuario").style.display="none"; 

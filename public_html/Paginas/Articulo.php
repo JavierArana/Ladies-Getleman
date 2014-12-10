@@ -20,12 +20,20 @@ and open the template in the editor.
         	</style>
     </head>
        <body>
+       <?php
+       $direccion=$_GET['direccion'];
+       ?>
 		<section id="previa" >
             <section id="contenedorPrevia">
                 <section id="contenedorImg">
+                <?php
+                echo "$direccion";
+                ?>
+                    <?php
+                    echo
+                   " <img id='imgfull' src='fotos/$direccion'>";
 
-                    <img id="imgfull" src=""><!--  imagen a mostrar   -->
-
+                     ?>
                 </section>
                 <section id="contenedorArt">
                     <article class="descripcionArt">
@@ -45,7 +53,16 @@ and open the template in the editor.
                             <option selected="value">Mediana</option>
                             <option>Grande</option>
                         </select>
-                        <a href="Compra.php"><img src="../Imagenes/s.png" id="comprar"></a>
+                        <?php
+                        session_start();
+                         if(isset($_POST['sesion'])){
+                             echo "<a href='Comprar.php'><img src='../Imagenes/s.png' id='comprar'></a>  ";   
+                            }else{
+
+                                
+                            }
+                      
+                            ?>
                     </article>
                 </section>
             </section>
