@@ -112,17 +112,11 @@ $busquedaelegida ="select * from productos where genero='Caballero' limit $a,$b"
 $consulta= mysqli_query($conexion,$busquedaelegida);
 #--------------------------------------------------------------------
 while($fila = mysqli_fetch_array($consulta)){
-  $idpro=$fila[0];
-  $imagen=$fila[7];
-  $desc=$fila[8];
-  require_once '../Articulo.php';
-                   $con = new Articulo();
-                  
 echo "
 <section  class='base'>
   <article>
       <figure>
-          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='$con->consultar_articulo();'/>
+          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='abrirImagen();'/>
           <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
        </figure>
   </article>
