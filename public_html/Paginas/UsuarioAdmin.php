@@ -23,19 +23,18 @@
       </section>
   
 
-   <section id="seccion2">
-                    <nav><br>
-                        <center>
-                            <ul id="menu">
-                                <li class="opcionmenu"><a href="../Index.php">Home</a></li>
-                                <li class="opcionmenu"><a href="Caballero/Caballero.php">Caballero</a></li>
-                                <li class="opcionmenu"><a href="Dama/Dama.php">Dama</a></li>
-                                <li class="opcionmenu"><a href="Ninio/Ninios.php">Niños</a></li>                    
-                                <li class="opcionmenu"><a href="Ninia/Ninias.php">Niñas</a></li>                    
-                            </ul>
-                        </center>
-                    </nav>
-                </section>
+<section id="seccion2">
+         <nav>
+            <br>
+            <ul id="menu">
+               <li class="opcionmenu" ><a href="Admin/productos.php">Productos</a></li>
+               <li class="opcionmenu" ><a href="Admin/ventas.php">Ventas</a></li>
+               <li class="opcionmenu" ><a href="Admin/proveedores.php">Proveedores</a></li>
+               <li class="opcionmenu" ><a href="Admin/sugerencias.php">Sugerencias</a></li>
+               <li class="opcionmenu" ><a href="Admin/usuario.php">Usuarios</a></li>
+            </ul>
+         </nav>
+</section>
 
       <?php
   session_start();
@@ -44,7 +43,7 @@ header("Location: ../Index.php");
   }
   ?>  
   <form action="procesar/login.php" method="post">
-  <input type="hidden" name="pagina" value="../Usuario.php">
+  <input type="hidden" name="pagina" value="../UsuarioAdmin.php">
   <input type="hidden" name="cerrarsesion" value="../../Index.php">
 <table  class="tabla">
              <tr>
@@ -55,7 +54,7 @@ header("Location: ../Index.php");
     $nickname=$_SESSION['usuario'];
     $idusuario=$_SESSION['id'];
     echo "<td>$nickname</td>"; ?>
-                <td><a href="Usuario.php"><img alt="config" width="25" src="../Imagenes/config.png"></a></td> &emsp13; 
+                <td><a href="UsuarioAdmin.php"><img alt="config" width="25" src="../Imagenes/config.png"></a></td> &emsp13; 
                <td> &emsp13; <button name="sesion" value="1">Cerrar Sesion</button></td>
                </tr>
                </table>
