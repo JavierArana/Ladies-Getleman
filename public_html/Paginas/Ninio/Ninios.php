@@ -95,7 +95,22 @@
  $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
 $a=1;
 $b=9;
-$consulta = mysqli_query($conexion, "select * from productos where genero='Niño' limit $a,$b");
+ #-------------------------codigo--------------------------------------
+
+//evalua si el usuario hizo una busqueda por marca
+if(isset($_GET['consultabusqueda'])){
+  //si la realiza toma la nueva consulta para mostrar nuevos datos
+
+$busqueda=$_GET['consultabusqueda'];
+
+$busquedaelegida=$busqueda;
+
+
+}else{
+$busquedaelegida=  "select * from productos where genero='Niño' limit $a,$b";
+}
+$consulta= mysqli_query($conexion,$busquedaelegida);
+
 //$consulta = mysqli_query($conexion, "select * from productos where nombre='Accesorio' and genero='Niño'");
 while($fila = mysqli_fetch_array($consulta)){
 echo "
@@ -130,7 +145,18 @@ mysqli_free_result($consulta);
                
                <li class="articulosCaballero"><a href="Ninios-accesorios.php">Accesorios</a></li>
             </ul>
-            <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false">  <input id="botonBuscar" type="submit" value="Buscar">
+            <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/busquedas.php">
+                 <input type="hidden" name="genero" id="genero" value="Niño">
+                 <input type="hidden" name="ubicacion" id="ubicacion" value="../Ninio/Ninios.php">
+
+                <!-- <input type="hidden" name="nombre" id="nombre" value="">-->
+
+                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar por Marca"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  
+                 <input id="botonBuscar" type="submit" value="Buscar">
+                 </form>
+
+
+
          <!-- .......... acomodar servicios web porfavor con estilos.......................... -->
           
           

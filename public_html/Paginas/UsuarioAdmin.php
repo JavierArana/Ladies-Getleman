@@ -73,7 +73,7 @@ header("Location: ../Index.php");
 
       <div id="regUsuario" class="reg">
       <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="procesar/modificar.php">
-       <input type="hidden" name="tabla" value="usuarioactivo">
+       <input type="hidden" name="tabla" value="usuarioactivoadmin">
        <!-- Incrustar id del usuario marcado para modificar en los procesos-->
        <?php 
         $idgeneral=$idusuario;
@@ -91,7 +91,7 @@ header("Location: ../Index.php");
        $consulta=mysqli_query($conexion, "SELECT * FROM usuarios where IdCliente='$idgeneral'");
        while($fila = mysqli_fetch_array($consulta)){
         $nombre=$fila[1];
-      
+        $tipousuario=$fila[2];
         $fechanac=$fila[3];
         $sexo=$fila[4];
         $nickname=$fila[5];
@@ -106,8 +106,29 @@ header("Location: ../Index.php");
            <section class=cajausuario>
                 Nombre:<br>
                 <input class='registro' type='text' name='nombre' id='nombre' maxlength='40' placeholder='Nombre   Apellido Paterno   Apellido Materno ' value='$nombre' onkeypress='return sololetrasconespacios(event)' onpaste='return false'/><br><br>
-                              
-                Fecha de nacimiento:<br><input type='date' id='fecha' name='fecha' value='$fechanac' />
+                              "?>
+
+
+                              <?php
+                 if($tipousuario=='admin'){
+                     $opcion3='selected';
+                     $opcion4='';
+                    }
+                    
+                    if($tipousuario=='cliente'){
+                     $opcion4='selected';
+                     $opcion3='';
+                    }
+                    ?>
+                     <?php
+                 echo "Tipo de Usuario:
+                 <select name='tipousuario' id='tipousuario' value='$tipousuario'>
+                 <option $opcion3>admin</option>
+                 <option $opcion4>cliente</option>
+                 </select><br><br>" ?>
+
+                              <?php
+                echo "Fecha de nacimiento:<br><input type='date' id='fecha' name='fecha' value='$fechanac' />
                 <br><br>"
                 ?>
                 <?php
@@ -156,5 +177,24 @@ header("Location: ../Index.php");
          </div>
         
       </center>
+              <?php
+    if(isset($_GET['res'])){
+    $resultado = $_GET['res'];  
+    if($resultado==1){
+    ?>
+  <script type="text/javascript">
+alert("El usuario se registro satisfactoriamente!! ");
+  </script>
+ <?php 
+ }
+ else{
+ ?>
+    <script type="text/javascript">
+alert("Error de envio de datos... asegurese de llenar todos los campos!");
+  </script>
+ <?php
+ }
+    }
+ ?>   
    </body>
 </html>

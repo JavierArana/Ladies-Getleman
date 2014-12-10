@@ -96,7 +96,24 @@
 //$a=1;
 //$b=9;
 //$consulta = mysqli_query($conexion, "select * from productos where nombre='Accesorio' and genero='Dama' limit $a,$b");
-$consulta = mysqli_query($conexion, "select * from productos where nombre='Short' and genero='Niña'");
+   #-------------------------codigo--------------------------------------
+
+//evalua si el usuario hizo una busqueda por marca
+if(isset($_GET['consultabusqueda'])){
+  //si la realiza toma la nueva consulta para mostrar nuevos datos
+
+$busqueda=$_GET['consultabusqueda'];
+
+$busquedaelegida=$busqueda;
+
+
+}else{
+$busquedaelegida= "select * from productos where nombre='Short' and genero='Niña'";
+}
+$consulta= mysqli_query($conexion,$busquedaelegida);
+
+
+
 while($fila = mysqli_fetch_array($consulta)){
 echo "
 <section  class='base'>
@@ -131,7 +148,20 @@ mysqli_free_result($consulta);
                <li class="articulosCaballero"><a href="Ninias-Short.php" style="color:red; font-size:1.5em;">Short</a></li>
                <li class="articulosCaballero"><a href="Ninias-Accesorios.php">Accesorios</a></li>
             </ul>
-           <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <input id="botonBuscar" type="submit" value="Buscar">
+           
+           <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/busquedas.php">
+                 <input type="hidden" name="genero" id="genero" value="Niña">
+                 <input type="hidden" name="ubicacion" id="ubicacion" value="../Ninia/Ninias-Short.php">
+
+                <input type="hidden" name="nombre" id="nombre" value="Short">
+
+                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar por Marca"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  
+                 <input id="botonBuscar" type="submit" value="Buscar">
+                 </form>
+
+
+
+
          <!-- .......... acomodar servicios web porfavor con estilos.......................... -->
           
           

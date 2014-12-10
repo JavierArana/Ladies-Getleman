@@ -1,5 +1,11 @@
 <?php
+ require_once 'config.php';
+ $conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
+ if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+    die("No se pudo realizar la conexion a la base de datos!");
+}else{
 
+ $resultadoRetorno = 0;
 $idgeneral=$_POST['id'];
 $nombretabla=$_POST['tabla'];
 $modificacion='update ';
@@ -112,16 +118,80 @@ $modificacion="UPDATE $nombretabla SET fechaventa='$fechaventa',costouni='$costo
 header('Location:../Admin/ventas.php');
 }
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------usuarioadmin-------------------------------------------------------------------------------------------------------------
 
- require_once 'config.php';
+if($nombretabla == 'usuarioactivoadmin'){
+    if(isset($_POST['nombre']) && isset($_POST['tipousuario']) && isset($_POST['fecha']) && isset($_POST['sexo']) && isset($_POST['nick']) && isset($_POST['email'])
+         && isset($_POST['contra'])  && isset($_POST['tel'])   && isset($_POST['direccion'])){
 
- $conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
- if(mysqli_connect_errno()){//Comprobacion de error en la conexion
-    die("No se pudo realizar la conexion a la base de datos!");
+    $nombre=$_POST['nombre'];
+    $tipousuario=$_POST['tipousuario'];
+    $fecha=$_POST['fecha'];
+    $sexo= $_POST['sexo'];
+    $nick=$_POST['nick'];
+    $email=$_POST['email'];
+
+    $contra=$_POST['contra'];
+    
+
+    $tel=$_POST['tel'];
+    $direccion=$_POST['direccion'];
+    //Actualizacion
+    $modificacion= "UPDATE usuarios SET nombre='$nombre',tipousuario='$tipousuario',fechanac='$fecha',sexo='$sexo', nickname='$nick',email='$email',contra=password('$contra'),telefono='$tel', direccion='$direccion' WHERE IdCliente='$idgeneral'";
+    //$sql="UPDATE '$nombretabla' SET nombre=''$nombre''";
+    echo "UPDATE $nombretabla SET nombre='$nombre',fechanac='$fecha',sexo='$sexo', nickname='$nick',email='$email',contra='$contra',telefono='$tel', direccion='$direccion' WHERE IdCliente='$idgeneral'";
+$resultadoRetorno=1;
+}else{
+    die('Error en datos: no se envio la informacion correcta'); 
+            mysqli_close($conexion);
+            $resultadoRetorno=0;
+
 }
+
+
+ header('Location:../UsuarioAdmin.php?res='.$resultadoRetorno);
+}
+
+#-------------------------------------------Usuariocliente-------------------------------------------------------------------------------------------------------------
+
+
+if($nombretabla == 'usuarioactivo'){
+    if(isset($_POST['nombre']) &&  isset($_POST['fecha']) && isset($_POST['sexo']) && isset($_POST['nick']) && isset($_POST['email'])
+         && isset($_POST['contra'])  && isset($_POST['tel'])   && isset($_POST['direccion'])){
+
+    $nombre=$_POST['nombre'];
+    $tipousuario=$_POST['tipousuario'];
+    $fecha=$_POST['fecha'];
+    $sexo= $_POST['sexo'];
+    $nick=$_POST['nick'];
+    $email=$_POST['email'];
+
+    $contra=$_POST['contra'];
+    
+
+    $tel=$_POST['tel'];
+    $direccion=$_POST['direccion'];
+    //Actualizacion
+    $modificacion= "UPDATE usuarios SET nombre='$nombre',fechanac='$fecha',sexo='$sexo', nickname='$nick',email='$email',contra=password('$contra'),telefono='$tel', direccion='$direccion' WHERE IdCliente='$idgeneral'";
+    //$sql="UPDATE '$nombretabla' SET nombre=''$nombre''";
+    
+
+}else{
+    die('Error en datos: no se envio la informacion correcta'); 
+            mysqli_close($conexion);
+
+}
+$resultadoRetorno = 1;
+ mysqli_query($conexion, $modificacion);
+
+ header('Location:../UsuarioAdmin.php?res='.$resultadoRetorno);
+}
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
  mysqli_query($conexion, $modificacion);
 
-
+}
 
 ?>
