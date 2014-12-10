@@ -65,12 +65,28 @@ header("Location: ../../Index.php");
                <p>Nueva Sugerencia</p><br><br>
                <div class="cajausuario">
                Id Producto:<br>
-               <select name="idproducto">
-                <option selected="value">1</option>
-                <option>2</option>
-                <option>49</option>
+               <select name='idproducto' >
+               <?php 
+require_once '../procesar/config.php';
+ $conexion = mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos );
+ if(mysqli_connect_errno()){//Comprobacion de error en la conexion
+  die("No se pudo realizar la conexion a la base de datos!");
+}
+
+$consulta = mysqli_query($conexion, "select * from productos");
+
+while($fila = mysqli_fetch_array($consulta)){
+  $idpro=$fila[0];
+
+echo "
+                <option>$idpro</option>
+                <br>
+               
+";
+} ?>
                </select>
                <br><br>
+              
                Sugerencia:<br>
                <textarea class ="descripcion" name="sugerencia" rows="3" cols="38" placeholder="Descripion del articulo" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> </textarea> 
                 <section class="contenedorbtn">
