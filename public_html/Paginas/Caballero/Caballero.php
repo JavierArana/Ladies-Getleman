@@ -16,7 +16,34 @@ and open the template in the editor.
         <title>Ladies & Gentlemen </title>
     </head>
     <body>
-      
+        <section id="previa" >
+            <section id="contenedorPrevia">
+                <section id="contenedorImg">
+                    <img id="imgfull" src="">
+                </section>
+                <section id="contenedorArt">
+                    <article class="descripcionArt">
+                        <section class="contenedorbtn">
+                            <input type="button" value="X"  id="btncerrar" class="bnt_sig_ant" onclick="cerrarImg();" /> 
+                        </section><br><br><br>
+                        <p id="texto">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <select name="talla">
+                            <option>Chica</option>
+                            <option selected="value">Mediana</option>
+                            <option>Grande</option>
+                        </select>
+                        <a href="../Compra.php"><img src="../../Imagenes/s.png" id="comprar"></a>
+                    </article>
+                </section>
+            </section>
+        </section>
         <section id="cajaPrincipal">
             <section id="contenido">
                 <section id="seccion2">
@@ -132,6 +159,18 @@ mysqli_free_result($consulta);
                     <li class="articulosCaballero" id="accesorios" onclick="articuloSeleccionado();"><a href="Accesorios.php">Accesorios</a></li>	
                 </ul>
                  <input type="search" name="busqueda" id="busqueda" placeholder="Buscar"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  <input id="botonBuscar" type="submit" value="Buscar">
+            
+            <!-- .......... acomodar servicios web porfavor con estilos.......................... -->
+          <aside>
+          <div id="promociones">
+          <?php
+          include('../serviciosWeb/cliente.php');
+          ?>
+           </div>
+           </aside>
+           <!-- .................................................................................. -->
+
+
             </aside>
         </section>  
               <?php 
