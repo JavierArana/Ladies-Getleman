@@ -28,7 +28,7 @@
 </binding>
 <service name="Servicio web de Prendas con los mejores costos!">
   <port name="Servicio web de Prendas con los mejores costos!Port" binding="tns:Servicio web de Prendas con los mejores costos!Binding">
-    <soap:address location="http://localhost:8080/Ladies-Getleman/public_html/Paginas/serviciosWeb/servicio.php"/>
+    <soap:address location="http://localhost/Repositorio/Ladies-Gentleman/public_html/Paginas/serviciosWeb/servicio.php"/>
   </port>
 </service>
 </definitions>

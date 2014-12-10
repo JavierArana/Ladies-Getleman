@@ -38,7 +38,7 @@ else{
             <h2>Promociones de Articulos !</h2>
             <br>
            
-           <p><img src='../fotos/$imagen.jpg' whidth='50px' heigth='50px'></p>
+           <p><img src='../fotos/$imagen' whidth='50px' heigth='50px'></p>
            <br><br>
           <p><h2>$nombre</h2></p>
           <p><h2>Marca: $marca</h2></p>
