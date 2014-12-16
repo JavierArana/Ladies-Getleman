@@ -89,44 +89,50 @@
                <section class="contenedorbtn">
                   <input type="button" value="<"  class="bnt_sig_ant" />       
                </section>
-               <div>
-               	<?php 
+               <div>            
+                  <?php 
   require_once '../procesar/config.php';
  $conexion =  mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$baseDeDatos);
-//$a=1;
-//$b=9;
-  #-------------------------codigo--------------------------------------
+$a=1;
+$b=9;
+#-------------------------codigo--------------------------------------
 
 //evalua si el usuario hizo una busqueda por marca
 if(isset($_GET['consultabusqueda'])){
   //si la realiza toma la nueva consulta para mostrar nuevos datos
-
 $busqueda=$_GET['consultabusqueda'];
 
 $busquedaelegida=$busqueda;
 
-
 }else{
-$busquedaelegida=  "select * from productos where nombre='Jeans' and genero='Caballero'";
+$busquedaelegida ="select * from productos where genero='caballero' && nombre='Jeans'";
 }
 $consulta= mysqli_query($conexion,$busquedaelegida);
- 
+#--------------------------------------------------------------------
+   $datos =  array();
+         
+  $contador=0;
+#--------------------------------------------------------------
 while($fila = mysqli_fetch_array($consulta)){
-echo "
-<section  class='base'>
+  $datos[$contador]=$fila[7];
+  #echo"la direccion de la imagen es".$datos[$contador]."con el indice".$contador."br";?>
+  <?php
+echo "<section  class='base'>
   <article>
       <figure>
-          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='abrirImagen();'/>
+        <a href='../Articulo.php?direccion=$fila[7]&descripcion=$fila[8]&pagina=Caballero/Caballero.php'>  <img  src='../fotos/$fila[7]' alt='producto/1' /></a>
           <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
        </figure>
   </article>
 </section>
 ";
+  $contador++;
+
 }
 mysqli_close($conexion);
 mysqli_free_result($consulta);
                       ?>
-               </div>
+                    </div>
                <section class="contenedorbtn">
                   <input type="button" value=">" class="bnt_sig_ant"/>    
                </section>

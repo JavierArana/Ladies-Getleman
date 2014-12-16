@@ -112,16 +112,20 @@ $busquedaelegida=  "select * from productos where nombre='Accesorio' and genero=
 $consulta= mysqli_query($conexion,$busquedaelegida);
 
 while($fila = mysqli_fetch_array($consulta)){
-echo "
-<section  class='base'>
+  $datos[$contador]=$fila[7];
+  #echo"la direccion de la imagen es".$datos[$contador]."con el indice".$contador."br";?>
+  <?php
+echo "<section  class='base'>
   <article>
       <figure>
-          <img  src='../fotos/$fila[7]' alt='producto/1' onclick='abrirImagen();'/>
+        <a href='../Articulo.php?direccion=$fila[7]&descripcion=$fila[8]&pagina=Caballero/Caballero.php'>  <img  src='../fotos/$fila[7]' alt='producto/1' /></a>
           <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
        </figure>
   </article>
 </section>
 ";
+  $contador++;
+
 }
 mysqli_close($conexion);
 mysqli_free_result($consulta);

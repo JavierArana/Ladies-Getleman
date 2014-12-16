@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="../Estilos/estilo.css">
         <link rel="stylesheet" href="../Estilos/articulos.css">
         <script type="text/javascript" src="../JavaScript/validacionCampos.js"></script>
+        <script type="text/javascript" src"../JavaScript/funciones.js"></script>
         <script type="text/javascript" src="../JavaScript/lluvia.js"></script>
         	<style type="text/css">
         	#previa{
@@ -22,13 +23,13 @@ and open the template in the editor.
        <body>
        <?php
        $direccion=$_GET['direccion'];
+       $descripcion=$_GET['descripcion'];
+       $paginar=$_GET['pagina'];
        ?>
 		<section id="previa" >
             <section id="contenedorPrevia">
                 <section id="contenedorImg">
-                <?php
-                echo "$direccion";
-                ?>
+              
                     <?php
                     echo
                    " <img id='imgfull' src='fotos/$direccion'>";
@@ -38,16 +39,15 @@ and open the template in the editor.
                 <section id="contenedorArt">
                     <article class="descripcionArt">
                         <section class="contenedorbtn">
-                            <input type="button" value="X"  id="btncerrar" class="bnt_sig_ant" onclick="cerrarImg();" /> 
+                        <?php echo
+                           "<a href='$paginar'> <input type='button' value='X'  id='btncerrar' class='bnt_sig_ant'  /> ";
+                           ?>
                         </section><br><br><br>
-                        <p id="texto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                       <?php
+                        echo
+                        "<p id='texto'>
+                            $descripcion
+                        </p>"; ?>
                         <select name="talla">
                             <option>Chica</option>
                             <option selected="value">Mediana</option>
@@ -55,11 +55,8 @@ and open the template in the editor.
                         </select>
                         <?php
                         session_start();
-                         if(isset($_POST['sesion'])){
+                     if(isset($_SESSION['inicio'])){
                              echo "<a href='Comprar.php'><img src='../Imagenes/s.png' id='comprar'></a>  ";   
-                            }else{
-
-                                
                             }
                       
                             ?>

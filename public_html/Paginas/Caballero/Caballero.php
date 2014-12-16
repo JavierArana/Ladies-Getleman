@@ -151,7 +151,7 @@ while($fila = mysqli_fetch_array($consulta)){
 echo "<section  class='base'>
   <article>
       <figure>
-        <a href='../Articulo.php?direccion=$fila[7]'>  <img  src='../fotos/$fila[7]' alt='producto/1' /></a>
+        <a href='../Articulo.php?direccion=$fila[7]&descripcion=$fila[8]&pagina=Caballero/Caballero.php'>  <img  src='../fotos/$fila[7]' alt='producto/1' /></a>
           <figcaption>Marca: $fila[1] <br>Costo: $ $fila[5]</figcaption>
        </figure>
   </article>

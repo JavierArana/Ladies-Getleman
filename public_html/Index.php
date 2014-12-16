@@ -68,7 +68,6 @@ and open the template in the editor.
   session_name();
     $nickname=$_SESSION['usuario'];
     $idusuario=$_SESSION['id'];
-    $tipouser=$_SESSION['tipouser'];
     echo "<td>$nickname</td>"; 
     if($tipouser=='admin'){
         $configuser='Paginas/UsuarioAdmin.php';
