@@ -146,8 +146,7 @@ mysqli_free_result($consulta);
                <li class="articulosCaballero"><a href="Ninias-Short.php">Short</a></li>
                <li class="articulosCaballero"><a href="Ninias-Accesorios.php">Accesorios</a></li>
             </ul>
-            <input type="search" name="busqueda" id="busqueda" placeholder="Buscar" onkeypress="return sololetrasconespacios(event)" onpaste="return false"> <input id="botonBuscar" type="submit" value="Buscar">
-         
+           
 
 
            <form id="formularioModificacion" method="POST" enctype="multipart/form-data" action="../procesar/busquedas.php">
@@ -156,8 +155,8 @@ mysqli_free_result($consulta);
 
                 <input type="hidden" name="nombre" id="nombre" value="Vestido">
 
-                 <input type="search" name="busqueda" id="busqueda" placeholder="Buscar por Marca"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  
-                 <input id="botonBuscar" type="submit" value="Buscar">
+            <input type="search" name="busqueda" id="busqueda" placeholder="Buscar por Marca"  onkeypress="return sololetrasconespacios(event)" onpaste="return false">  
+                 <input id="botonBuscar" type="submit" value="Buscar"> 
                  </form>
 
 
